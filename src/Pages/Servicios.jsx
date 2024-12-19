@@ -11,4 +11,4 @@ const Servicios = () => {
   )
 }
 
-export default Servicioss
+export default Servicios
