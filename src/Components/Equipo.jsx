@@ -17,10 +17,14 @@ const Team = () => {
   return (
     <section className="">
       <div className="container px-6 py-10 mx-auto">
+      <h1 className="text-2xl font-dream font-bold text-center pb-20 text-gray-800 capitalize lg:text-3xl">
+                Equipo <span className="text-red-500"> Rosso</span>
+              </h1>
         <div className="xl:flex xl:items-center xl:-mx-4">
+          
           <div className="xl:w-1/2 xl:mx-4">
-            <h1 className="text-2xl font-century text-gray-800 capitalize lg:text-3xl ">
-              Equipo
+            <h1 className="text-2xl font-dream font-bold text-gray-800 capitalize lg:text-3xl ">
+              Somos familia
             </h1>
 
             <p className="max-w-2xl mt-4 text-gray-500 font-century">

@@ -10,7 +10,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="font-century bg-[#EDE9D5] shadow-md">
+    <nav className="font-century bg-primary shadow-md">
       <div className="container mx-auto  px-4 py-6 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl  text-black">
@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* CTA Button */}
         <div className="hidden md:block ">
           <Link
-            to="/trabaja"
+            to="/contacto"
             className="border-2 border-black text-black py-2 px-4 rounded-full hover:bg-black hover:text-white transition-all duration-500 ease-in-out"
           >
             Trabaja con nosotros ↗

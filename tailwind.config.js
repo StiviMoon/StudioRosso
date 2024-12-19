@@ -11,6 +11,7 @@ export default {
         greengrove: "#a59b20",
         crema: "#fffbf8",
         greenStem : "#c6bd56",
+        primary: "#EDE9D5"
 
       },
       fontFamily: {

@@ -1,6 +1,7 @@
 import React from 'react';
-import rossoL from "../../img/Logos/rossoL.png";
+import rossoL from "../../img/Logos/rossoL-min.svg";
 import ServiciosSlider from '../ServiciosSlider';
+import { Link } from 'react-router-dom';
 
 const InicioP1 = () => {
   return (
@@ -12,8 +13,7 @@ const InicioP1 = () => {
           className="w-full h-32 object-cover"
         />
       </div>
-      <div className="flex flex-col md:flex-row h-full pt-12">
-        {/* Sección de Texto */}
+      <div className="flex flex-col md:flex-row h-full pt-16">
 
         {/* Sección de Imagen o Contenido */}
         <div className="flex-1 flex items-center justify-center bg-neutral-50 ">
@@ -38,7 +38,7 @@ const InicioP1 = () => {
               mundo de diseño atemporal.
             </p>
             <button className="font-century px-6 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-700 transition">
-              Nuestros Servicios →
+              <Link to="/servicios">Nuestros Servicios →</Link> 
             </button>
           </div>
         </div>
