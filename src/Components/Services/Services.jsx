@@ -1,11 +1,20 @@
 import React from 'react';
-import { FaPaintBrush, FaCode, FaCameraRetro, FaChartLine, FaBoxOpen, FaMobileAlt, FaUserFriends, FaLightbulb } from "react-icons/fa";
+import { 
+  FaPaintBrush, 
+  FaCode, 
+  FaCameraRetro, 
+  FaChartLine, 
+  FaBoxOpen, 
+  FaMobileAlt, 
+  FaUserFriends, 
+  FaLightbulb 
+} from "react-icons/fa";
 import Card from '../Card.jsx';
 
 const Services = () => {
   return (
-    <div className="p-8 m-28 ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div className="px-4 py-8 sm:px-8 lg:px-16 xl:px-32">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {/* Branding y Estrategia de Marca */}
         <Card 
           number="01" 
