@@ -13,7 +13,7 @@ import Card from '../Card.jsx';
 
 const Services = () => {
   return (
-    <div className="flex flex-wrap  justify-center p-10">
+    <div className="flex flex-wrap  justify-center p-10 ">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {/* Branding y Estrategia de Marca */}
         <Card 

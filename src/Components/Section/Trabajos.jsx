@@ -2,7 +2,7 @@ import React from 'react'
 
 const Trabajos = () => {
   return (
-    <div>
+    <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 p-4'>
         <div className='bg-red-200 h-96 flex items-center justify-center'>
             <h1 className='text-black '>Branding</h1>
         </div>
