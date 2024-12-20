@@ -60,7 +60,7 @@ export default function ContactForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block font-century text-black">Nombres</label>
+            <label className="block font-century text-black font-semibold">Nombres</label>
             <input
               {...form.register('nombres')}
               className="w-full border-gris rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-greenStem"
@@ -74,7 +74,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block font-century text-black">Apellidos</label>
+            <label className="block font-century text-black font-semibold">Apellidos</label>
             <input
               {...form.register('apellidos')}
               className="w-full border-gris rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-greenStem"
@@ -90,7 +90,7 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block font-century text-black">Correo</label>
+            <label className="block font-century text-black font-semibold">Correo</label>
             <input
               type="email"
               {...form.register('correo')}
@@ -105,7 +105,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block font-century text-black">Número de contacto</label>
+            <label className="block font-century text-black font-semibold">Número de contacto</label>
             <input
               {...form.register('numeroContacto')}
               className="w-full border-gris rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-greenStem"
@@ -120,7 +120,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block font-century text-black">¿Qué servicio o servicios te interesan?</label>
+          <label className="block font-century text-black font-semibold">¿Qué servicio o servicios te interesan?</label>
           <div className="grid gap-2 mt-3">
             {services.map((service) => (
               <label key={service.id} className="flex items-center space-x-3">
@@ -139,7 +139,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block font-century text-black">¿En qué ciudad te encuentras?</label>
+          <label className="block font-century text-black font-semibold">¿En qué ciudad te encuentras?</label>
           <input
             {...form.register('ciudad')}
             className="w-full border-gris rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-greenStem"
@@ -153,7 +153,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block font-century text-black">Cuéntanos qué idea quieres llevar a cabo:</label>
+          <label className="block font-century text-black font-semibold">Cuéntanos qué idea quieres llevar a cabo:</label>
           <textarea
             {...form.register('idea')}
             className="w-full border-gris rounded-lg p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-greenStem"

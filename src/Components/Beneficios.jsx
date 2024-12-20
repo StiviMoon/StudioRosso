@@ -1,6 +1,6 @@
 import React from "react";
 import { FiPenTool, FiTrendingUp, FiStar } from "react-icons/fi";
-import imgL from '../img/1.png'
+import imgL from '../img/1.jpg'
 const ComponentSection = () => {
   const features = [
     {
