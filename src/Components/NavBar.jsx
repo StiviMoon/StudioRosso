@@ -86,7 +86,7 @@ const Navbar = () => {
           ))}
           <li className="text-center mt-4 ">
             <Link
-              to="/trabaja"
+              to="/contacto"
               className="block border-2 border-black text-black py-2 px-6  mx-8 rounded-full hover:bg-black hover:text-white transition-all duration-500 ease-in-out"
               onClick={() => setMenuOpen(false)}
             >

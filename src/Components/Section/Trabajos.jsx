@@ -21,6 +21,8 @@ import p2 from "../../img/Servicios/p2.png";
 
 import s1 from "../../img/Servicios/s1.jpg";
 import s2 from "../../img/Servicios/s2.jpg";
+
+import wb1 from "../../img/Servicios/wb1.png";
 import { Link } from 'react-router-dom';
 
 const Trabajos = () => {
@@ -65,7 +67,7 @@ const Trabajos = () => {
         <TarjetaComp
           title="Desarrollo Web"
           description="Transformamos tus ideas en sitios web modernos, dinámicos y totalmente personalizados. Destaca en el mundo digital con soluciones innovadoras diseñadas para impactar."
-          image={img2}
+          image={wb1}
         />
 
       </div>
