@@ -8,10 +8,10 @@ const Servicios = () => {
     <div className="bg-gray-100 min-h-screen">
       {/* Título principal */}
       <div className="flex flex-wrap justify-center text-center p-12">
-        <h1 className="text-4xl md:text-8xl font-bold text-greengrove tracking-wide font-dream leading-snug">
+        <h1 className="text-4xl md:text-8xl   text-greengrove tracking-wide font-dream leading-snug">
           Nuestros Servicios
         </h1>
-        <p className="text-lg md:text-4xl max-w-[75%] text-center  text-greengrove mt-6 font-century">
+        <p className="text-lg md:text-4xl max-w-[60%] text-center  text-greengrove mt-6 font-century">
           Soluciones digitales creativas diseñadas para potenciar tu marca y mejorar la experiencia de tus clientes.
         </p>
       </div>      

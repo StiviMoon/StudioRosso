@@ -17,26 +17,17 @@ const Team = () => {
   return (
     <section className="">
       <div className="container px-6 py-10 mx-auto">
-      <h1 className="text-2xl font-dream font-bold text-center pb-20 text-gray-800 capitalize lg:text-3xl">
-                Equipo <span className="text-red-500"> Rosso</span>
+      <h1 className="text-2xl font-dream font-bold text-center pb-20 pt-12 text-greengrove capitalize lg:text-6xl">
+                Equipo Rosso
               </h1>
-        <div className="xl:flex xl:items-center xl:-mx-4">
+        <div className="xl:flex xl:items-center  flex flex-wrap justify-center text-center xl:-mx-4">
           
-          <div className="xl:w-1/2 xl:mx-4">
-            <h1 className="text-2xl font-dream font-bold text-gray-800 capitalize lg:text-3xl ">
-              Somos familia
-            </h1>
-
-            <p className="max-w-2xl mt-4 text-gray-500 font-century">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-0 xl:mx-4 xl:w-1/2 md:grid-cols-2">
+          
+          <div className="grid grid-cols-1 gap-12 mt-8 xl:mt-0 xl:mx-4 xl:w-1/2 md:grid-cols-2">
             {teamMembers.map((member, index) => (
               <div key={index}>
                 <img
-                  className="object-cover rounded-xl aspect-square"
+                  className="object-cover h-[485px] rounded-2xl aspect-square"
                   src={member.image}
                   alt={member.name}
                 />

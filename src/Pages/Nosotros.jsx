@@ -5,9 +5,9 @@ import creativo from "../img/9.jpg";
 const Nosotros = () => {
   return (
     <section className="bg-gray-100 pt-20 pb-20 p-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto pb-12">
         {/* Header */}
-        <h2 className="text-5xl font-bold text-center text-red-600 mb-6 font-dream">Sobre Nosotros</h2>
+        <h2 className="text-7xl text-center text-greengrove mb-6 font-dream">Sobre Nosotros</h2>
         <p className="text-center text-gray-700 leading-relaxed md:text-xl font-century text-lg">
           Studio Rosso es una agencia de diseño integral que combina creatividad y estrategia para crear marcas auténticas, proyectos únicos y experiencias visuales excepcionales. Inspirados por la fuerza y la pasión que evoca nuestro nombre, desarrollamos proyectos que trascienden el tiempo y destacan en un entorno competitivo.
         </p>

@@ -10,7 +10,7 @@ export default {
         gris: "#e5e5e5",
         greengrove: "#a59b20",
         crema: "#fffbf8",
-        greenStem : "#c6bd56",
+        greenStem : "#e6dd73",
         primary: "#EDE9D5"
 
       },

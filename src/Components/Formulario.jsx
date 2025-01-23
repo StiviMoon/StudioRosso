@@ -47,9 +47,27 @@ export default function ContactForm() {
     },
   });
 
-  const onSubmit = (values) => {
-    console.log('Formulario enviado:', values);
+  const onSubmit = async (values) => {
+    try {
+      const response = await fetch('http://localhost:5000/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+  
+      if (response.ok) {
+        alert('Formulario enviado correctamente');
+      } else {
+        alert('Hubo un error al enviar el formulario');
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      alert('No se pudo enviar el formulario');
+    }
   };
+  
 
   return (
     <div className="w-full max-w-4xl mx-auto p-6 bg-crema rounded-3xl m-4 ">
