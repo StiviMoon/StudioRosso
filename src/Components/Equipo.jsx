@@ -1,16 +1,18 @@
 import React from 'react';
+import fts from '../img/PT1.jpg';
+import ftv from '../img/PT2.jpg';
 
 const Team = () => {
   const teamMembers = [
     {
       name: 'Steven Rodriguez',
       role: 'Full Stack Developer',
-      image: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+      image: fts, // Usa la variable importada
     },
     {
       name: 'Valentina Reyes',
       role: 'Comunicadora Visual',
-      image: 'https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+      image: ftv, // Usa la variable importada
     },
   ];
 
