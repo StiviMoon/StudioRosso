@@ -81,7 +81,7 @@ const Services = () => {
       <div className="flex justify-center mt-12 w-full">
         <Card 
           number="07" 
-          title="Fotografía & Ilustración" 
+          title="Fotografía e Ilustración" 
           description="Producción de contenido visual profesional y creativo para tu marca." 
           icon={<FaCameraRetro />}
           targetId="fotografia" 
