@@ -4,8 +4,8 @@ import creativo from "../img/9.jpg";
 
 const Nosotros = () => {
   return (
-    <section className="bg-gray-100 pt-20 pb-20 p-4">
-      <div className="max-w-6xl mx-auto pb-12">
+    <section className="bg-gray-100 pt-20 pb-20 p-4 min-h-screen">
+      <div className="max-w-6xl mx-auto pb-12 pt-20">
         {/* Header */}
         <h2 className="text-7xl text-center text-greengrove mb-6 font-dream">Sobre Nosotros</h2>
         <p className="text-center text-gray-700 leading-relaxed md:text-xl font-century text-lg">

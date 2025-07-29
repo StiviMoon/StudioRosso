@@ -8,10 +8,6 @@ import img2 from "../../img/2.jpg";
 import img3 from "../../img/3.png";
 import img4 from "../../img/4.png";
 
-//Servicios img
-import pc1 from "../../img/Servicios/pc1.jpg";
-import pc2 from "../../img/Servicios/pc2.jpg";
-
 import f1 from "../../img/Servicios/f1.jpg";
 import f2 from "../../img/Servicios/f2.jpg";
 
@@ -29,9 +25,9 @@ const Trabajos = () => {
 
  
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 space-y-12">
+    <div className="max-w-7xl mx-auto px-4 py-20 space-y-20">
       {/* Componente 1 - Branding */}
-      <div className="p-6" id='branding' >
+      <div id='branding'>
         <ServicioComp
           title="Branding"
           description="En Studio Rosso transformamos tu visión en una marca poderosa y auténtica. Desde el diseño del concepto hasta la creación de una identidad visual única, nuestro objetivo es reflejar la esencia de tu marca de manera coherente y atractiva. ¡Haz que tu marca se distinga!"
@@ -45,7 +41,7 @@ const Trabajos = () => {
       </div>
 
       {/* Componente 2 - Packaging */}
-      <div className="p-6" id='packaging'>
+      <div id='packaging'>
         <ServicioCompInverso
           title="Packaging"
           description="Diseñamos empaques que no solo protegen, sino que hablan por tu marca. A través de soluciones creativas y estratégicas, creamos packaging que resalta en el mercado, conecta emocionalmente con tu audiencia y eleva el valor percibido de tu producto. ¡Haz que tu empaque cautive!"
@@ -58,7 +54,7 @@ const Trabajos = () => {
       </div>
 
       {/* Nueva Sección con Tarjetas */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6" id='ux'>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8" id='ux'>
         <TarjetaComp
           title="Diseño UX/UI"
           description="Diseñamos productos y servicios que satisfacen las necesidades de tus usuarios. Nuestro objetivo es que los usuarios tengan la mejor experiencia al Interactuar con tu marca."
@@ -72,23 +68,17 @@ const Trabajos = () => {
 
       </div>
 
-      <div className='flex justify-center  p-6'>
-
+      <div className='flex justify-center'>
         <Link
-                to="/contacto"
-                className="block justify-center w-[225px] border-2 border-black text-black py-2 px-6 text-center mx-8 rounded-full hover:bg-black hover:text-white transition-all duration-500 ease-in-out"
-                onClick={() => setMenuOpen(false)}
-              >
-                ¡Contáctanos!
-                
-          </Link>
-
+          to="/contacto"
+          className="inline-flex items-center justify-center w-[225px] border-2 border-black text-black py-3 px-6 text-center rounded-full hover:bg-black hover:text-white transition-all duration-500 ease-in-out font-semibold"
+        >
+          ¡Contáctanos!
+        </Link>
       </div>
         
-
-
       {/* Componente 3 - Social Media */}
-      <div className="p-6" id='social'>
+      <div id='social'>
         <ServicioComp
           title="Social Media"
           description="En Rosso, no solo gestionamos redes sociales, sino que creamos estrategias personalizadas para que tu marca destaque. Mejoramos tu alcance y optimizamos los resultados con contenidos que capturan la atención y fomentan la interacción. ¡Lleva tu marca al siguiente nivel!"
@@ -101,7 +91,7 @@ const Trabajos = () => {
       </div>
 
       {/* Componente 4 - Fotografía */}
-      <div className="p-6" id='fotografia'>
+      <div id='fotografia'>
         <ServicioCompInverso
           title="Fotografía"
           description="Capturamos la esencia de tu marca a través de fotografías y videos que cuentan historias visuales. Nuestra fotografía profesional resalta la identidad y calidad de tus productos, creando una conexión inmediata con tu audiencia. ¡Imágenes que hablan por tu marca!"
@@ -114,7 +104,7 @@ const Trabajos = () => {
       </div>
 
       {/* Componente 5 - Identidad Visual */}
-      <div className="p-6" id='identidad'>
+      <div id='identidad'>
         <ServicioComp
           title="Identidad Visual"
           description="En Studio Rosso diseñamos identidades visuales que transmiten claramente la esencia de tu marca. Desde el logo hasta cada detalle gráfico, trabajamos para que tu marca sea memorable, se distinga en el mercado y tenga un impacto duradero. ¡Construye una identidad visual que deje huella!"

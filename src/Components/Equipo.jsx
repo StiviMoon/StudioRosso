@@ -6,43 +6,76 @@ const Team = () => {
   const teamMembers = [
     {
       name: 'Steven Rodriguez',
-      role: 'Full Stack Developer',
-      image: fts, // Usa la variable importada
+      role: 'Fundador & Director de Desarrollo',
+      specialization: 'Desarrollo Web Full Stack & Tecnología',
+      description: 'Especialista en React, Next.js y tecnologías modernas. Lidera la arquitectura técnica y desarrollo de soluciones digitales innovadoras.',
+      image: fts,
     },
     {
       name: 'Valentina Reyes',
-      role: 'Comunicadora Visual',
-      image: ftv, // Usa la variable importada
+      role: 'Fundadora & Directora Creativa',
+      specialization: 'Comunicación Visual & Diseño',
+      description: 'Experta en branding, diseño gráfico y estrategias de comunicación visual. Transforma ideas en experiencias visuales impactantes.',
+      image: ftv,
     },
   ];
 
   return (
-    <section className="">
-      <div className="container px-6 py-10 mx-auto">
-      <h1 className="text-2xl font-dream font-bold text-center pb-20 pt-12 text-greengrove capitalize lg:text-6xl">
-                Equipo Rosso
-              </h1>
-        <div className="xl:flex xl:items-center  flex flex-wrap justify-center text-center xl:-mx-4">
-          
-          
-          <div className="grid grid-cols-1 gap-12 mt-8 xl:mt-0 xl:mx-4 xl:w-1/2 md:grid-cols-2">
-            {teamMembers.map((member, index) => (
-              <div key={index}>
+    <section className="bg-gradient-to-b from-white to-gray-50">
+      <div className="container px-6 py-16 mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="text-3xl font-dream font-bold text-greengrove capitalize lg:text-6xl mb-4">
+            Nuestros Fundadores
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Conoce al equipo que está transformando la manera de crear experiencias digitales únicas
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="group">
+              <div className="relative overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 group-hover:scale-105">
                 <img
-                  className="object-cover h-[485px] rounded-2xl aspect-square"
+                  className="object-cover h-[500px] w-full"
                   src={member.image}
                   alt={member.name}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
 
-                <h1 className="mt-4 text-2xl font-century text-gray-700 capitalize ">
+              <div className="mt-6 text-center lg:text-left">
+                <h2 className="text-2xl font-century font-bold text-gray-800 mb-2">
                   {member.name}
-                </h1>
-
-                <p className="mt-2 text-gray-500 capitalize">
+                </h2>
+                
+                <h3 className="text-lg font-semibold text-greengrove mb-1">
                   {member.role}
+                </h3>
+                
+                <p className="text-sm text-gray-500 mb-3 font-medium">
+                  {member.specialization}
+                </p>
+                
+                <p className="text-gray-600 leading-relaxed">
+                  {member.description}
                 </p>
               </div>
-            ))}
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-dream font-bold text-greengrove mb-4">
+              Nuestra Visión
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Como fundadores de Studio Rosso, combinamos la excelencia técnica con la creatividad visual 
+              para crear soluciones digitales que no solo funcionan perfectamente, sino que también 
+              cautivan y conectan con tu audiencia. Cada proyecto es una oportunidad para innovar 
+              y superar expectativas.
+            </p>
           </div>
         </div>
       </div>
