@@ -1,5 +1,5 @@
 import React from "react";
-import { FiPenTool, FiTrendingUp, FiStar, FiCheckCircle } from "react-icons/fi";
+import { FiPenTool, FiTrendingUp, FiStar, FiCheckCircle, FiUsers, FiAward } from "react-icons/fi";
 import imgL from '../img/1.jpg';
 
 const ComponentSection = () => {
@@ -27,8 +27,14 @@ const ComponentSection = () => {
     },
   ];
 
+  const stats = [
+    { number: "50+", label: "Proyectos Completados", icon: <FiAward /> },
+    { number: "100%", label: "Clientes Satisfechos", icon: <FiUsers /> },
+    { number: "24/7", label: "Soporte Técnico", icon: <FiCheckCircle /> },
+  ];
+
   return (
-    <section className="relative bg-gradient-to-br from-neutral-50 to-white py-20 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-white via-neutral-50 to-white py-16 sm:py-20 lg:py-24 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -36,59 +42,58 @@ const ComponentSection = () => {
         }}></div>
       </div>
 
-      <div className="container px-6 py-10 mx-auto relative z-10">
-        <div className="lg:flex lg:items-center lg:gap-16">
-          <div className="w-full space-y-12 lg:w-1/2">
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h1 className="text-3xl md:text-4xl font-bold font-dream text-gray-800 leading-tight">
-                  ¿Por qué elegir{" "}
-                  <span className="text-greengrove relative">
-                    Studio Rosso
-                    <div className="absolute -bottom-2 left-0 w-full h-1 bg-greengrove/30 rounded-full"></div>
-                  </span>
-                  ?
-                </h1>
-                <div className="flex items-center space-x-2">
-                  <div className="w-12 h-1 bg-greengrove rounded-full"></div>
-                  <div className="w-4 h-1 bg-greengrove rounded-full"></div>
-                  <div className="w-2 h-1 bg-greengrove rounded-full"></div>
-                </div>
-              </div>
-              
-              <p className="text-lg font-century text-gray-600 leading-relaxed">
-                En Studio Rosso, combinamos pasión, creatividad y tecnología para crear soluciones que transformen tu marca. 
-                Nuestro equipo de expertos trabaja contigo para alcanzar resultados excepcionales y experiencias memorables.
-              </p>
-            </div>
+      <div className="container px-4 sm:px-6 py-10 mx-auto relative z-10">
+        {/* Header Section */}
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-2 bg-greengrove/10 rounded-full border border-greengrove/20 mb-4 sm:mb-6">
+            <FiStar className="text-greengrove text-sm sm:text-base" />
+            <span className="text-xs sm:text-sm font-medium text-greengrove">¿Por qué elegirnos?</span>
+          </div>
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-dream text-gray-800 leading-tight mb-4 sm:mb-6">
+            ¿Por qué elegir{" "}
+            <span className="text-greengrove relative">
+              Studio Rosso
+              <div className="absolute -bottom-2 left-0 w-full h-1 bg-greengrove/30 rounded-full"></div>
+            </span>
+            ?
+          </h2>
+          
+          <p className="text-base sm:text-lg lg:text-xl font-century text-gray-600 leading-relaxed max-w-3xl mx-auto px-4">
+            En Studio Rosso, combinamos pasión, creatividad y tecnología para crear soluciones que transformen tu marca. 
+            Nuestro equipo de expertos trabaja contigo para alcanzar resultados excepcionales y experiencias memorables.
+          </p>
+        </div>
 
-            <div className="space-y-8">
+        <div className="lg:flex lg:items-center lg:gap-16">
+          <div className="w-full space-y-8 sm:space-y-12 lg:w-1/2">
+            <div className="space-y-6 sm:space-y-8">
               {features.map((feature, index) => (
                 <div className="group" key={index}>
-                  <div className="flex items-start space-x-4 p-6 bg-white/60 backdrop-blur-sm rounded-2xl 
-                                  border border-gray-100 hover:border-greengrove/20 transition-all duration-300 
-                                  hover:shadow-lg hover:transform hover:scale-105">
-                    <div className="flex-shrink-0">
-                      <div className="p-3 bg-gradient-to-br from-crema to-primary rounded-xl shadow-md 
+                  <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 p-6 sm:p-8 bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl 
+                                  border border-gray-100 hover:border-greengrove/30 transition-all duration-300 
+                                  hover:shadow-xl hover:transform hover:scale-105">
+                    <div className="flex-shrink-0 flex justify-center sm:justify-start">
+                      <div className="p-3 sm:p-4 bg-gradient-to-br from-greengrove/10 to-greengrove/5 rounded-xl sm:rounded-2xl 
                                     group-hover:shadow-lg transition-all duration-300 group-hover:scale-110">
                         {feature.icon}
                       </div>
                     </div>
                     
-                    <div className="flex-1 space-y-3">
-                      <h3 className="text-xl font-bold text-gray-800 font-dream group-hover:text-greengrove transition-colors duration-300">
+                    <div className="flex-1 space-y-3 sm:space-y-4 text-center sm:text-left">
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-dream group-hover:text-greengrove transition-colors duration-300">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-600 font-century leading-relaxed">
+                      <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-century leading-relaxed">
                         {feature.description}
                       </p>
                       
                       {/* Benefits list */}
-                      <div className="flex flex-wrap gap-2 pt-2">
+                      <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-3 pt-2 sm:pt-4">
                         {feature.benefits.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-center space-x-1 px-3 py-1 
-                                                           bg-greengrove/10 rounded-full text-xs font-medium text-greengrove">
-                            <FiCheckCircle className="w-3 h-3" />
+                          <div key={benefitIndex} className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-4 py-1 sm:py-2 
+                                                           bg-greengrove/10 rounded-full text-xs sm:text-sm font-medium text-greengrove">
+                            <FiCheckCircle className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
                             <span>{benefit}</span>
                           </div>
                         ))}
@@ -100,19 +105,19 @@ const ComponentSection = () => {
             </div>
 
             {/* Call to action */}
-            <div className="pt-6">
-              <button className="inline-flex items-center space-x-3 px-8 py-4 bg-black text-white rounded-full 
+            <div className="pt-6 sm:pt-8 text-center sm:text-left">
+              <button className="group inline-flex items-center space-x-2 sm:space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-full 
                                  font-semibold hover:bg-greengrove transition-all duration-300 transform hover:scale-105 
-                                 shadow-lg hover:shadow-xl">
-                <span>Descubre más</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                 shadow-lg hover:shadow-xl text-sm sm:text-base">
+                <span>Descubre más sobre nosotros</span>
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
             </div>
           </div>
 
-          <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
+          <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center mt-12 lg:mt-0">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-greengrove/20 to-transparent rounded-full blur-3xl"></div>
               <img
@@ -130,6 +135,23 @@ const ComponentSection = () => {
                 <FiCheckCircle className="text-white text-lg" />
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="mt-16 sm:mt-20 lg:mt-24">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-greengrove/10 rounded-xl sm:rounded-2xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-greengrove text-lg sm:text-2xl">
+                    {stat.icon}
+                  </div>
+                </div>
+                <div className="text-2xl sm:text-3xl font-bold text-gray-800 mb-1 sm:mb-2">{stat.number}</div>
+                <div className="text-xs sm:text-sm text-gray-600 font-century">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
