@@ -1,6 +1,6 @@
-import React from 'react';
-import fts from '../img/PT1.jpg';
-import ftv from '../img/PT2.jpg';
+
+import fts from '../img/PT1.jpeg';
+import ftv from '../img/PT2.jpeg';
 
 const Team = () => {
   const teamMembers = [

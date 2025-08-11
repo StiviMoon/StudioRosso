@@ -8,7 +8,7 @@ const InicioP1 = () => {
   return (
     <div className="relative">
       {/* Hero Section with Background */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-0">
         {/* Background with overlay */}
         <div className="absolute inset-0">
           <img
@@ -33,10 +33,10 @@ const InicioP1 = () => {
 
               {/* Main Heading */}
               <div className="space-y-4 sm:space-y-6">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-dream font-bold leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-dream leading-tight">
                   Creamos
-                  <span className="block text-greengrove">Experiencias</span>
-                  <span className="block">Digitales Únicas</span>
+                  <span className="block text-white font-semibold">Experiencias</span>
+                  <span className="block text-white font-bold">Digitales Únicas</span>
                 </h1>
                 
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-century text-gray-200 leading-relaxed max-w-2xl">
@@ -111,14 +111,6 @@ const InicioP1 = () => {
                     alt="Studio Rosso Logo"
                     className="w-full h-auto filter brightness-0 invert"
                   />
-                </div>
-
-                {/* Floating Elements - Hidden on mobile for better performance */}
-                <div className="hidden sm:block absolute -top-4 -right-4 w-12 h-12 sm:w-16 sm:h-16 bg-greengrove/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
-                  <FiStar className="text-greengrove text-lg sm:text-xl" />
-                </div>
-                <div className="hidden sm:block absolute -bottom-4 -left-4 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
-                  <FiCheckCircle className="text-white text-base sm:text-lg" />
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Services from '../Components/Services/Services.jsx';
 import CarruselImg from '../Components/CarruselImg.jsx';
 import Trabajos from '../Components/Section/Trabajos.jsx';
@@ -94,12 +94,12 @@ const Servicios = () => {
               Cuéntanos sobre tu proyecto y juntos crearemos algo extraordinario
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
+              <button onClick={() => window.location.href = '/contacto'} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
                                  hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 
                                  shadow-lg hover:shadow-xl">
                 Iniciar proyecto
               </button>
-              <button className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold 
+              <button onClick={() => window.open("https://www.behance.net/gallery/213678865/Portfolio-Design", "_blank") } className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold 
                                  hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105">
                 Ver portafolio
               </button>

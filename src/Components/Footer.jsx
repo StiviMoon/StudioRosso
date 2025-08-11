@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaInstagram, FaTiktok, FaYoutube, FaLinkedin, FaGithub, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import r1 from '../img/Logos/rosso-min.svg';
@@ -46,11 +46,11 @@ const Footer = () => {
                 {/* Social Media */}
                 <div className="flex space-x-4">
                   {[
-                    { icon: FaInstagram, href: "https://www.instagram.com", label: "Instagram" },
-                    { icon: FaTiktok, href: "https://www.tiktok.com", label: "TikTok" },
+                    { icon: FaInstagram, href: "https://www.instagram.com/studiorossoagency?igsh=YzMxMzM2MHN0cDZ1", label: "Instagram" },
+                    { icon: FaTiktok, href: "https://www.tiktok.com/@studio.rosso?_t=ZM-8ym6UCcOZvC&_r=1", label: "TikTok" },
                     { icon: FaYoutube, href: "https://www.youtube.com", label: "YouTube" },
-                    { icon: FaLinkedin, href: "https://www.linkedin.com", label: "LinkedIn" },
-                    { icon: FaGithub, href: "https://www.github.com", label: "GitHub" }
+                    { icon: FaLinkedin, href: "https://www.linkedin.com/in/valentina-reyes-285137335/", label: "LinkedIn" },
+                    { icon: FaGithub, href: "https://www.github.com/stivimoon", label: "GitHub" }
                   ].map((social, index) => (
                     <a
                       key={index}
@@ -137,7 +137,7 @@ const Footer = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-gray-900">Teléfono</p>
-                      <p className="text-sm text-gray-700">+1 (555) 123-4567</p>
+                      <p className="text-sm text-gray-700">+57 319-487-3667</p>
                     </div>
                   </div>
                   
@@ -147,7 +147,7 @@ const Footer = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-gray-900">Email</p>
-                      <p className="text-sm text-gray-700">hola@agenciarosso.com</p>
+                      <p className="text-sm text-gray-700">studiorossoagency@gmail.com</p>
                     </div>
                   </div>
                   
@@ -157,7 +157,7 @@ const Footer = () => {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-gray-900">Ubicación</p>
-                      <p className="text-sm text-gray-700">Ciudad de México, México</p>
+                      <p className="text-sm text-gray-700">Colombia</p>
                     </div>
                   </div>
                 </div>
