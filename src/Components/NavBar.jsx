@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FaArrowRight } from "react-icons/fa";
+import logo from '../img/Logos/rossoL-min.svg';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);  
   const location = useLocation();
 
   // Función para verificar si la ruta es activa
@@ -32,7 +33,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-2xl font-bold text-black group">
           <Link to="/" className="flex items-center space-x-2 hover:text-greengrove transition-colors duration-300">
-            <span className="font-dream">Studio Rosso</span>
+            <img src={logo} alt="Studio Rosso" className="w-[14rem]" />
             <div className="w-2 h-2 bg-greengrove rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
         </div>

@@ -35,8 +35,8 @@ const InicioP1 = () => {
               <div className="space-y-4 sm:space-y-6">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-dream leading-tight">
                   Creamos
-                  <span className="block text-white font-semibold">Experiencias</span>
-                  <span className="block text-white font-bold">Digitales Únicas</span>
+                  <span className="block text-white pb-2">Experiencias</span>
+                  <span className="block text-white ">Digitales Únicas</span>
                 </h1>
                 
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-century text-gray-200 leading-relaxed max-w-2xl">

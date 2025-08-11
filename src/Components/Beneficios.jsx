@@ -135,7 +135,7 @@ const ComponentSection = () => {
               </div>
               
               {/* Minimal Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-greengrove/20 to-greengrove/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30">
+              <div className="absolute top-10 right-16 w-16 h-16 bg-gradient-to-br from-greengrove/20 to-greengrove/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30">
                 <FiStar className="text-greengrove text-xl" />
               </div>
               <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-black/30 to-black/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30">
