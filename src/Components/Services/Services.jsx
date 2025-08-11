@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { 
   FaPaintBrush, 
   FaCode, 
@@ -133,7 +133,7 @@ const Services = () => {
               Cada proyecto es único. Cuéntanos sobre tus necesidades específicas y crearemos una solución personalizada.
             </p>
             <button 
-              onClick={() => handleScroll('contacto')}
+              onClick={() => window.location.href = '/contacto'}
               className="inline-flex items-center space-x-3 px-8 py-4 bg-black text-white rounded-full 
                          font-semibold hover:bg-greengrove transition-all duration-300 transform hover:scale-105 
                          shadow-lg hover:shadow-xl"

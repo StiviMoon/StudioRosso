@@ -66,7 +66,7 @@ const Home = () => {
           </div>
 
           <div className="text-center">
-            <button className="group inline-flex items-center space-x-2 sm:space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-greengrove text-white rounded-full 
+            <button onClick={() => window.location.href = '/nosotros'} className="group inline-flex items-center space-x-2 sm:space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-greengrove text-white rounded-full 
                                font-semibold hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 
                                shadow-lg hover:shadow-xl text-sm sm:text-base">
               <span>Conoce Nuestro Proceso</span>

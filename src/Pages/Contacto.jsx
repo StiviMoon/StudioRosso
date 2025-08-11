@@ -66,12 +66,12 @@ const Contacto = () => {
               <div className="pt-4">
                 <div className="flex flex-wrap items-center gap-4 text-xs text-white font-century">
                   <div className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>Respuesta en 24h</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-white font-century">Respuesta en 24h</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                    <span>Proyectos completados</span>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <span className="text-white font-century">Proyectos completados</span>
                   </div>
                 </div>
               </div>
