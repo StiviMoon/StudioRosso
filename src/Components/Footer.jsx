@@ -76,12 +76,11 @@ const Footer = () => {
                 </h3>
                 <nav className="space-y-3">
                   {[
-                    { to: "/sobre-nosotros", label: "Sobre Nosotros" },
+                    { to: "/", label: "Home" },
                     { to: "/servicios", label: "Servicios" },
-                    { to: "/portafolio", label: "Portafolio" },
+                    { to: "/nosotros", label: "Nosotros" },
                     { to: "/contacto", label: "Contacto" },
-                    { to: "/blog", label: "Blog" },
-                    { to: "/faq", label: "Preguntas Frecuentes" }
+                    { to: "/trabaja", label: "Trabaja con Nosotros" }
                   ].map((link, index) => (
                     <Link
                       key={index}
@@ -104,12 +103,11 @@ const Footer = () => {
                 </h3>
                 <nav className="space-y-3">
                   {[
-                    { to: "/servicios/diseno-web", label: "Diseño Web" },
-                    { to: "/servicios/desarrollo-web", label: "Desarrollo Web" },
-                    { to: "/servicios/branding", label: "Branding" },
-                    { to: "/servicios/marketing-digital", label: "Marketing Digital" },
-                    { to: "/servicios/seo", label: "SEO & SEM" },
-                    { to: "/servicios/consultoria", label: "Consultoría" }
+                    { to: "/servicios", label: "Branding y Estrategia" },
+                    { to: "/servicios", label: "Identidad Visual & Packaging" },
+                    { to: "/servicios", label: "Diseño UX/UI" },
+                    { to: "/servicios", label: "Desarrollo Web" },
+                    { to: "/servicios", label: "Marketing Digital & SEO" }
                   ].map((service, index) => (
                     <Link
                       key={index}
@@ -177,17 +175,17 @@ const Footer = () => {
                 </p>
               </div>
 
-              {/* Legal Links */}
+              {/* Legal Links - Removed non-existent pages */}
               <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm">
-                <Link to="/terminos" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                <span className="text-gray-400 cursor-not-allowed">
                   Términos & Condiciones
-                </Link>
-                <Link to="/privacidad" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                </span>
+                <span className="text-gray-400 cursor-not-allowed">
                   Política de Privacidad
-                </Link>
-                <Link to="/cookies" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+                </span>
+                <span className="text-gray-400 cursor-not-allowed">
                   Política de Cookies
-                </Link>
+                </span>
               </div>
             </div>
           </div>

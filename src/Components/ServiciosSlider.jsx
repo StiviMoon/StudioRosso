@@ -10,7 +10,6 @@ import img6 from "../img/Ser/6.jpg";
 import img7 from "../img/Ser/7.jpg";
 import img8 from "../img/Ser/8.jpg";
 
-
 const logos = [
   { src: img1, alt: "1" },
   { src: img2, alt: "2" },
@@ -20,10 +19,9 @@ const logos = [
   { src: img6, alt: "6" },
   { src: img7, alt: "7" },
   { src: img8, alt: "8" },
-
 ];
 
-const ServiciosSlider = React.memo(() => {
+const ServiciosSlider = React.memo(function ServiciosSlider() {
   return (
     <Slider
       width="420px"
@@ -34,7 +32,12 @@ const ServiciosSlider = React.memo(() => {
     >
       {logos.map((logo, index) => (
         <Slider.Slide key={index}>
-          <img src={logo.src} alt={logo.alt} className="w-[450px] h-[470px] p-1 cursor-pointer pt-10 pb-10  transition-all duration-300 ease-in-out transform hover:scale-100 hover:translate-y-1" loading="lazy" />
+          <img 
+            src={logo.src} 
+            alt={logo.alt} 
+            className="w-[450px] h-[470px] p-1 cursor-pointer pt-10 pb-10 transition-all duration-300 ease-in-out transform hover:scale-100 hover:translate-y-1" 
+            loading="lazy" 
+          />
         </Slider.Slide>
       ))}
     </Slider>

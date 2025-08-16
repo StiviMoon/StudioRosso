@@ -29,17 +29,17 @@ const Navbar = () => {
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
         : 'bg-primary'
     }`}>
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-black group">
+        <div className="text-xl sm:text-2xl font-bold text-black group">
           <Link to="/" className="flex items-center space-x-2 hover:text-greengrove transition-colors duration-300">
-            <img src={logo} alt="Studio Rosso" className="w-[14rem]" />
+            <img src={logo} alt="Studio Rosso" className="w-[10rem] sm:w-[12rem] md:w-[14rem]" />
             <div className="w-2 h-2 bg-greengrove rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
         </div>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 items-center">
+        {/* Desktop Menu - Hidden on mobile and tablet, visible on lg+ */}
+        <ul className="hidden lg:flex space-x-6 xl:space-x-8 items-center">
           {[
             { path: "/", label: "Home" },
             { path: "/servicios", label: "Servicios" },
@@ -69,24 +69,26 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
+        {/* CTA Button - Hidden on mobile, visible on tablet+ */}
+        <div className="hidden sm:block">
           <Link
             to="/contacto"
-            className="group relative px-6 py-3 bg-black text-white rounded-full font-medium
+            className="group relative px-4 sm:px-6 py-2 sm:py-3 bg-black text-white rounded-full text-sm sm:text-base font-medium
                      hover:bg-greengrove hover:text-white transition-all duration-300 
                      transform hover:scale-105 hover:shadow-lg flex items-center space-x-2"
           >
-            <span>Trabaja con nosotros</span>
+            <span className="hidden md:inline">Trabaja con nosotros</span>
+            <span className="md:hidden">Contacto</span>
             <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        {/* Mobile Menu Button - Visible on mobile and tablet */}
+        <div className="lg:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-black focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
           >
             {menuOpen ? (
               <HiX className="text-2xl" />
@@ -97,13 +99,13 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile/Tablet Menu - Hidden on lg+ */}
       <div
         className={`${
           menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-        } md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-white/95 backdrop-blur-md border-t border-gray-100`}
+        } lg:hidden overflow-hidden transition-all duration-500 ease-in-out bg-white/95 backdrop-blur-md border-t border-gray-100`}
       >
-        <ul className="px-6 py-4 space-y-2">
+        <ul className="px-4 sm:px-6 py-4 space-y-2">
           {[
             { path: "/", label: "Home" },
             { path: "/servicios", label: "Servicios" },
