@@ -15,14 +15,19 @@ export default {
 
       },
       fontFamily: {
-        century: ["Century Gothic", ],
-        dream: ['Dream Orphans'],
+        montserrat: ["Montserrat", "Arial", "sans-serif"],
+        dream: ['Dream Orphans', 'Georgia', 'serif'],
       },
       animation: {
         marquee: "marquee 10s linear infinite",  // Animación suave de 20 segundos
+        scroll: "scroll 30s linear infinite", // Nueva animación para logos más suave
       },
       keyframes: {
         marquee: {
+          "0%": { transform: "translateX(0)" }, // Inicio
+          "100%": { transform: "translateX(-50%)" }, // Mueve a la mitad del contenido duplicado
+        },
+        scroll: {
           "0%": { transform: "translateX(0)" }, // Inicio
           "100%": { transform: "translateX(-50%)" }, // Mueve a la mitad del contenido duplicado
         },

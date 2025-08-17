@@ -1,6 +1,7 @@
 
 import { FaArrowRight, FaStar, FaPalette, FaBoxOpen, FaUserFriends, FaCode, FaChartLine, FaMobileAlt, FaCameraRetro } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { navigateToTop } from '../../utils/navigation.js';
 import Card from '../Card.jsx';
 
 const Services = () => {
@@ -28,12 +29,12 @@ const Services = () => {
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-2 bg-greengrove/10 rounded-full text-greengrove text-xs sm:text-sm font-medium mb-4 sm:mb-6">
             <FaStar className="text-xs" />
-            <span className="font-century">Nuestros Servicios</span>
+            <span className="font-montserrat">Nuestros Servicios</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 font-dream px-4">
             Soluciones Creativas para tu Negocio
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-century px-4">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-montserrat px-4">
             Transformamos ideas en experiencias digitales impactantes que conectan con tu audiencia
           </p>
         </div>
@@ -122,11 +123,11 @@ const Services = () => {
             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 font-dream">
               ¿No encuentras lo que buscas?
             </h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 font-century">
+            <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 font-montserrat">
               Cada proyecto es único. Cuéntanos sobre tus necesidades específicas y crearemos una solución personalizada.
             </p>
             <button 
-              onClick={() => navigate('/contacto')}
+              onClick={() => navigateToTop(navigate, '/contacto')}
               className="inline-flex items-center space-x-2 sm:space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-full 
                        font-semibold hover:bg-greengrove transition-all duration-300 transform hover:scale-105 
                        shadow-lg hover:shadow-xl text-sm sm:text-base"

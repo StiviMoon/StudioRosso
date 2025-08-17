@@ -5,9 +5,11 @@ import Contacto from './Pages/Contacto.jsx'
 import Nosotros from './Pages/Nosotros.jsx'
 import NavBar from './Components/NavBar.jsx'
 import Footer from './Components/Footer.jsx'
+import useScrollToTop from './hooks/useScrollToTop.jsx'
 
 function App() {
-
+  // Hook para hacer scroll al top en cada navegación
+  useScrollToTop();
 
   return (
 

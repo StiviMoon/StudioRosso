@@ -38,7 +38,7 @@ const InicioP1 = () => {
                   <span className="block text-white ">Digitales Únicas</span>
                 </h1>
                 
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-century text-gray-200 leading-relaxed max-w-2xl">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-montserrat text-gray-200 leading-relaxed max-w-2xl">
                   Somos un estudio creativo fundado por expertos en desarrollo y diseño. 
                   Transformamos ideas en experiencias digitales que conectan, inspiran y generan resultados.
                 </p>
@@ -48,19 +48,19 @@ const InicioP1 = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-4">
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <FiCheckCircle className="text-greengrove text-lg sm:text-xl flex-shrink-0" />
-                  <span className="font-century text-sm sm:text-base">Desarrollo Web Full Stack</span>
+                  <span className="font-montserrat text-sm sm:text-base">Desarrollo Web Full Stack</span>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <FiCheckCircle className="text-greengrove text-lg sm:text-xl flex-shrink-0" />
-                  <span className="font-century text-sm sm:text-base">Diseño Visual Profesional</span>
+                  <span className="font-montserrat text-sm sm:text-base">Diseño Visual Profesional</span>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <FiCheckCircle className="text-greengrove text-lg sm:text-xl flex-shrink-0" />
-                  <span className="font-century text-sm sm:text-base">Branding & Identidad</span>
+                  <span className="font-montserrat text-sm sm:text-base">Branding & Identidad</span>
                 </div>
                 <div className="flex items-center space-x-2 sm:space-x-3">
                   <FiCheckCircle className="text-greengrove text-lg sm:text-xl flex-shrink-0" />
-                  <span className="font-century text-sm sm:text-base">Estrategia Digital</span>
+                  <span className="font-montserrat text-sm sm:text-base">Estrategia Digital</span>
                 </div>
               </div>
 

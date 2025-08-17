@@ -59,7 +59,7 @@ const ComponentSection = () => {
             ?
           </h2>
           
-          <p className="text-lg sm:text-xl lg:text-2xl font-century text-gray-600 leading-relaxed max-w-4xl mx-auto px-4">
+          <p className="text-lg sm:text-xl lg:text-2xl font-montserrat text-gray-600 leading-relaxed max-w-4xl mx-auto px-4">
             En Studio Rosso, combinamos pasión, creatividad y tecnología para crear soluciones que transformen tu marca. 
             Nuestro equipo de expertos trabaja contigo para alcanzar resultados excepcionales y experiencias memorables.
           </p>
@@ -85,7 +85,7 @@ const ComponentSection = () => {
                       <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 font-dream group-hover:text-greengrove transition-colors duration-300">
                         {feature.title}
                       </h3>
-                      <p className="text-base sm:text-lg lg:text-xl text-gray-600 font-century leading-relaxed">
+                      <p className="text-base sm:text-lg lg:text-xl text-gray-600 font-montserrat leading-relaxed">
                         {feature.description}
                       </p>
                       
@@ -157,7 +157,7 @@ const ComponentSection = () => {
                   </div>
                 </div>
                 <div className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2 sm:mb-3 font-dream">{stat.number}</div>
-                <div className="text-sm sm:text-base text-gray-600 font-century">{stat.label}</div>
+                <div className="text-sm sm:text-base text-gray-600 font-montserrat">{stat.label}</div>
               </div>
             ))}
           </div>

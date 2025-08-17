@@ -29,14 +29,14 @@ const Contacto = () => {
               <div className="space-y-4 sm:space-y-6">
                 <div className="inline-flex items-center space-x-2 px-3 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-4">
                   <FiHeart className="text-white text-sm" />
-                  <span className="text-xs font-medium text-white font-century">Studio Rosso</span>
+                  <span className="text-xs font-medium text-white font-montserrat">Studio Rosso</span>
                 </div>
                 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-dream">
                   Nos inspiran 
                   <span className="block text-white">las historias</span>
                 </h2>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl w-full lg:w-[90%] text-white leading-relaxed font-century">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl w-full lg:w-[90%] text-white leading-relaxed font-montserrat">
                   Cuéntanos todo sobre la tuya y juntos crearemos algo extraordinario
                 </p>
               </div>
@@ -47,7 +47,7 @@ const Contacto = () => {
                   <FiUsers className="text-white text-lg" />
                   <h4 className="text-lg font-semibold text-white font-dream">Somos personas reales</h4>
                 </div>
-                <p className="text-sm text-white/90 font-century leading-relaxed">
+                <p className="text-sm text-white/90 font-montserrat leading-relaxed">
                   No somos una gran corporación. Somos Johan y Valentina, dos jóvenes apasionados 
                   que creemos en el poder de las marcas bien hechas. Tu proyecto será nuestro proyecto.
                 </p>
@@ -60,8 +60,8 @@ const Contacto = () => {
                     <FiMail className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-xs text-white font-century">Email</p>
-                    <p className="font-semibold text-xs sm:text-sm font-century">studiorossoagency@gmail.com</p>
+                    <p className="text-xs text-white font-montserrat">Email</p>
+                    <p className="font-semibold text-xs sm:text-sm font-montserrat">studiorossoagency@gmail.com</p>
                   </div>
                 </div>
 
@@ -70,8 +70,8 @@ const Contacto = () => {
                     <FiPhone className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-xs text-white font-century">Teléfono</p>
-                    <p className="font-semibold text-xs sm:text-sm font-century">+57 3194873667</p>
+                    <p className="text-xs text-white font-montserrat">Teléfono</p>
+                    <p className="font-semibold text-xs sm:text-sm font-montserrat">+57 3194873667</p>
                   </div>
                 </div>
 
@@ -80,26 +80,26 @@ const Contacto = () => {
                     <FiMapPin className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-xs text-white font-century">Ubicación</p>
-                    <p className="font-semibold text-xs sm:text-sm font-century">Colombia</p>
+                    <p className="text-xs text-white font-montserrat">Ubicación</p>
+                    <p className="font-semibold text-xs sm:text-sm font-montserrat">Colombia</p>
                   </div>
                 </div>
               </div>
 
               {/* Trust indicators - Más honestos y cercanos */}
               <div className="pt-4 sm:pt-6">
-                <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-white font-century">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-white font-montserrat">
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
-                    <span className="text-white font-century">Respuesta en 24h</span>
+                    <span className="text-white font-montserrat">Respuesta en 24h</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
-                    <span className="text-white font-century">Sin compromisos</span>
+                    <span className="text-white font-montserrat">Sin compromisos</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
-                    <span className="text-white font-century">Conversación directa</span>
+                    <span className="text-white font-montserrat">Conversación directa</span>
                   </div>
                 </div>
               </div>

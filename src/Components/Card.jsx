@@ -30,7 +30,7 @@ const Card = ({ title, description, icon, targetId, handleScroll }) => {
                        group-hover:text-gray-900 transition-colors duration-300">
           {title}
         </h2>
-        <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-century 
+        <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-montserrat 
                      group-hover:text-gray-700 transition-colors duration-300">
           {description}
         </p>

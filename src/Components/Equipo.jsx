@@ -26,7 +26,7 @@ const Team = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-dream font-bold text-greengrove capitalize mb-4 sm:mb-6">
             Nuestros Fundadores
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 font-montserrat">
             Conoce al equipo que está transformando la manera de crear experiencias digitales únicas
           </p>
         </div>
@@ -44,7 +44,7 @@ const Team = () => {
               </div>
 
               <div className="mt-4 sm:mt-6 text-center lg:text-left">
-                <h2 className="text-xl sm:text-2xl font-century font-bold text-gray-800 mb-2">
+                <h2 className="text-xl sm:text-2xl font-montserrat font-bold text-gray-800 mb-2">
                   {member.name}
                 </h2>
                 
@@ -52,11 +52,11 @@ const Team = () => {
                   {member.role}
                 </h3>
                 
-                <p className="text-xs sm:text-sm text-gray-500 mb-2 sm:mb-3 font-medium">
+                <p className="text-xs sm:text-sm text-gray-500 mb-2 sm:mb-3 font-medium font-montserrat">
                   {member.specialization}
                 </p>
                 
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-montserrat">
                   {member.description}
                 </p>
               </div>
@@ -69,7 +69,7 @@ const Team = () => {
             <h3 className="text-xl sm:text-2xl font-dream font-bold text-greengrove mb-4">
               Nuestra Visión
             </h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-montserrat">
               Como fundadores de Studio Rosso, combinamos la excelencia técnica con la creatividad visual 
               para crear soluciones digitales que no solo funcionan perfectamente, sino que también 
               cautivan y conectan con tu audiencia. Cada proyecto es una oportunidad para innovar 

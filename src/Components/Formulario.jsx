@@ -114,7 +114,7 @@ export default function ContactForm() {
               <FaCheck className="text-green-600 text-2xl" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2 font-dream">¡Mensaje Enviado!</h3>
-            <p className="text-gray-600 font-century">Gracias por contactarnos. Nos pondremos en contacto contigo pronto.</p>
+            <p className="text-gray-600 font-montserrat">Gracias por contactarnos. Nos pondremos en contacto contigo pronto.</p>
           </div>
         </div>
       )}
@@ -125,15 +125,15 @@ export default function ContactForm() {
           <h2 className="text-2xl font-bold text-gray-900 mb-2 font-dream">
             ¡Cuéntanos tu proyecto!
           </h2>
-          <p className="text-gray-600 font-century">
-            Juntos haremos realidad tu visión digital
-          </p>
+                      <p className="text-gray-600 font-montserrat">
+              Juntos haremos realidad tu visión digital
+            </p>
           
           {/* Progress Bar */}
           <div className="mt-4">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-century text-gray-600">Paso {currentStep} de 3</span>
-              <span className="text-sm font-century text-gray-600">{Math.round((currentStep / 3) * 100)}%</span>
+              <span className="text-sm font-montserrat text-gray-600">Paso {currentStep} de 3</span>
+              <span className="text-sm font-montserrat text-gray-600">{Math.round((currentStep / 3) * 100)}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
@@ -151,12 +151,12 @@ export default function ContactForm() {
             <div className="space-y-4">
               <div className="text-center mb-4">
                 <h3 className="text-lg font-bold text-gray-900 mb-1 font-dream">Información Personal</h3>
-                <p className="text-gray-600 font-century text-sm">Comencemos con tus datos básicos</p>
+                <p className="text-gray-600 font-montserrat text-sm">Comencemos con tus datos básicos</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-century flex items-center space-x-2">
+                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                     <FaUser className="text-gray-600 text-sm" />
                     <span>Nombres</span>
                   </label>
@@ -164,16 +164,16 @@ export default function ContactForm() {
                     {...form.register('nombres')}
                     className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg 
                              focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 
-                             transition-all duration-200 text-gray-800 font-century text-sm"
+                             transition-all duration-200 text-gray-800 font-montserrat text-sm"
                     placeholder="Tu nombre"
                   />
                   {form.formState.errors.nombres && (
-                    <p className="text-red-500 text-xs mt-1 font-century">{form.formState.errors.nombres.message}</p>
+                    <p className="text-red-500 text-xs mt-1 font-montserrat">{form.formState.errors.nombres.message}</p>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-century flex items-center space-x-2">
+                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                     <FaUser className="text-gray-600 text-sm" />
                     <span>Apellidos</span>
                   </label>
@@ -181,18 +181,18 @@ export default function ContactForm() {
                     {...form.register('apellidos')}
                     className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg 
                              focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 
-                             transition-all duration-200 text-gray-800 font-century text-sm"
+                             transition-all duration-200 text-gray-800 font-montserrat text-sm"
                     placeholder="Tus apellidos"
                   />
                   {form.formState.errors.apellidos && (
-                    <p className="text-red-500 text-xs mt-1 font-century">{form.formState.errors.apellidos.message}</p>
+                    <p className="text-red-500 text-xs mt-1 font-montserrat">{form.formState.errors.apellidos.message}</p>
                   )}
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-century flex items-center space-x-2">
+                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                     <FaEnvelope className="text-gray-600 text-sm" />
                     <span>Email</span>
                   </label>
@@ -201,16 +201,16 @@ export default function ContactForm() {
                     {...form.register('correo')}
                     className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg 
                              focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 
-                             transition-all duration-200 text-gray-800 font-century text-sm"
+                             transition-all duration-200 text-gray-800 font-montserrat text-sm"
                     placeholder="tu@email.com"
                   />
                   {form.formState.errors.correo && (
-                    <p className="text-red-500 text-xs mt-1 font-century">{form.formState.errors.correo.message}</p>
+                    <p className="text-red-500 text-xs mt-1 font-montserrat">{form.formState.errors.correo.message}</p>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-century flex items-center space-x-2">
+                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                     <FaPhone className="text-gray-600 text-sm" />
                     <span>Teléfono</span>
                   </label>
@@ -218,17 +218,17 @@ export default function ContactForm() {
                     {...form.register('numeroContacto')}
                     className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg 
                              focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 
-                             transition-all duration-200 text-gray-800 font-century text-sm"
+                             transition-all duration-200 text-gray-800 font-montserrat text-sm"
                     placeholder="Tu número"
                   />
                   {form.formState.errors.numeroContacto && (
-                    <p className="text-red-500 text-xs mt-1 font-century">{form.formState.errors.numeroContacto.message}</p>
+                    <p className="text-red-500 text-xs mt-1 font-montserrat">{form.formState.errors.numeroContacto.message}</p>
                   )}
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-800 mb-2 font-century flex items-center space-x-2">
+                <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                   <FaMapMarkerAlt className="text-gray-600 text-sm" />
                   <span>Ciudad</span>
                 </label>
@@ -236,11 +236,11 @@ export default function ContactForm() {
                   {...form.register('ciudad')}
                   className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg 
                            focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 
-                           transition-all duration-200 text-gray-800 font-century text-sm"
+                           transition-all duration-200 text-gray-800 font-montserrat text-sm"
                   placeholder="¿En qué ciudad te encuentras?"
                 />
                 {form.formState.errors.ciudad && (
-                  <p className="text-red-500 text-xs mt-1 font-century">{form.formState.errors.ciudad.message}</p>
+                  <p className="text-red-500 text-xs mt-1 font-montserrat">{form.formState.errors.ciudad.message}</p>
                 )}
               </div>
 
@@ -248,7 +248,7 @@ export default function ContactForm() {
                 <button
                   type="button"
                   onClick={nextStep}
-                  className="px-6 py-2 bg-black text-white rounded-lg font-semibold font-century text-sm
+                  className="px-6 py-2 bg-black text-white rounded-lg font-semibold font-montserrat text-sm
                            hover:bg-gray-900 transition-all duration-200 transform hover:scale-105
                            shadow-lg hover:shadow-xl flex items-center space-x-2"
                 >
@@ -266,12 +266,12 @@ export default function ContactForm() {
             <div className="space-y-4">
               <div className="text-center mb-4">
                 <h3 className="text-lg font-bold text-gray-900 mb-1 font-dream">Detalles del Proyecto</h3>
-                <p className="text-gray-600 font-century text-sm">Cuéntanos más sobre lo que necesitas</p>
+                <p className="text-gray-600 font-montserrat text-sm">Cuéntanos más sobre lo que necesitas</p>
               </div>
 
               {/* Services */}
               <div>
-                <label className="block text-sm font-semibold text-gray-800 mb-3 font-century flex items-center space-x-2">
+                <label className="block text-sm font-semibold text-gray-800 mb-3 font-montserrat flex items-center space-x-2">
                   <FaLightbulb className="text-gray-600 text-sm" />
                   <span>Servicios de interés</span>
                 </label>
@@ -290,7 +290,7 @@ export default function ContactForm() {
                           className="sr-only"
                         />
                         <span className="text-lg">{service.icon}</span>
-                        <span className={`text-xs font-medium transition-colors duration-200 font-century
+                        <span className={`text-xs font-medium transition-colors duration-200 font-montserrat
                                         ${form.watch('servicios')?.includes(service.id)
                                           ? 'text-black'
                                           : 'text-gray-700 group-hover:text-gray-900'
@@ -302,13 +302,13 @@ export default function ContactForm() {
                   ))}
                 </div>
                 {form.formState.errors.servicios && (
-                  <p className="text-red-500 text-xs mt-1 font-century">{form.formState.errors.servicios.message}</p>
+                  <p className="text-red-500 text-xs mt-1 font-montserrat">{form.formState.errors.servicios.message}</p>
                 )}
               </div>
 
               {/* Budget */}
               <div>
-                <label className="block text-sm font-semibold text-gray-800 mb-2 font-century flex items-center space-x-2">
+                <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                   <FaStar className="text-gray-600 text-sm" />
                   <span>Rango de presupuesto</span>
                 </label>
@@ -316,7 +316,7 @@ export default function ContactForm() {
                   {...form.register('presupuesto')}
                   className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg 
                            focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 
-                           transition-all duration-200 text-gray-800 font-century text-sm"
+                           transition-all duration-200 text-gray-800 font-montserrat text-sm"
                 >
                   <option value="">Selecciona un rango</option>
                   {budgetRanges.map((range) => (
@@ -326,7 +326,7 @@ export default function ContactForm() {
                   ))}
                 </select>
                 {form.formState.errors.presupuesto && (
-                  <p className="text-red-500 text-xs mt-1 font-century">{form.formState.errors.presupuesto.message}</p>
+                  <p className="text-red-500 text-xs mt-1 font-montserrat">{form.formState.errors.presupuesto.message}</p>
                 )}
               </div>
 
@@ -334,7 +334,7 @@ export default function ContactForm() {
                 <button
                   type="button"
                   onClick={prevStep}
-                  className="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold font-century text-sm
+                  className="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold font-montserrat text-sm
                            hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 flex items-center space-x-2"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -345,7 +345,7 @@ export default function ContactForm() {
                 <button
                   type="button"
                   onClick={nextStep}
-                  className="px-6 py-2 bg-black text-white rounded-lg font-semibold font-century text-sm
+                  className="px-6 py-2 bg-black text-white rounded-lg font-semibold font-montserrat text-sm
                            hover:bg-gray-900 transition-all duration-200 transform hover:scale-105
                            shadow-lg hover:shadow-xl flex items-center space-x-2"
                 >
@@ -363,11 +363,11 @@ export default function ContactForm() {
             <div className="space-y-4">
               <div className="text-center mb-4">
                 <h3 className="text-lg font-bold text-gray-900 mb-1 font-dream">Tu Proyecto</h3>
-                <p className="text-gray-600 font-century text-sm">Cuéntanos los detalles de tu idea</p>
+                <p className="text-gray-600 font-montserrat text-sm">Cuéntanos los detalles de tu idea</p>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-800 mb-2 font-century flex items-center space-x-2">
+                <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                   <FaLightbulb className="text-gray-600 text-sm" />
                   <span>Descripción del proyecto</span>
                 </label>
@@ -375,12 +375,12 @@ export default function ContactForm() {
                   {...form.register('idea')}
                   className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg 
                            focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 
-                           transition-all duration-200 text-gray-800 font-century text-sm resize-none"
+                           transition-all duration-200 text-gray-800 font-montserrat text-sm resize-none"
                   placeholder="Cuéntanos sobre tu idea, objetivos, público objetivo, referencias que te gusten..."
                   rows="4"
                 />
                 {form.formState.errors.idea && (
-                  <p className="text-red-500 text-xs mt-1 font-century">{form.formState.errors.idea.message}</p>
+                  <p className="text-red-500 text-xs mt-1 font-montserrat">{form.formState.errors.idea.message}</p>
                 )}
               </div>
 
@@ -388,15 +388,15 @@ export default function ContactForm() {
               <div className="bg-gray-50 rounded-lg p-3 space-y-2">
                 <div className="flex items-center space-x-2">
                   <FaClock className="text-green-600 text-xs" />
-                  <span className="text-xs font-century text-gray-700">Respuesta en 24 horas</span>
+                  <span className="text-xs font-montserrat text-gray-700">Respuesta en 24 horas</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <FaShieldAlt className="text-green-600 text-xs" />
-                  <span className="text-xs font-century text-gray-700">Información segura y confidencial</span>
+                  <span className="text-xs font-montserrat text-gray-700">Información segura y confidencial</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <FaStar className="text-green-600 text-xs" />
-                  <span className="text-xs font-century text-gray-700">Consulta gratuita sin compromiso</span>
+                  <span className="text-xs font-montserrat text-gray-700">Consulta gratuita sin compromiso</span>
                 </div>
               </div>
 
@@ -404,7 +404,7 @@ export default function ContactForm() {
                 <button
                   type="button"
                   onClick={prevStep}
-                  className="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold font-century text-sm
+                  className="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold font-montserrat text-sm
                            hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 flex items-center space-x-2"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -415,7 +415,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group px-6 py-2 bg-black text-white rounded-lg font-semibold font-century text-sm
+                  className="group px-6 py-2 bg-black text-white rounded-lg font-semibold font-montserrat text-sm
                            hover:bg-gray-900 transition-all duration-200 transform hover:scale-105
                            disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
                            shadow-lg hover:shadow-xl flex items-center space-x-2"

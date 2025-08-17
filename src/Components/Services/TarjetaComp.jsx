@@ -2,7 +2,7 @@ import React from "react";
 
 const TarjetaComp = ({ title, description, image }) => {
   return (
-    <div className=" shadow-md rounded-lg overflow-hidden border border-gray-200 font-century">
+    <div className=" shadow-md rounded-lg overflow-hidden border border-gray-200 font-montserrat">
       <img
         src={image}
         alt={title}

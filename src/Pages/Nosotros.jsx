@@ -3,6 +3,7 @@ import Services from "../Components/Services/Services";
 import SEO from '../Components/SEO.jsx';
 import { FiHeart, FiUsers, FiTarget, FiArrowRight } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
+import { navigateToTop } from '../utils/navigation.js';
 
 const Nosotros = () => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ const Nosotros = () => {
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center text-greengrove mb-6 sm:mb-8 font-dream px-4">
             Sobre Nosotros
           </h2>
-          <p className="text-center text-gray-700 leading-relaxed text-lg sm:text-xl md:text-2xl font-century px-4 max-w-5xl mx-auto">
+          <p className="text-center text-gray-700 leading-relaxed text-lg sm:text-xl md:text-2xl font-montserrat px-4 max-w-5xl mx-auto">
             Somos <strong>Johan y Valentina</strong>, dos jóvenes apasionados que creemos que el diseño 
             y la tecnología pueden cambiar el mundo. Studio Rosso nació de nuestra convicción de que 
             cada marca tiene una historia única que merece ser contada de manera extraordinaria.
@@ -40,8 +41,8 @@ const Nosotros = () => {
                 <FiUsers className="text-greengrove text-3xl" />
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-greengrove font-dream">Johan Rodríguez</h3>
-              <p className="text-lg text-gray-600 font-century mb-4">Full Stack Developer</p>
-              <p className="text-gray-700 font-century leading-relaxed">
+              <p className="text-lg text-gray-600 font-montserrat mb-4">Full Stack Developer</p>
+              <p className="text-gray-700 font-montserrat leading-relaxed">
                 El cerebro técnico del equipo. Convierte ideas complejas en código limpio y funcional. 
                 Su pasión por la tecnología se refleja en cada línea de código que escribe.
               </p>
@@ -54,8 +55,8 @@ const Nosotros = () => {
                 <FiHeart className="text-greengrove text-3xl" />
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-greengrove font-dream">Valentina Reyes</h3>
-              <p className="text-lg text-gray-600 font-century mb-4">Visual Communicator</p>
-              <p className="text-gray-700 font-century leading-relaxed">
+              <p className="text-lg text-gray-600 font-montserrat mb-4">Visual Communicator</p>
+              <p className="text-gray-700 font-montserrat leading-relaxed">
                 La artista visual que da vida a las ideas. Su creatividad y sensibilidad estética 
                 transforman conceptos abstractos en experiencias visuales que conectan emocionalmente.
               </p>
@@ -72,7 +73,7 @@ const Nosotros = () => {
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 font-dream">Nuestra Visión</h3>
             </div>
-            <p className="text-gray-700 leading-relaxed font-century text-lg">
+            <p className="text-gray-700 leading-relaxed font-montserrat text-lg">
               Creemos en el poder transformador del diseño bien hecho. No solo queremos que tu marca 
               se vea bien, queremos que genere conexiones reales con tu audiencia y impulse el 
               crecimiento de tu negocio.
@@ -86,7 +87,7 @@ const Nosotros = () => {
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 font-dream">Nuestra Misión</h3>
             </div>
-            <p className="text-gray-700 leading-relaxed font-century text-lg">
+            <p className="text-gray-700 leading-relaxed font-montserrat text-lg">
               Ayudar a emprendedores y pequeñas empresas a construir marcas auténticas que 
               reflejen su verdadera esencia y conecten con su audiencia de manera significativa.
             </p>
@@ -99,7 +100,7 @@ const Nosotros = () => {
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 font-dream">
               Nuestro Proceso
             </h3>
-            <p className="text-gray-600 font-century text-lg">
+            <p className="text-gray-600 font-montserrat text-lg">
               Simple, transparente y sin sorpresas. Así es como trabajamos juntos.
             </p>
           </div>
@@ -110,7 +111,7 @@ const Nosotros = () => {
                 1
               </div>
               <h4 className="text-lg font-semibold text-gray-800 mb-2 font-dream">Conversación</h4>
-              <p className="text-gray-600 font-century text-sm">
+              <p className="text-gray-600 font-montserrat text-sm">
                 Nos tomamos un café (virtual o presencial) y nos cuentas todo sobre tu proyecto
               </p>
             </div>
@@ -120,7 +121,7 @@ const Nosotros = () => {
                 2
               </div>
               <h4 className="text-lg font-semibold text-gray-800 mb-2 font-dream">Propuesta</h4>
-              <p className="text-gray-600 font-century text-sm">
+              <p className="text-gray-600 font-montserrat text-sm">
                 Te presentamos un plan claro, sin tecnicismos, con fechas y precios transparentes
               </p>
             </div>
@@ -130,7 +131,7 @@ const Nosotros = () => {
                 3
               </div>
               <h4 className="text-lg font-semibold text-gray-800 mb-2 font-dream">Trabajo</h4>
-              <p className="text-gray-600 font-century text-sm">
+              <p className="text-gray-600 font-montserrat text-sm">
                 Nos ponemos manos a la obra. Te mantenemos informado en cada paso del proceso
               </p>
             </div>
@@ -140,7 +141,7 @@ const Nosotros = () => {
                 4
               </div>
               <h4 className="text-lg font-semibold text-gray-800 mb-2 font-dream">Lanzamiento</h4>
-              <p className="text-gray-600 font-century text-sm">
+              <p className="text-gray-600 font-montserrat text-sm">
                 Tu proyecto cobra vida. Celebramos juntos y seguimos apoyándote en el crecimiento
               </p>
             </div>
@@ -153,11 +154,11 @@ const Nosotros = () => {
             <h3 className="text-2xl sm:text-3xl font-bold mb-4 font-dream">
               ¿Te gusta cómo pensamos?
             </h3>
-            <p className="text-lg sm:text-xl mb-6 font-century opacity-90">
+            <p className="text-lg sm:text-xl mb-6 font-montserrat opacity-90">
               Cuéntanos sobre tu proyecto y veamos cómo podemos ayudarte a hacerlo realidad
             </p>
             <button 
-              onClick={() => navigate('/contacto')} 
+              onClick={() => navigateToTop(navigate, '/contacto')} 
               className="group inline-flex items-center space-x-2 px-8 py-4 bg-white text-greengrove rounded-full 
                        font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 
                        shadow-lg text-lg"

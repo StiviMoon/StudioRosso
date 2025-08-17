@@ -1,0 +1,44 @@
+/* Fuentes personalizadas para Studio Rosso */
+
+/* Configuración de fuentes para Tailwind */
+/* Las fuentes se cargan desde archivos locales */
+
+/* Dream Orphans - Para títulos */
+@font-face {
+  font-family: 'Dream Orphans';
+  src: url('/fonts/Dream Orphans.otf') format('opentype'),
+       url('/fonts/DreamOrphans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Dream Orphans Bold - Para títulos destacados */
+@font-face {
+  font-family: 'Dream Orphans';
+  src: url('/fonts/Dream Orphans Bd.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Dream Orphans Italic - Para títulos con estilo */
+@font-face {
+  font-family: 'Dream Orphans';
+  src: url('/fonts/Dream Orphans It.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Montserrat - Para textos */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
+       local('Arial'),
+       local('Helvetica'),
+       local('sans-serif');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} 

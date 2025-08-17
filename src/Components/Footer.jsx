@@ -38,7 +38,7 @@ const Footer = () => {
                 {/* Description */}
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold text-gray-900">Agencia Rosso</h3>
-                  <p className="text-sm leading-relaxed text-gray-700 max-w-xs">
+                  <p className="text-sm leading-relaxed text-gray-700 max-w-xs font-montserrat">
                     Somos una agencia de diseño y desarrollo web enfocada en crear experiencias digitales innovadoras y marcas impactantes que transforman negocios.
                   </p>
                 </div>

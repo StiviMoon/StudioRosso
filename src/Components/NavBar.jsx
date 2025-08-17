@@ -12,6 +12,21 @@ const Navbar = () => {
   // Función para verificar si la ruta es activa
   const isActive = (path) => location.pathname === path;
 
+  // Función para hacer scroll al top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  // Función para cerrar menú y hacer scroll al top
+  const handleNavClick = () => {
+    setMenuOpen(false);
+    scrollToTop();
+  };
+
   // Effect para detectar scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +39,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`font-century fixed w-full top-0 z-50 transition-all duration-300 ${
+    <nav className={`font-montserrat fixed w-full top-0 z-50 transition-all duration-300 ${
       scrolled 
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
         : 'bg-primary'
@@ -32,7 +47,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-xl sm:text-2xl font-bold text-black group">
-          <Link to="/" className="flex items-center space-x-2 hover:text-greengrove transition-colors duration-300">
+          <Link to="/" onClick={scrollToTop} className="flex items-center space-x-2 hover:text-greengrove transition-colors duration-300">
             <img src={logo} alt="Studio Rosso" className="w-[10rem] sm:w-[12rem] md:w-[14rem]" />
             <div className="w-2 h-2 bg-greengrove rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
@@ -49,6 +64,7 @@ const Navbar = () => {
             <li key={index}>
               <Link
                 to={item.path}
+                onClick={scrollToTop}
                 className={`relative font-medium transition-all duration-300 pb-2 ${
                   isActive(item.path)
                     ? "text-greengrove"
@@ -73,6 +89,7 @@ const Navbar = () => {
         <div className="hidden sm:block">
           <Link
             to="/contacto"
+            onClick={scrollToTop}
             className="group relative px-4 sm:px-6 py-2 sm:py-3 bg-black text-white rounded-full text-sm sm:text-base font-medium
                      hover:bg-greengrove hover:text-white transition-all duration-300 
                      transform hover:scale-105 hover:shadow-lg flex items-center space-x-2"
@@ -115,12 +132,12 @@ const Navbar = () => {
             <li key={index}>
               <Link
                 to={item.path}
+                onClick={handleNavClick}
                 className={`block py-3 px-4 rounded-lg font-medium transition-all duration-200 ${
                   isActive(item.path) 
                     ? "text-greengrove bg-greengrove/10" 
                     : "text-black hover:text-greengrove hover:bg-gray-50"
                 }`}
-                onClick={() => setMenuOpen(false)}
               >
                 {item.label}
               </Link>
@@ -129,9 +146,9 @@ const Navbar = () => {
           <li className="pt-4">
             <Link
               to="/contacto"
+              onClick={handleNavClick}
               className="block w-full text-center py-3 px-6 bg-black text-white rounded-full font-medium
                        hover:bg-greengrove transition-all duration-300 transform hover:scale-105"
-              onClick={() => setMenuOpen(false)}
             >
               ¡Empezar Proyecto!
             </Link>

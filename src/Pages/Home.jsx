@@ -6,6 +6,7 @@ import Team from '../Components/Equipo.jsx'
 import SEO from '../Components/SEO.jsx'
 import { FiArrowRight, FiStar, FiTrendingUp, FiHeart, FiZap } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
+import { navigateToTop } from '../utils/navigation.js';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -38,20 +39,20 @@ const Home = () => {
               </span>
             </h2>
             
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-century text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12 px-4">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-montserrat text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12 px-4">
               <strong>Studio Rosso:</strong> diseño + tecnología para negocios que quieren crecer.
             </p>
 
             {/* Botones claros */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <button onClick={() => navigate('/servicios')} className="group inline-flex items-center space-x-3 px-8 py-4 bg-greengrove text-white rounded-full 
+              <button onClick={() => navigateToTop(navigate, '/servicios')} className="group inline-flex items-center space-x-3 px-8 py-4 bg-greengrove text-white rounded-full 
                                font-semibold hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 
                                shadow-lg hover:shadow-xl text-base sm:text-lg">
                 <span>Explorar Servicios</span>
                 <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
               
-              <button onClick={() => navigate('/contacto')} className="group inline-flex items-center space-x-3 px-8 py-4 border-2 border-greengrove text-greengrove rounded-full 
+              <button onClick={() => navigateToTop(navigate, '/contacto')} className="group inline-flex items-center space-x-3 px-8 py-4 border-2 border-greengrove text-greengrove rounded-full 
                                font-semibold hover:bg-greengrove hover:text-white transition-all duration-300 transform hover:scale-105 
                                text-base sm:text-lg">
                 <span>Iniciar tu Proyecto</span>
@@ -69,7 +70,7 @@ const Home = () => {
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-dream text-gray-800 mb-6 sm:mb-8">
               Lo hacemos simple
             </h3>
-            <p className="text-lg sm:text-xl md:text-2xl font-century text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl font-montserrat text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Tú tienes una idea, nosotros la llevamos al siguiente nivel. Desde el branding hasta tu web, 
               te ayudamos a construir una marca que conecta con clientes y genera resultados.
             </p>
@@ -81,7 +82,7 @@ const Home = () => {
                 <FiHeart className="text-greengrove text-3xl" />
               </div>
               <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 font-dream">Branding & Diseño Visual</h4>
-              <p className="text-base sm:text-lg text-gray-600 font-century leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 font-montserrat leading-relaxed">
                 Dale identidad a tu negocio
               </p>
             </div>
@@ -91,7 +92,7 @@ const Home = () => {
                 <FiZap className="text-greengrove text-3xl" />
               </div>
               <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 font-dream">Desarrollo Web</h4>
-              <p className="text-base sm:text-lg text-gray-600 font-century leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 font-montserrat leading-relaxed">
                 Tu vitrina digital, moderna y funcional
               </p>
             </div>
@@ -101,7 +102,7 @@ const Home = () => {
                 <FiTrendingUp className="text-greengrove text-3xl" />
               </div>
               <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 font-dream">Estrategia & SEO</h4>
-              <p className="text-base sm:text-lg text-gray-600 font-century leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 font-montserrat leading-relaxed">
                 Haz que te encuentren y te recuerden
               </p>
             </div>
@@ -124,7 +125,7 @@ const Home = () => {
                 1
               </div>
               <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 font-dream">Escuchamos tu historia</h4>
-              <p className="text-base sm:text-lg text-gray-600 font-century leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 font-montserrat leading-relaxed">
                 Entendemos tu marca, metas y retos
               </p>
             </div>
@@ -134,7 +135,7 @@ const Home = () => {
                 2
               </div>
               <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 font-dream">Damos forma a tu visión</h4>
-              <p className="text-base sm:text-lg text-gray-600 font-century leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 font-montserrat leading-relaxed">
                 Con diseño estratégico y tecnología moderna
               </p>
             </div>
@@ -144,7 +145,7 @@ const Home = () => {
                 3
               </div>
               <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 font-dream">Creamos impacto</h4>
-              <p className="text-base sm:text-lg text-gray-600 font-century leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 font-montserrat leading-relaxed">
                 Lanzamos soluciones que hacen crecer tu negocio
               </p>
             </div>
@@ -160,7 +161,7 @@ const Home = () => {
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-dream text-gray-800 mb-6 sm:mb-8">
                 ¿Por qué Studio Rosso?
               </h3>
-              <p className="text-lg sm:text-xl md:text-2xl font-century text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl font-montserrat text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 Porque somos jóvenes, frescos y hablamos tu mismo idioma. No creemos en plantillas: 
                 cada proyecto es tan único como tu marca.
               </p>
@@ -177,19 +178,19 @@ const Home = () => {
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-greengrove rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base sm:text-lg text-gray-600 font-century">Diseño auténtico, no genérico</p>
+                      <p className="text-base sm:text-lg text-gray-600 font-montserrat">Diseño auténtico, no genérico</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-greengrove rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base sm:text-lg text-gray-600 font-century">Tecnología moderna y escalable</p>
+                      <p className="text-base sm:text-lg text-gray-600 font-montserrat">Tecnología moderna y escalable</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-greengrove rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base sm:text-lg text-gray-600 font-century">Estrategias pensadas para crecer, no solo verse bonitas</p>
+                      <p className="text-base sm:text-lg text-gray-600 font-montserrat">Estrategias pensadas para crecer, no solo verse bonitas</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-greengrove rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-base sm:text-lg text-gray-600 font-century">Comunicación cercana y transparente</p>
+                      <p className="text-base sm:text-lg text-gray-600 font-montserrat">Comunicación cercana y transparente</p>
                     </div>
                   </div>
                 </div>
@@ -204,18 +205,18 @@ const Home = () => {
                   <div className="space-y-4">
                     <div className="text-center">
                       <h5 className="font-bold text-greengrove font-dream">Johan Rodríguez</h5>
-                      <p className="text-sm text-gray-600 font-century">Full Stack Developer</p>
-                      <p className="text-xs text-gray-500 font-century mt-1">El que convierte ideas en código y webs que funcionan</p>
+                      <p className="text-sm text-gray-600 font-montserrat">Full Stack Developer</p>
+                      <p className="text-xs text-gray-500 font-montserrat mt-1">El que convierte ideas en código y webs que funcionan</p>
                     </div>
                     
                     <div className="text-center">
                       <h5 className="font-bold text-greengrove font-dream">Valentina Reyes</h5>
-                      <p className="text-sm text-gray-600 font-century">Visual Communicator</p>
-                      <p className="text-xs text-gray-500 font-century mt-1">La mente detrás del diseño que conecta y emociona</p>
+                      <p className="text-sm text-gray-600 font-montserrat">Visual Communicator</p>
+                      <p className="text-xs text-gray-500 font-montserrat mt-1">La mente detrás del diseño que conecta y emociona</p>
                     </div>
                   </div>
                   
-                  <p className="text-sm text-gray-600 font-century">
+                  <p className="text-sm text-gray-600 font-montserrat">
                     Somos jóvenes, apasionados y creemos en el poder de las marcas bien hechas.
                   </p>
                 </div>
@@ -232,7 +233,7 @@ const Home = () => {
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-dream text-gray-800 mb-6 sm:mb-8">
               Ya hemos trabajado con proyectos locales y startups que confiaron en nosotros
             </h3>
-            <p className="text-lg sm:text-xl md:text-2xl font-century text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl font-montserrat text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Hoy queremos ayudarte a ti a dar el siguiente paso.
             </p>
           </div>
@@ -240,15 +241,15 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold text-greengrove font-dream mb-2">15+</div>
-              <div className="text-base sm:text-lg text-gray-600 font-century">Proyectos Completados</div>
+              <div className="text-base sm:text-lg text-gray-600 font-montserrat">Proyectos Completados</div>
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold text-greengrove font-dream mb-2">100%</div>
-              <div className="text-base sm:text-lg text-gray-600 font-century">Clientes Satisfechos</div>
+              <div className="text-base sm:text-lg text-gray-600 font-montserrat">Clientes Satisfechos</div>
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold text-greengrove font-dream mb-2">24h</div>
-              <div className="text-base sm:text-lg text-gray-600 font-century">Tiempo de Respuesta</div>
+              <div className="text-base sm:text-lg text-gray-600 font-montserrat">Tiempo de Respuesta</div>
             </div>
           </div>
         </div>
@@ -261,12 +262,12 @@ const Home = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-dream px-4">
               ¿Listo para darle vida a tu marca?
             </h2>
-            <p className="text-xl sm:text-2xl text-gray-300 font-century px-4">
+            <p className="text-xl sm:text-2xl text-gray-300 font-montserrat px-4">
               Cuéntanos tu idea y hagámosla realidad.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <button onClick={() => navigate('/contacto')} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
+              <button onClick={() => navigateToTop(navigate, '/contacto')} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
                                  hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 
                                  shadow-lg hover:shadow-xl text-base sm:text-lg">
                 Iniciar Proyecto
