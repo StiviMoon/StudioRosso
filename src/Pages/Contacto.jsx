@@ -1,10 +1,17 @@
 import Formulario from '../Components/Formulario.jsx';
+import SEO from '../Components/SEO.jsx';
 import banner from '../img/banner.jpg';
 import { FiMail, FiPhone, FiMapPin, FiHeart, FiUsers } from 'react-icons/fi';
 
 const Contacto = () => {
   return (
     <div className="min-h-screen relative">
+      <SEO 
+        title="Contacto - Studio Rosso Agency"
+        description="Contacta con Studio Rosso Agency en Colombia. Teléfono: +57 319 487 3667. Email: studiorossoagency@gmail.com. Consulta gratuita para tu proyecto."
+        keywords="contacto studio rosso, teléfono agencia diseño colombia, email studio rosso, consulta diseño web colombia, presupuesto diseño colombia"
+        url="/contacto"
+      />
       {/* Background with overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

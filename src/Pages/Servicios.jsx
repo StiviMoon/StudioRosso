@@ -2,12 +2,21 @@
 import Services from '../Components/Services/Services.jsx';
 import CarruselImg from '../Components/CarruselImg.jsx';
 import Trabajos from '../Components/Section/Trabajos.jsx';
+import SEO from '../Components/SEO.jsx';
 import { FaArrowDown, FaStar } from 'react-icons/fa';
 import { FiHeart, FiUsers, FiTrendingUp } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const Servicios = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-gradient-to-br from-gray-50 to-white min-h-screen pt-16 sm:pt-20">
+      <SEO 
+        title="Servicios de Diseño y Desarrollo Web"
+        description="Servicios profesionales de branding, diseño web, desarrollo web, marketing digital y SEO en Colombia. Soluciones personalizadas para hacer crecer tu negocio."
+        keywords="servicios diseño web colombia, branding servicios, desarrollo web colombia, marketing digital servicios, SEO colombia, diseño UX UI colombia, fotografía comercial colombia"
+        url="/servicios"
+      />
       {/* Hero Section */}
       <div className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
         {/* Background decoration */}
@@ -161,7 +170,7 @@ const Servicios = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
-              <button onClick={() => window.location.href = '/contacto'} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
+              <button onClick={() => navigate('/contacto')} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
                                  hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 
                                  shadow-lg hover:shadow-xl text-base sm:text-lg">
                 Iniciar proyecto

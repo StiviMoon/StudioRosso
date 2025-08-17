@@ -39,12 +39,12 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu - Hidden on mobile and tablet, visible on lg+ */}
-        <ul className="hidden lg:flex space-x-6 xl:space-x-8 items-center">
+        <ul className="hidden lg:flex items-center space-x-8">
           {[
             { path: "/", label: "Home" },
             { path: "/servicios", label: "Servicios" },
-            { path: "/contacto", label: "Contacto" },
-            { path: "/nosotros", label: "Nosotros" }
+            { path: "/nosotros", label: "Nosotros" },
+            { path: "/contacto", label: "Contacto" }
           ].map((item, index) => (
             <li key={index}>
               <Link
@@ -77,8 +77,8 @@ const Navbar = () => {
                      hover:bg-greengrove hover:text-white transition-all duration-300 
                      transform hover:scale-105 hover:shadow-lg flex items-center space-x-2"
           >
-            <span className="hidden md:inline">Trabaja con nosotros</span>
-            <span className="md:hidden">Contacto</span>
+            <span className="hidden md:inline">¡Empezar Proyecto!</span>
+            <span className="md:hidden">¡Empezar!</span>
             <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </div>
@@ -109,8 +109,8 @@ const Navbar = () => {
           {[
             { path: "/", label: "Home" },
             { path: "/servicios", label: "Servicios" },
-            { path: "/contacto", label: "Contacto" },
-            { path: "/nosotros", label: "Nosotros" }
+            { path: "/nosotros", label: "Nosotros" },
+            { path: "/contacto", label: "Contacto" }
           ].map((item, index) => (
             <li key={index}>
               <Link
@@ -133,7 +133,7 @@ const Navbar = () => {
                        hover:bg-greengrove transition-all duration-300 transform hover:scale-105"
               onClick={() => setMenuOpen(false)}
             >
-              Trabaja con nosotros
+              ¡Empezar Proyecto!
             </Link>
           </li>
         </ul>

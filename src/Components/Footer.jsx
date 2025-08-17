@@ -79,8 +79,7 @@ const Footer = () => {
                     { to: "/", label: "Home" },
                     { to: "/servicios", label: "Servicios" },
                     { to: "/nosotros", label: "Nosotros" },
-                    { to: "/contacto", label: "Contacto" },
-                    { to: "/trabaja", label: "Trabaja con Nosotros" }
+                    { to: "/contacto", label: "Contacto" }
                   ].map((link, index) => (
                     <Link
                       key={index}

@@ -1,15 +1,6 @@
 
-import { 
-  FaPaintBrush, 
-  FaCode, 
-  FaCameraRetro, 
-  FaChartLine, 
-  FaBoxOpen, 
-  FaMobileAlt, 
-  FaUserFriends,
-  FaArrowRight,
-  FaStar
-} from "react-icons/fa";
+import { FaArrowRight, FaStar, FaPalette, FaBoxOpen, FaUserFriends, FaCode, FaChartLine, FaMobileAlt, FaCameraRetro } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import Card from '../Card.jsx';
 
 const Services = () => {
@@ -20,6 +11,8 @@ const Services = () => {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
@@ -53,7 +46,7 @@ const Services = () => {
                 number="01" 
                 title="Branding y Estrategia" 
                 description="Desarrollamos identidades de marca únicas y estrategias que conectan con tu audiencia." 
-                icon={<FaPaintBrush />} 
+                icon={<FaPalette />} 
                 targetId="branding" 
                 handleScroll={handleScroll} 
               />
@@ -133,10 +126,10 @@ const Services = () => {
               Cada proyecto es único. Cuéntanos sobre tus necesidades específicas y crearemos una solución personalizada.
             </p>
             <button 
-              onClick={() => window.location.href = '/contacto'}
+              onClick={() => navigate('/contacto')}
               className="inline-flex items-center space-x-2 sm:space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-full 
-                         font-semibold hover:bg-greengrove transition-all duration-300 transform hover:scale-105 
-                         shadow-lg hover:shadow-xl text-sm sm:text-base"
+                       font-semibold hover:bg-greengrove transition-all duration-300 transform hover:scale-105 
+                       shadow-lg hover:shadow-xl text-sm sm:text-base"
             >
               <span>Consulta personalizada</span>
               <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />

@@ -1,10 +1,19 @@
 
 import Services from "../Components/Services/Services";
+import SEO from '../Components/SEO.jsx';
 import { FiHeart, FiUsers, FiTarget, FiArrowRight } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const Nosotros = () => {
+  const navigate = useNavigate();
   return (
     <section className="bg-gradient-to-br from-gray-50 to-white pt-16 sm:pt-20 pb-12 sm:pb-20 p-4 min-h-screen">
+      <SEO 
+        title="Sobre Nosotros - Studio Rosso Agency"
+        description="Conoce a Johan Rodríguez y Valentina Reyes, fundadores de Studio Rosso Agency. Somos jóvenes apasionados por el diseño y la tecnología en Colombia."
+        keywords="johan rodríguez colombia, valentina reyes colombia, fundadores studio rosso, agencia diseño colombia, historia studio rosso, equipo diseño colombia"
+        url="/nosotros"
+      />
       <div className="max-w-6xl mx-auto pb-8 sm:pb-12 pt-16 sm:pt-20">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -148,7 +157,7 @@ const Nosotros = () => {
               Cuéntanos sobre tu proyecto y veamos cómo podemos ayudarte a hacerlo realidad
             </p>
             <button 
-              onClick={() => window.location.href = '/contacto'} 
+              onClick={() => navigate('/contacto')} 
               className="group inline-flex items-center space-x-2 px-8 py-4 bg-white text-greengrove rounded-full 
                        font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 
                        shadow-lg text-lg"

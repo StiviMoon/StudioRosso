@@ -3,11 +3,22 @@ import InicioP1 from '../Components/Home/inicio.jsx'
 import LogoSlider from '../Components/LogoSlider.jsx'
 import Beneficios from '../Components/Beneficios.jsx'
 import Team from '../Components/Equipo.jsx'
+import SEO from '../Components/SEO.jsx'
 import { FiArrowRight, FiStar, FiTrendingUp, FiHeart, FiZap } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='h-full pt-10'>
+      <SEO 
+        title="Agencia de Diseño y Desarrollo Web en Colombia"
+        description="Studio Rosso Agency: Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia. Johan Rodríguez y Valentina Reyes."
+        keywords="agencia diseño colombia, branding colombia, desarrollo web colombia, diseño web bogotá, agencia digital colombia, marketing digital colombia, SEO colombia, diseño gráfico colombia"
+        url="/"
+      />
+      
       <InicioP1 />
       
       {/* Hero Section - Renovado */}
@@ -33,14 +44,14 @@ const Home = () => {
 
             {/* Botones claros */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <button onClick={() => window.location.href = '/servicios'} className="group inline-flex items-center space-x-3 px-8 py-4 bg-greengrove text-white rounded-full 
+              <button onClick={() => navigate('/servicios')} className="group inline-flex items-center space-x-3 px-8 py-4 bg-greengrove text-white rounded-full 
                                font-semibold hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 
                                shadow-lg hover:shadow-xl text-base sm:text-lg">
                 <span>Explorar Servicios</span>
                 <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
               
-              <button onClick={() => window.location.href = '/contacto'} className="group inline-flex items-center space-x-3 px-8 py-4 border-2 border-greengrove text-greengrove rounded-full 
+              <button onClick={() => navigate('/contacto')} className="group inline-flex items-center space-x-3 px-8 py-4 border-2 border-greengrove text-greengrove rounded-full 
                                font-semibold hover:bg-greengrove hover:text-white transition-all duration-300 transform hover:scale-105 
                                text-base sm:text-lg">
                 <span>Iniciar tu Proyecto</span>
@@ -255,7 +266,7 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <button onClick={() => window.location.href = '/contacto'} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
+              <button onClick={() => navigate('/contacto')} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
                                  hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 
                                  shadow-lg hover:shadow-xl text-base sm:text-lg">
                 Iniciar Proyecto
