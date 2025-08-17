@@ -1,9 +1,11 @@
 'use client';
 
-import  { useState } from 'react';
+import  { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs.js';
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLightbulb, FaCheck, FaPaperPlane, FaStar, FaClock, FaShieldAlt } from 'react-icons/fa';
 
 import imgD from '/img/Logos/rosso-min.svg';
@@ -66,27 +68,67 @@ export default function ContactForm() {
     },
   });
 
+  // Inicializar EmailJS
+  useEffect(() => {
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+  }, []);
+
   const onSubmit = async (values) => {
     setIsSubmitting(true);
+    
+    // Debug: Mostrar los datos que se van a enviar
+    console.log('🚀 Iniciando envío del formulario...');
+    console.log('📧 Configuración EmailJS:', EMAILJS_CONFIG);
+    console.log('📝 Datos del formulario:', values);
+    
     try {
-      const response = await fetch('http://localhost:5000/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      });
-  
-      if (response.ok) {
+      // Preparar los datos para el template de EmailJS
+      const templateParams = {
+        from_name: `${values.nombres} ${values.apellidos}`,
+        from_email: values.correo,
+        phone: values.numeroContacto,
+        city: values.ciudad,
+        services: values.servicios, // Enviamos el array completo
+        budget: values.presupuesto,
+        project_description: values.idea,
+        to_name: "Studio Rosso",
+        email: "studiorossoagency@gmail.com", // Campo que espera el template
+        reply_to: values.correo // Campo para responder al cliente
+      };
+
+      console.log('📨 Parámetros del template:', templateParams);
+
+      // Enviar email usando EmailJS
+      console.log('📤 Enviando email con EmailJS...');
+      const response = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      );
+
+      console.log('✅ Respuesta de EmailJS:', response);
+
+      if (response.status === 200) {
         setSubmitSuccess(true);
         form.reset();
-        setTimeout(() => setSubmitSuccess(false), 3000);
-      } else {
-        alert('Hubo un error al enviar el formulario');
+        setCurrentStep(1);
+        setTimeout(() => setSubmitSuccess(false), 5000);
       }
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
-      alert('No se pudo enviar el formulario');
+      
+      // Mostrar mensaje de error más específico
+      let errorMessage = 'No se pudo enviar el formulario. Por favor, inténtalo de nuevo.';
+      
+      if (error.message?.includes('Configuration incomplete')) {
+        errorMessage = 'Error de configuración. Por favor, contacta al administrador.';
+      } else if (error.message?.includes('Service not found')) {
+        errorMessage = 'Error del servicio de email. Por favor, inténtalo más tarde.';
+      } else if (error.message?.includes('Template not found')) {
+        errorMessage = 'Error del template de email. Por favor, contacta al administrador.';
+      }
+      
+      alert(errorMessage);
     } finally {
       setIsSubmitting(false);
     }
@@ -109,42 +151,51 @@ export default function ContactForm() {
       {/* Success Message */}
       {submitSuccess && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-8 max-w-md mx-4 text-center shadow-2xl">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <FaCheck className="text-green-600 text-2xl" />
+          <div className="bg-white rounded-3xl p-8 max-w-md mx-4 text-center shadow-2xl border border-green-100">
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <FaCheck className="text-green-600 text-3xl" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2 font-dream">¡Mensaje Enviado!</h3>
-            <p className="text-gray-600 font-montserrat">Gracias por contactarnos. Nos pondremos en contacto contigo pronto.</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3 font-dream">¡Proyecto Enviado!</h3>
+            <p className="text-gray-600 font-montserrat mb-6 leading-relaxed">
+              Gracias por compartir tu proyecto con nosotros. 
+              <br />
+              <span className="font-semibold text-green-600">Nos pondremos en contacto contigo en las próximas 24 horas.</span>
+            </p>
+            <div className="bg-green-50 rounded-xl p-4 border border-green-200">
+              <p className="text-sm text-green-800 font-montserrat">
+                📧 Revisa tu email para confirmar que recibimos tu mensaje
+              </p>
+            </div>
           </div>
         </div>
       )}
 
-      <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-6">
+      <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 sm:p-6">
         {/* Header */}
-        <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2 font-dream">
+        <div className="text-center mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 font-dream">
             ¡Cuéntanos tu proyecto!
           </h2>
-                      <p className="text-gray-600 font-montserrat">
-              Juntos haremos realidad tu visión digital
-            </p>
+          <p className="text-sm sm:text-base text-gray-600 font-montserrat">
+            Juntos haremos realidad tu visión digital
+          </p>
           
           {/* Progress Bar */}
-          <div className="mt-4">
+          <div className="mt-3 sm:mt-4">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-montserrat text-gray-600">Paso {currentStep} de 3</span>
-              <span className="text-sm font-montserrat text-gray-600">{Math.round((currentStep / 3) * 100)}%</span>
+              <span className="text-xs sm:text-sm font-montserrat text-gray-600">Paso {currentStep} de 3</span>
+              <span className="text-xs sm:text-sm font-montserrat text-gray-600">{Math.round((currentStep / 3) * 100)}%</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2">
               <div 
-                className="bg-black h-2 rounded-full transition-all duration-300"
+                className="bg-black h-1.5 sm:h-2 rounded-full transition-all duration-300"
                 style={{ width: `${(currentStep / 3) * 100}%` }}
               ></div>
             </div>
           </div>
         </div>
 
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" id="contact-form">
           
           {/* Step 1: Personal Information */}
           {currentStep === 1 && (
@@ -154,15 +205,15 @@ export default function ContactForm() {
                 <p className="text-gray-600 font-montserrat text-sm">Comencemos con tus datos básicos</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
+                  <label className="text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                     <FaUser className="text-gray-600 text-sm" />
                     <span>Nombres</span>
                   </label>
                   <input
                     {...form.register('nombres')}
-                    className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg 
+                    className="w-full px-3 py-2.5 bg-white/80 border border-gray-200 rounded-lg 
                              focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 
                              transition-all duration-200 text-gray-800 font-montserrat text-sm"
                     placeholder="Tu nombre"
@@ -173,13 +224,13 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
+                  <label className="text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                     <FaUser className="text-gray-600 text-sm" />
                     <span>Apellidos</span>
                   </label>
                   <input
                     {...form.register('apellidos')}
-                    className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg 
+                    className="w-full px-3 py-2.5 bg-white/80 border border-gray-200 rounded-lg 
                              focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 
                              transition-all duration-200 text-gray-800 font-montserrat text-sm"
                     placeholder="Tus apellidos"
@@ -190,7 +241,7 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
                     <FaEnvelope className="text-gray-600 text-sm" />
@@ -248,9 +299,9 @@ export default function ContactForm() {
                 <button
                   type="button"
                   onClick={nextStep}
-                  className="px-6 py-2 bg-black text-white rounded-lg font-semibold font-montserrat text-sm
-                           hover:bg-gray-900 transition-all duration-200 transform hover:scale-105
-                           shadow-lg hover:shadow-xl flex items-center space-x-2"
+                  className="px-4 sm:px-6 py-2.5 sm:py-2 bg-black text-white rounded-lg font-semibold font-montserrat text-sm
+                           hover:bg-gray-900 transition-all duration-200 transform hover:scale-105 active:scale-95
+                           shadow-lg hover:shadow-xl flex items-center space-x-2 w-full sm:w-auto justify-center"
                 >
                   <span>Siguiente</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -275,7 +326,7 @@ export default function ContactForm() {
                   <FaLightbulb className="text-gray-600 text-sm" />
                   <span>Servicios de interés</span>
                 </label>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
                   {services.map((service) => (
                     <label key={service.id} className="group cursor-pointer">
                       <div className={`flex items-center space-x-2 p-3 rounded-lg border-2 transition-all duration-200 
@@ -330,12 +381,12 @@ export default function ContactForm() {
                 )}
               </div>
 
-              <div className="flex justify-between pt-2">
+              <div className="flex flex-col sm:flex-row justify-between pt-2 gap-3 sm:gap-0">
                 <button
                   type="button"
                   onClick={prevStep}
-                  className="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold font-montserrat text-sm
-                           hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 flex items-center space-x-2"
+                  className="px-4 py-2.5 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold font-montserrat text-sm
+                           hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 flex items-center justify-center space-x-2 w-full sm:w-auto"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -345,9 +396,9 @@ export default function ContactForm() {
                 <button
                   type="button"
                   onClick={nextStep}
-                  className="px-6 py-2 bg-black text-white rounded-lg font-semibold font-montserrat text-sm
-                           hover:bg-gray-900 transition-all duration-200 transform hover:scale-105
-                           shadow-lg hover:shadow-xl flex items-center space-x-2"
+                  className="px-4 sm:px-6 py-2.5 bg-black text-white rounded-lg font-semibold font-montserrat text-sm
+                           hover:bg-gray-900 transition-all duration-200 transform hover:scale-105 active:scale-95
+                           shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 w-full sm:w-auto"
                 >
                   <span>Siguiente</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -400,12 +451,25 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div className="flex justify-between pt-2">
+              {/* Ready to send indicator */}
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+                <div className="flex items-center justify-center space-x-2 mb-2">
+                  <FaCheck className="text-green-600 text-sm" />
+                  <span className="text-sm font-semibold text-green-800 font-montserrat">
+                    Formulario completo
+                  </span>
+                </div>
+                <p className="text-xs text-green-700 font-montserrat">
+                  Todos los campos están completos. Haz clic en &quot;Enviar proyecto&quot; para continuar.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row justify-between pt-2 gap-3 sm:gap-0">
                 <button
                   type="button"
                   onClick={prevStep}
-                  className="px-4 py-2 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold font-montserrat text-sm
-                           hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 flex items-center space-x-2"
+                  className="px-4 py-2.5 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold font-montserrat text-sm
+                           hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 flex items-center justify-center space-x-2 w-full sm:w-auto"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -415,20 +479,30 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group px-6 py-2 bg-black text-white rounded-lg font-semibold font-montserrat text-sm
-                           hover:bg-gray-900 transition-all duration-200 transform hover:scale-105
+                  onClick={() => {
+                    console.log('🖱️ Botón clickeado');
+                    console.log('📋 Estado del formulario:', form.formState);
+                    console.log('✅ ¿Formulario válido?', form.formState.isValid);
+                    console.log('❌ Errores:', form.formState.errors);
+                  }}
+                  className={`group px-6 py-3 rounded-xl font-semibold font-montserrat text-sm
+                           transition-all duration-300 transform hover:scale-105 active:scale-95
                            disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
-                           shadow-lg hover:shadow-xl flex items-center space-x-2"
+                           shadow-lg hover:shadow-xl flex items-center justify-center space-x-3 w-full
+                           ${isSubmitting 
+                             ? 'bg-blue-600 text-white cursor-not-allowed' 
+                             : 'bg-black text-white hover:bg-gray-900 cursor-pointer'
+                           }`}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                      <span>Enviando...</span>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                      <span className="font-medium">Enviando proyecto...</span>
                     </>
                   ) : (
                     <>
-                      <FaPaperPlane className="text-sm group-hover:translate-x-1 transition-transform duration-200" />
-                      <span>Enviar proyecto</span>
+                      <FaPaperPlane className="text-base group-hover:translate-x-1 transition-transform duration-200" />
+                      <span className="font-medium">Enviar proyecto</span>
                     </>
                   )}
                 </button>
