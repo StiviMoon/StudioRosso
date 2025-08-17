@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FaArrowRight } from "react-icons/fa";
-import logo from '../img/Logos/rossoL-min.svg';
+import logo from '/img/Logos/rossoL-min.svg';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

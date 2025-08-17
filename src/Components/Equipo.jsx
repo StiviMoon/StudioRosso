@@ -1,6 +1,5 @@
-
-import fts from '../img/PT1.jpeg';
-import ftv from '../img/PT2.jpeg';
+import fts from '/img/PT1.jpeg';
+import ftv from '/img/PT2.jpeg';
 
 const Team = () => {
   const teamMembers = [

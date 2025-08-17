@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-import img1 from "../img/1.jpg";
-import img2 from "../img/2.jpg";
-import img3 from "../img/3.png";
-import img4 from "../img/4.png";
-import img5 from "../img/5.png";
-import img6 from "../img/6.jpg";
-import img7 from "../img/7.jpg";
-import img8 from "../img/8.jpg";
-import img9 from "../img/9.jpg";
+import img1 from "/img/1.jpg";
+import img2 from "/img/2.jpg";
+import img3 from "/img/3.png";
+import img4 from "/img/4.png";
+import img5 from "/img/5.png";
+import img6 from "/img/6.jpg";
+import img7 from "/img/7.jpg";
+import img8 from "/img/8.jpg";
+import img9 from "/img/9.jpg";
 
 
 const servicios = [

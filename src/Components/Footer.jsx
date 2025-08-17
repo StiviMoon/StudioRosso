@@ -1,7 +1,7 @@
 
 import { FaInstagram, FaTiktok, FaYoutube, FaLinkedin, FaGithub, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import r1 from '../img/Logos/rosso-min.svg';
+import r1 from '/img/Logos/rosso-min.svg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

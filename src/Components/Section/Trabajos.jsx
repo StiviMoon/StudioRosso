@@ -1,24 +1,23 @@
-import React from 'react';
+ 
 import ServicioComp from '../Services/ServicioComp';
 import ServicioCompInverso from '../Services/Inverso';
 import TarjetaComp from '../Services/TarjetaComp';
 
-import img1 from "../../img/1.jpg";
-import img2 from "../../img/2.jpg";
-import img3 from "../../img/3.png";
-import img4 from "../../img/4.png";
+import img2 from "/img/2.jpg";
+import img3 from "/img/3.png";
+import img4 from "/img/4.png";
 
-import f1 from "../../img/Servicios/f1.jpg";
-import f2 from "../../img/Servicios/f2.jpg";
+import f1 from "/img/Servicios/f1.jpg";
+import f2 from "/img/Servicios/f2.jpg";
 
-import id1 from "../../img/Servicios/id1.jpg";
-import p1 from "../../img/Servicios/p1.png";
-import p2 from "../../img/Servicios/p2.png";
+import id1 from "/img/Servicios/id1.jpg";
+import p1 from "/img/Servicios/p1.png";
+import p2 from "/img/Servicios/p2.png";
 
-import s1 from "../../img/Servicios/s1.jpg";
-import s2 from "../../img/Servicios/s2.jpg";
+import s1 from "/img/Servicios/s1.jpg";
+import s2 from "/img/Servicios/s2.jpg";
 
-import wb1 from "../../img/Servicios/wb1.png";
+import wb1 from "/img/Servicios/wb1.png";
 import { Link } from 'react-router-dom';
 
 const Trabajos = () => {

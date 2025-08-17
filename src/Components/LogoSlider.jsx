@@ -1,12 +1,12 @@
 import React from "react";
 import Slider from "react-infinite-logo-slider";
 
-import abue from "../img/Logos/abue-min.svg";
-import cafe from "../img/Logos/cafe-min.svg";
-import daza from "../img/Logos/daza-min.svg";
-import nimbus from "../img/Logos/nimbus-min.svg";
-import vino from "../img/Logos/vino-min.svg";
-import nimbu1 from "../img/Logos/nimbu1-min.svg";
+import abue from "/img/Logos/abue-min.svg";
+import cafe from "/img/Logos/cafe-min.svg";
+import daza from "/img/Logos/daza-min.svg";
+import nimbus from "/img/Logos/nimbus-min.svg";
+import vino from "/img/Logos/vino-min.svg";
+import nimbu1 from "/img/Logos/nimbu1-min.svg";
 
 const logos = [
   { src: abue, alt: "abue" },
@@ -17,7 +17,7 @@ const logos = [
   { src: nimbu1, alt: "nimbu1" },
 ];
 
-const LogoSlider = React.memo(() => {
+const LogoSlider = React.memo(function LogoSlider() {
   return (
     <Slider
       width="350px"

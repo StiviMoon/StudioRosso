@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLightbulb, FaCheck, FaPaperPlane, FaStar, FaClock, FaShieldAlt } from 'react-icons/fa';
 
-import imgD from '../img/Logos/rosso-min.svg';
+import imgD from '/img/Logos/rosso-min.svg';
 
 const formSchema = z.object({
   nombres: z.string().min(2, {

@@ -1,6 +1,6 @@
 import Formulario from '../Components/Formulario.jsx';
 import SEO from '../Components/SEO.jsx';
-import banner from '../img/banner.jpg';
+import banner from '/img/banner.jpg';
 import { FiMail, FiPhone, FiMapPin, FiHeart, FiUsers } from 'react-icons/fi';
 
 const Contacto = () => {

@@ -1,5 +1,4 @@
-
-import rossoL from "../../img/Logos/rossoL-min.svg";
+import rossoL from "/img/Logos/rossoL-min.svg";
 import ServiciosSlider from '../ServiciosSlider';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiPlay, FiStar, FiCheckCircle } from 'react-icons/fi';

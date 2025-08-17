@@ -1,6 +1,6 @@
 
 import { FiPenTool, FiTrendingUp, FiStar, FiCheckCircle, FiUsers, FiAward, FiArrowRight } from "react-icons/fi";
-import imgL from '../img/vv.jpeg';
+import imgL from '/img/vv.jpeg';
 
 const ComponentSection = () => {
   const features = [

@@ -1,14 +1,14 @@
 import React from "react";
 import Slider from "react-infinite-logo-slider";
 
-import img1 from "../img/Ser/1.jpg";
-import img2 from "../img/Ser/2.jpg";
-import img3 from "../img/Ser/3.jpg";
-import img4 from "../img/Ser/4.jpg";
-import img5 from "../img/Ser/5.jpg";
-import img6 from "../img/Ser/6.jpg";
-import img7 from "../img/Ser/7.jpg";
-import img8 from "../img/Ser/8.jpg";
+import img1 from "/img/Ser/1.jpg";
+import img2 from "/img/Ser/2.jpg";
+import img3 from "/img/Ser/3.jpg";
+import img4 from "/img/Ser/4.jpg";
+import img5 from "/img/Ser/5.jpg";
+import img6 from "/img/Ser/6.jpg";
+import img7 from "/img/Ser/7.jpg";
+import img8 from "/img/Ser/8.jpg";
 
 const logos = [
   { src: img1, alt: "1" },

@@ -12,7 +12,7 @@ const SEO = ({
 }) => {
   const siteName = 'Studio Rosso Agency';
   const siteUrl = 'https://studiorossoagency.com';
-  const defaultImage = `${siteUrl}/og-image.jpg`;
+  const defaultImage = `${siteUrl}/img/Logos/rosso-min.png`;
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
 
   return (
@@ -65,7 +65,7 @@ const SEO = ({
           "@type": "Organization",
           "name": "Studio Rosso Agency",
           "url": siteUrl,
-          "logo": `${siteUrl}/logo.png`,
+          "logo": `${siteUrl}/img/Logos/rosso-min.png`,
           "description": "Agencia de diseño y desarrollo web en Colombia. Creamos marcas que se sienten, se ven y venden.",
           "address": {
             "@type": "PostalAddress",
