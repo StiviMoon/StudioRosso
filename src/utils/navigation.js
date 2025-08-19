@@ -4,9 +4,9 @@ export const navigateToTop = (navigate, path) => {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
-  
+
   // Navegar a la ruta
   navigate(path);
 };
@@ -16,6 +16,6 @@ export const scrollToTop = () => {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
-}; 
+};
