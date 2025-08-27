@@ -7,16 +7,47 @@ Sitemap: https://www.studiorossoagency.com/sitemap.xml
 # Allow all search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
+
+# Allow specific content types
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
 
 # Disallow admin or private areas (if any in the future)
 # Disallow: /admin/
 # Disallow: /private/
+# Disallow: /api/
 
-# Crawl delay (optional)
+# Allow important directories
+Allow: /img/
+Allow: /fonts/
+Allow: /assets/
+
+# Specific crawl instructions for different content
+User-agent: Googlebot-Image
+Allow: /img/
+Allow: /assets/
 Crawl-delay: 1
+
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 1
+
+# Host
+Host: https://www.studiorossoagency.com
