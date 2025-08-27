@@ -15,67 +15,61 @@
       "destination": "/index.html"
     }
   ],
-  "routes": [
+  "redirects": [
     {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml",
-      "headers": {
-        "Content-Type": "application/xml",
-        "Cache-Control": "public, max-age=3600"
-      }
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": false
     },
     {
-      "src": "/robots.txt",
-      "dest": "/robots.txt",
-      "headers": {
-        "Content-Type": "text/plain",
-        "Cache-Control": "public, max-age=3600"
-      }
+      "source": "/robots.txt",
+      "destination": "/robots.txt",
+      "permanent": false
     },
     {
-      "src": "/img/(.*)",
-      "dest": "/img/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
+      "source": "/img/(.*)",
+      "destination": "/img/$1",
+      "permanent": false
     },
     {
-      "src": "/fonts/(.*)",
-      "dest": "/fonts/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
+      "source": "/fonts/(.*)",
+      "destination": "/fonts/$1",
+      "permanent": false
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1",
+      "permanent": false
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
+      "source": "/favicon.ico",
+      "destination": "/favicon.ico",
+      "permanent": false
     },
     {
-      "src": "/apple-touch-icon.png",
-      "dest": "/apple-touch-icon.png"
+      "source": "/apple-touch-icon.png",
+      "destination": "/apple-touch-icon.png",
+      "permanent": false
     },
     {
-      "src": "/favicon-16x16.png",
-      "dest": "/favicon-16x16.png"
+      "source": "/favicon-16x16.png",
+      "destination": "/favicon-16x16.png",
+      "permanent": false
     },
     {
-      "src": "/favicon-32x32.png",
-      "dest": "/favicon-32x32.png"
+      "source": "/favicon-32x32.png",
+      "destination": "/favicon-32x32.png",
+      "permanent": false
     },
     {
-      "src": "/site.webmanifest",
-      "dest": "/site.webmanifest"
+      "source": "/site.webmanifest",
+      "destination": "/site.webmanifest",
+      "permanent": false
     },
     {
-      "src": "/google123456789.html",
-      "dest": "/google123456789.html"
+      "source": "/google123456789.html",
+      "destination": "/google123456789.html",
+      "permanent": false
     }
   ],
   "headers": [
@@ -105,6 +99,59 @@
         {
           "key": "Accept-Encoding",
           "value": "gzip, deflate, br"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    },
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
