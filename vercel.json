@@ -48,6 +48,33 @@
       }
     },
     {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "dest": "/apple-touch-icon.png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "dest": "/favicon-16x16.png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "dest": "/favicon-32x32.png"
+    },
+    {
+      "src": "/site.webmanifest",
+      "dest": "/site.webmanifest"
+    },
+    {
+      "src": "/google123456789.html",
+      "dest": "/google123456789.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html",
       "headers": {
@@ -86,11 +113,6 @@
       ]
     }
   ],
-  "functions": {
-    "app/api/hello.js": {
-      "maxDuration": 10
-    }
-  },
   "env": {
     "NODE_ENV": "production"
   }
