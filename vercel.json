@@ -15,63 +15,6 @@
       "destination": "/index.html"
     }
   ],
-  "redirects": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml",
-      "permanent": false
-    },
-    {
-      "source": "/robots.txt",
-      "destination": "/robots.txt",
-      "permanent": false
-    },
-    {
-      "source": "/img/(.*)",
-      "destination": "/img/$1",
-      "permanent": false
-    },
-    {
-      "source": "/fonts/(.*)",
-      "destination": "/fonts/$1",
-      "permanent": false
-    },
-    {
-      "source": "/assets/(.*)",
-      "destination": "/assets/$1",
-      "permanent": false
-    },
-    {
-      "source": "/favicon.ico",
-      "destination": "/favicon.ico",
-      "permanent": false
-    },
-    {
-      "source": "/apple-touch-icon.png",
-      "destination": "/apple-touch-icon.png",
-      "permanent": false
-    },
-    {
-      "source": "/favicon-16x16.png",
-      "destination": "/favicon-16x16.png",
-      "permanent": false
-    },
-    {
-      "source": "/favicon-32x32.png",
-      "destination": "/favicon-32x32.png",
-      "permanent": false
-    },
-    {
-      "source": "/site.webmanifest",
-      "destination": "/site.webmanifest",
-      "permanent": false
-    },
-    {
-      "source": "/google123456789.html",
-      "destination": "/google123456789.html",
-      "permanent": false
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -95,63 +38,6 @@
         {
           "key": "Permissions-Policy",
           "value": "camera=(), microphone=(), geolocation=()"
-        },
-        {
-          "key": "Accept-Encoding",
-          "value": "gzip, deflate, br"
-        }
-      ]
-    },
-    {
-      "source": "/sitemap.xml",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/xml"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
-      ]
-    },
-    {
-      "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
-      ]
-    },
-    {
-      "source": "/img/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/fonts/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
         }
       ]
     }
