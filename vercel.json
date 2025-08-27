@@ -115,5 +115,6 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  }
+  },
+  "comment": "SPA configuration - All routes redirect to index.html for React Router"
 }
