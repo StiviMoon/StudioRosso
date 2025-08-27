@@ -1,7 +1,149 @@
-@import './fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 
+/* Fuentes personalizadas */
+@font-face {
+  font-family: 'Dream Orphans';
+  src: url('/fonts/Dream Orphans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dream Orphans Bd';
+  src: url('/fonts/Dream Orphans Bd.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dream Orphans It';
+  src: url('/fonts/Dream Orphans It.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Clases de fuentes */
+.font-dream { font-family: 'Dream Orphans', serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+
+/* Lazy loading optimizado */
+.lazy-loading {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.lazy-loaded {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Placeholder animado */
+.image-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Estilos de imagen optimizados */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bg-image-optimized {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contenedores de imagen */
+.lazy-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilos específicos por tipo de imagen */
+.service-image,
+.carousel-image,
+.logo-image,
+.profile-image,
+.background-image {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-image:hover,
+.carousel-image:hover,
+.logo-image:hover,
+.profile-image:hover,
+.background-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay de imagen */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-overlay:hover {
+  opacity: 1;
+}
+
+/* Estados de imagen */
+.skeleton-image {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.image-error {
+  background: #fee;
+  border: 1px solid #fcc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c33;
+}
+
+/* Optimizaciones móviles */
+@media (max-width: 768px) {
+  .service-image:hover,
+  .carousel-image:hover,
+  .logo-image:hover,
+  .profile-image:hover,
+  .background-image:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .lazy-loading {
+    filter: blur(3px);
+  }
+}
+
+/* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.app{background-color: rgb(250 250 250);}
+.app {
+  background-color: rgb(250 250 250);
+}

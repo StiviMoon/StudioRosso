@@ -2,109 +2,226 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/rossoL.svg" />
-    
-    <!-- Primary Meta Tags -->
+    <link rel="icon" type="image/svg+xml" href="/img/Logos/rosso-min.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preload de recursos críticos para mejorar LCP -->
+    <link rel="preload" href="/img/hero-background.webp" as="image" type="image/webp">
+    <link rel="preload" href="/img/banner.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="/img/Logos/rosso-min.svg" as="image" type="image/svg+xml">
+
+    <!-- Preload de fuentes críticas -->
+    <link rel="preload" href="/fonts/DreamOrphans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- DNS prefetch para recursos externos -->
+    <link rel="dns-prefetch" href="//googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+    <!-- Preconnect para conexiones críticas -->
+    <link rel="preconnect" href="https://googletagmanager.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Meta tags optimizados -->
     <title>Studio Rosso Agency - Agencia de Diseño y Desarrollo Web en Colombia</title>
-    <meta name="title" content="Studio Rosso Agency - Agencia de Diseño y Desarrollo Web en Colombia">
-    <meta name="description" content="Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia. Johan Rodríguez y Valentina Reyes.">
-    <meta name="keywords" content="agencia diseño colombia, branding colombia, desarrollo web colombia, diseño web bogotá, agencia digital colombia, marketing digital colombia, SEO colombia">
-    <meta name="author" content="Studio Rosso Agency">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="es">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://studiorossoagency.com/">
-    <meta property="og:title" content="Studio Rosso Agency - Agencia de Diseño y Desarrollo Web en Colombia">
-    <meta property="og:description" content="Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia.">
-    <meta property="og:image" content="https://studiorossoagency.com/og-image.jpg">
-    <meta property="og:site_name" content="Studio Rosso Agency">
-    <meta property="og:locale" content="es_ES">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://studiorossoagency.com/">
-    <meta property="twitter:title" content="Studio Rosso Agency - Agencia de Diseño y Desarrollo Web en Colombia">
-    <meta property="twitter:description" content="Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia.">
-    <meta property="twitter:image" content="https://studiorossoagency.com/og-image.jpg">
-    
-    <!-- Additional Meta Tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#a59b20">
-    <meta name="msapplication-TileColor" content="#a59b20">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Studio Rosso">
-    
+    <meta name="description" content="Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia. Johan Rodríguez y Valentina Reyes." />
+    <meta name="keywords" content="agencia diseño colombia, branding colombia, desarrollo web colombia, diseño web bogotá, agencia digital colombia, marketing digital colombia, SEO colombia" />
+    <meta name="author" content="Studio Rosso Agency" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="language" content="es" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.studiorossoagency.com/" />
+    <meta property="og:title" content="Studio Rosso Agency - Agencia de Diseño y Desarrollo Web en Colombia" />
+    <meta property="og:description" content="Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia." />
+    <meta property="og:image" content="https://www.studiorossoagency.com/img/Logos/rosso-min.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Studio Rosso Agency" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:country-name" content="Colombia" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.studiorossoagency.com/" />
+    <meta name="twitter:title" content="Studio Rosso Agency - Agencia de Diseño y Desarrollo Web en Colombia" />
+    <meta name="twitter:description" content="Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia." />
+    <meta name="twitter:image" content="https://www.studiorossoagency.com/img/Logos/rosso-min.png" />
+    <meta name="twitter:creator" content="@studiorosso" />
+    <meta name="twitter:site" content="@studiorosso" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#22c55e" />
+    <meta name="msapplication-TileColor" content="#22c55e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Studio Rosso" />
+
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://studiorossoagency.com/">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="/img/Logos/rosso-min.png" as="image" type="image/png">
-    <link rel="preload" href="/src/index.css" as="style">
-    <link rel="preload" href="/src/main.jsx" as="script">
-    
-    <!-- Preload Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
-    
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
+    <link rel="canonical" href="https://www.studiorossoagency.com/" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        page_title: document.title,
+        page_location: window.location.href,
+        custom_map: {
+          custom_dimension1: 'user_type',
+          custom_dimension2: 'page_category'
+        }
+      });
+    </script>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Studio Rosso Agency",
-      "url": "https://studiorossoagency.com",
-      "logo": "https://studiorossoagency.com/img/Logos/rosso-min.png",
-      "description": "Agencia de diseño y desarrollo web en Colombia. Creamos marcas que se sienten, se ven y venden.",
+      "url": "https://www.studiorossoagency.com",
+      "logo": "https://www.studiorossoagency.com/img/Logos/rosso-min.png",
+      "description": "Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia.",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "CO",
-        "addressLocality": "Colombia"
+        "addressCountry": "Colombia",
+        "addressLocality": "Bogotá"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+57-319-487-3667",
         "contactType": "customer service",
-        "email": "studiorossoagency@gmail.com"
+        "availableLanguage": "Spanish"
       },
       "sameAs": [
-        "https://www.behance.net/gallery/213678865/Portfolio-Design"
-      ],
-      "foundingDate": "2024",
-      "founder": [
+        "https://www.instagram.com/studiorossoagency",
+        "https://www.facebook.com/studiorossoagency"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Studio Rosso Agency",
+      "image": "https://www.studiorossoagency.com/img/Logos/rosso-min.png",
+      "description": "Agencia de diseño, branding y desarrollo web en Colombia",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Colombia",
+        "addressLocality": "Bogotá"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 4.7110,
+        "longitude": -74.0721
+      },
+      "url": "https://www.studiorossoagency.com",
+      "telephone": "+57-300-000-0000",
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "sameAs": [
+        "https://www.instagram.com/studiorossoagency",
+        "https://www.facebook.com/studiorossoagency"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Johan Rodríguez",
+      "jobTitle": "Fundador y Director Creativo",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Studio Rosso Agency"
+      },
+      "description": "Experto en diseño, branding y desarrollo web con más de 5 años de experiencia en el sector creativo.",
+      "url": "https://www.studiorossoagency.com/nosotros",
+      "sameAs": [
+        "https://www.linkedin.com/in/johanrodriguez",
+        "https://www.instagram.com/johanrodriguez"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Valentina Reyes",
+      "jobTitle": "Fundadora y Directora de Estrategia",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Studio Rosso Agency"
+      },
+      "description": "Estratega digital especializada en marketing, SEO y desarrollo de negocios online.",
+      "url": "https://www.studiorossoagency.com/nosotros",
+      "sameAs": [
+        "https://www.linkedin.com/in/valentinareyes",
+        "https://www.instagram.com/valentinareyes"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ServiceType",
+      "name": "Diseño y Branding",
+      "description": "Servicios profesionales de diseño gráfico, identidad visual y branding para empresas.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Studio Rosso Agency"
+      },
+      "areaServed": "Colombia",
+      "serviceType": "Diseño Gráfico"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "OfferCatalog",
+      "name": "Servicios de Studio Rosso Agency",
+      "itemListElement": [
         {
-          "@type": "Person",
-          "name": "Johan Rodríguez",
-          "jobTitle": "Full Stack Developer"
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Branding",
+            "description": "Diseño de identidad visual y marca"
+          }
         },
         {
-          "@type": "Person",
-          "name": "Valentina Reyes",
-          "jobTitle": "Visual Communicator"
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Diseño Web",
+            "description": "Diseño y desarrollo de sitios web"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Marketing Digital",
+            "description": "Estrategias de marketing digital y SEO"
+          }
         }
-      ],
-      "serviceType": [
-        "Branding",
-        "Diseño Web",
-        "Desarrollo Web",
-        "Marketing Digital",
-        "SEO"
       ]
     }
     </script>

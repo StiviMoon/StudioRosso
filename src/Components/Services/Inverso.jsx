@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 const ServicioCompInverso = ({
@@ -26,7 +26,7 @@ const ServicioCompInverso = ({
         <h2 className="text-5xl md:text-7xl font-bold text-black font-dream">
           {title}
         </h2>
-        <p className="mt-4 text-gray-700 font-montserrat text-lg">{description}</p>
+        <p className="mt-4 text-gray-800 font-montserrat text-lg">{description}</p>
         <div className="relative w-full h-[150px] md:h-[230px] rounded-lg overflow-hidden shadow-lg border border-gray-300">
           <img
             src={image1}

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 const ServicioComp = ({
@@ -18,7 +18,7 @@ const ServicioComp = ({
             {title}
           </h2>
           {/* Descripción */}
-          <p className="mt-4 text-gray-700 font-montserrat text-lg">{description}</p>
+          <p className="mt-4 text-gray-800 font-montserrat text-lg">{description}</p>
           {/* Botón */}
           <div className="relative w-full h-[150px] md:h-[230px] rounded-lg overflow-hidden shadow-lg border border-gray-300">
             <img

@@ -237,8 +237,8 @@ export default function ContactForm() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
-                    <FaUser className="text-gray-600 text-sm" />
+                  <label className="text-sm font-semibold text-gray-900 mb-2 font-montserrat flex items-center space-x-2">
+                    <FaUser className="text-gray-700 text-sm" />
                     <span>Nombres</span>
                   </label>
                   <input
@@ -256,8 +256,8 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className="text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
-                    <FaUser className="text-gray-600 text-sm" />
+                  <label className="text-sm font-semibold text-gray-900 mb-2 font-montserrat flex items-center space-x-2">
+                    <FaUser className="text-gray-700 text-sm" />
                     <span>Apellidos</span>
                   </label>
                   <input
@@ -277,8 +277,8 @@ export default function ContactForm() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div>
-                  <label className="text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
-                    <FaEnvelope className="text-gray-600 text-sm" />
+                  <label className="text-sm font-semibold text-gray-900 mb-2 font-montserrat flex items-center space-x-2">
+                    <FaEnvelope className="text-gray-700 text-sm" />
                     <span>Email</span>
                   </label>
                   <input
@@ -297,8 +297,8 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className=" text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
-                    <FaPhone className="text-gray-600 text-sm" />
+                  <label className=" text-sm font-semibold text-gray-900 mb-2 font-montserrat flex items-center space-x-2">
+                    <FaPhone className="text-gray-700 text-sm" />
                     <span>Teléfono</span>
                   </label>
                   <input
@@ -317,8 +317,8 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label className=" text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
-                  <FaMapMarkerAlt className="text-gray-600 text-sm" />
+                <label className=" text-sm font-semibold text-gray-900 mb-2 font-montserrat flex items-center space-x-2">
+                  <FaMapMarkerAlt className="text-gray-700 text-sm" />
                   <span>Ciudad</span>
                 </label>
                 <input
@@ -376,8 +376,8 @@ export default function ContactForm() {
 
               {/* Services */}
               <div>
-                <label className=" text-sm font-semibold text-gray-800 mb-3 font-montserrat flex items-center space-x-2">
-                  <FaLightbulb className="text-gray-600 text-sm" />
+                <label className=" text-sm font-semibold text-gray-900 mb-3 font-montserrat flex items-center space-x-2">
+                  <FaLightbulb className="text-gray-700 text-sm" />
                   <span>Servicios de interés</span>
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
@@ -425,8 +425,8 @@ export default function ContactForm() {
 
               {/* Budget */}
               <div>
-                <label className=" text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
-                  <FaStar className="text-gray-600 text-sm" />
+                <label className=" text-sm font-semibold text-gray-900 mb-2 font-montserrat flex items-center space-x-2">
+                  <FaStar className="text-gray-700 text-sm" />
                   <span>Rango de presupuesto</span>
                 </label>
                 <select
@@ -510,8 +510,8 @@ export default function ContactForm() {
               </div>
 
               <div>
-                <label className=" text-sm font-semibold text-gray-800 mb-2 font-montserrat flex items-center space-x-2">
-                  <FaLightbulb className="text-gray-600 text-sm" />
+                <label className=" text-sm font-semibold text-gray-900 mb-2 font-montserrat flex items-center space-x-2">
+                  <FaLightbulb className="text-gray-700 text-sm" />
                   <span>Descripción del proyecto</span>
                 </label>
                 <textarea

@@ -2,11 +2,21 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://studiorossoagency.com/sitemap.xml
+Sitemap: https://www.studiorossoagency.com/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
 
 # Disallow admin or private areas (if any in the future)
 # Disallow: /admin/
-# Disallow: /private/ 
+# Disallow: /private/
+
+# Crawl delay (optional)
+Crawl-delay: 1

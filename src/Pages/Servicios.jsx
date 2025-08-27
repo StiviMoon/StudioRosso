@@ -12,11 +12,14 @@ const Servicios = () => {
   const navigate = useNavigate();
   return (
     <div className="bg-gradient-to-br from-gray-50 to-white min-h-screen pt-16 sm:pt-20">
-      <SEO 
-        title="Servicios de Diseño y Desarrollo Web"
-        description="Servicios profesionales de branding, diseño web, desarrollo web, marketing digital y SEO en Colombia. Soluciones personalizadas para hacer crecer tu negocio."
-        keywords="servicios diseño web colombia, branding servicios, desarrollo web colombia, marketing digital servicios, SEO colombia, diseño UX UI colombia, fotografía comercial colombia"
+      <SEO
+        title="Servicios de Diseño y Desarrollo Web en Colombia"
+        description="Servicios profesionales de branding, diseño web, desarrollo web, marketing digital y SEO en Colombia. Soluciones personalizadas para hacer crecer tu negocio. Johan Rodríguez y Valentina Reyes."
+        keywords="servicios diseño web colombia, branding servicios, desarrollo web colombia, marketing digital servicios, SEO colombia, diseño UX UI colombia, fotografía comercial colombia, packaging diseño colombia, identidad visual colombia, social media colombia"
         url="/servicios"
+        image="/img/banner.jpg"
+        type="website"
+        tags={["diseño web", "branding", "desarrollo web", "marketing digital", "SEO", "Colombia"]}
       />
       {/* Hero Section */}
       <div className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
@@ -35,7 +38,7 @@ const Servicios = () => {
                 <FiHeart className="text-greengrove text-base" />
                 <span className="text-sm font-medium text-greengrove">Lo que hacemos</span>
               </div>
-              
+
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 tracking-wide font-dream leading-tight px-4">
                 No vendemos{" "}
                 <span className="text-greengrove relative">
@@ -43,7 +46,7 @@ const Servicios = () => {
                   <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-greengrove/30 rounded-full"></div>
                 </span>
               </h1>
-              
+
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 tracking-wide font-dream leading-tight px-4">
                 Vendemos{" "}
                 <span className="text-greengrove relative">
@@ -51,9 +54,9 @@ const Servicios = () => {
                   <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-0.5 sm:h-1 bg-greengrove/30 rounded-full"></div>
                 </span>
               </h2>
-              
+
               <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto font-montserrat leading-relaxed px-4">
-                Cada proyecto que desarrollamos tiene un objetivo claro: hacer crecer tu negocio, 
+                Cada proyecto que desarrollamos tiene un objetivo claro: hacer crecer tu negocio,
                 conectar con tu audiencia y generar un impacto real en el mercado.
               </p>
             </div>
@@ -101,7 +104,7 @@ const Servicios = () => {
               ¿Por qué elegir nuestros servicios?
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto font-montserrat leading-relaxed">
-              Porque entendemos que no solo necesitas algo que se vea bonito. 
+              Porque entendemos que no solo necesitas algo que se vea bonito.
               Necesitas algo que funcione y genere resultados reales para tu negocio.
             </p>
           </div>
@@ -113,7 +116,7 @@ const Servicios = () => {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 font-dream">Enfoque en el Cliente</h3>
               <p className="text-gray-600 font-montserrat leading-relaxed">
-                No trabajamos con plantillas. Cada proyecto se adapta a tus necesidades específicas 
+                No trabajamos con plantillas. Cada proyecto se adapta a tus necesidades específicas
                 y objetivos de negocio.
               </p>
             </div>
@@ -124,7 +127,7 @@ const Servicios = () => {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 font-dream">Resultados Medibles</h3>
               <p className="text-gray-600 font-montserrat leading-relaxed">
-                No solo creamos diseños bonitos. Implementamos estrategias que puedes medir 
+                No solo creamos diseños bonitos. Implementamos estrategias que puedes medir
                 y que realmente impactan tu negocio.
               </p>
             </div>
@@ -135,7 +138,7 @@ const Servicios = () => {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 font-dream">Compromiso Real</h3>
               <p className="text-gray-600 font-montserrat leading-relaxed">
-                Tu éxito es nuestro éxito. Nos comprometemos contigo desde el primer día 
+                Tu éxito es nuestro éxito. Nos comprometemos contigo desde el primer día
                 hasta que veas los resultados que esperabas.
               </p>
             </div>
@@ -166,17 +169,17 @@ const Servicios = () => {
               ¿Listo para ver resultados reales en tu negocio?
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 font-montserrat px-4">
-              No solo diseñamos y desarrollamos. Creamos soluciones que transforman 
+              No solo diseñamos y desarrollamos. Creamos soluciones que transforman
               tu marca y generan el crecimiento que buscas.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
-              <button onClick={() => navigateToTop(navigate, '/contacto')} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
-                                 hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 
+              <button onClick={() => navigateToTop(navigate, '/contacto')} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold
+                                 hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105
                                  shadow-lg hover:shadow-xl text-base sm:text-lg">
                 Iniciar proyecto
               </button>
-              <button onClick={() => window.open("https://www.behance.net/gallery/213678865/Portfolio-Design", "_blank") } className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold 
+              <button onClick={() => window.open("https://www.behance.net/gallery/213678865/Portfolio-Design", "_blank") } className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold
                                  hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 text-base sm:text-lg">
                 Ver portafolio
               </button>

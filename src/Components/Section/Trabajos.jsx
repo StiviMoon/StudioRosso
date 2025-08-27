@@ -1,28 +1,29 @@
- 
+
 import ServicioComp from '../Services/ServicioComp';
 import ServicioCompInverso from '../Services/Inverso';
 import TarjetaComp from '../Services/TarjetaComp';
 
-import img2 from "/img/2.jpg";
-import img3 from "/img/3.png";
-import img4 from "/img/4.png";
+// Importar imágenes optimizadas WebP
+import img2 from "/img/optimized/2.webp";
+import img3 from "/img/optimized/3.webp";
+import img4 from "/img/optimized/4.webp";
 
-import f1 from "/img/Servicios/f1.jpg";
-import f2 from "/img/Servicios/f2.jpg";
+import f1 from "/img/Servicios/optimized/f1.webp";
+import f2 from "/img/Servicios/optimized/f2.webp";
 
-import id1 from "/img/Servicios/id1.jpg";
-import p1 from "/img/Servicios/p1.png";
-import p2 from "/img/Servicios/p2.png";
+import id1 from "/img/Servicios/optimized/id1.webp";
+import p1 from "/img/Servicios/optimized/p1.webp";
+import p2 from "/img/Servicios/optimized/p2.webp";
 
-import s1 from "/img/Servicios/s1.jpg";
-import s2 from "/img/Servicios/s2.jpg";
+import s1 from "/img/Servicios/optimized/s1.webp";
+import s2 from "/img/Servicios/optimized/s2.webp";
 
-import wb1 from "/img/Servicios/wb1.png";
+import wb1 from "/img/Servicios/optimized/wb1.webp";
 import { Link } from 'react-router-dom';
 
 const Trabajos = () => {
 
- 
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-20 space-y-20">
       {/* Componente 1 - Branding */}
@@ -35,7 +36,7 @@ const Trabajos = () => {
           badgeText="Nuestra especialidad"
           image1={img3}
           image2={img2}
-          
+
         />
       </div>
 
@@ -75,7 +76,7 @@ const Trabajos = () => {
           ¡Contáctanos!
         </Link>
       </div>
-        
+
       {/* Componente 3 - Social Media */}
       <div id='social'>
         <ServicioComp

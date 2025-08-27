@@ -26,7 +26,7 @@ const Team = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-dream font-bold text-greengrove capitalize mb-4 sm:mb-6">
             Nuestros Fundadores
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4 font-montserrat">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-800 max-w-3xl mx-auto px-4 font-montserrat">
             Conoce al equipo que está transformando la manera de crear experiencias digitales únicas
           </p>
         </div>
@@ -47,16 +47,16 @@ const Team = () => {
                 <h2 className="text-xl sm:text-2xl font-montserrat font-bold text-gray-800 mb-2">
                   {member.name}
                 </h2>
-                
+
                 <h3 className="text-base sm:text-lg font-semibold text-greengrove mb-1">
                   {member.role}
                 </h3>
-                
-                <p className="text-xs sm:text-sm text-gray-500 mb-2 sm:mb-3 font-medium font-montserrat">
+
+                <p className="text-xs sm:text-sm text-gray-700 mb-2 sm:mb-3 font-medium font-montserrat">
                   {member.specialization}
                 </p>
-                
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-montserrat">
+
+                <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-montserrat">
                   {member.description}
                 </p>
               </div>
@@ -69,10 +69,10 @@ const Team = () => {
             <h3 className="text-xl sm:text-2xl font-dream font-bold text-greengrove mb-4">
               Nuestra Visión
             </h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-montserrat">
-              Como fundadores de Studio Rosso, combinamos la excelencia técnica con la creatividad visual 
-              para crear soluciones digitales que no solo funcionan perfectamente, sino que también 
-              cautivan y conectan con tu audiencia. Cada proyecto es una oportunidad para innovar 
+            <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-montserrat">
+              Como fundadores de Studio Rosso, combinamos la excelencia técnica con la creatividad visual
+              para crear soluciones digitales que no solo funcionan perfectamente, sino que también
+              cautivan y conectan con tu audiencia. Cada proyecto es una oportunidad para innovar
               y superar expectativas.
             </p>
           </div>

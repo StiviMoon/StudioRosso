@@ -1,14 +1,61 @@
 {
-  "headers": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/fonts/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml",
+        "Cache-Control": "public, max-age=3600"
+      }
     },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": {
+        "Content-Type": "text/plain",
+        "Cache-Control": "public, max-age=3600"
+      }
+    },
+    {
+      "src": "/img/(.*)",
+      "dest": "/img/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/fonts/(.*)",
+      "dest": "/fonts/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html",
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      }
+    }
+  ],
+  "headers": [
     {
       "source": "/(.*)",
       "headers": [
@@ -23,21 +70,28 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Accept-Encoding",
+          "value": "gzip, deflate, br"
         }
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/fonts/(.*)",
-      "destination": "/fonts/$1"
+  "functions": {
+    "app/api/hello.js": {
+      "maxDuration": 10
     }
-  ],
-  "redirects": [
-    {
-      "source": "/trabaja-con-nosotros",
-      "destination": "/contacto",
-      "permanent": true
-    }
-  ]
-} 
+  },
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

@@ -1,16 +1,22 @@
 {
-  "name": "Studio Rosso Agency",
+  "name": "Studio Rosso Agency - Agencia de Diseño y Desarrollo Web en Colombia",
   "short_name": "Studio Rosso",
-  "description": "Agencia de diseño y desarrollo web en Colombia",
+  "description": "Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#22c55e",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": ["business", "design", "technology", "marketing"],
   "icons": [
     {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/favicon-32x32.png",
@@ -18,9 +24,17 @@
       "type": "image/png"
     },
     {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
       "type": "image/png"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "/img/banner.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
   ]
-} 
+}

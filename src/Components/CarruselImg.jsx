@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-import img1 from "/img/1.jpg";
-import img2 from "/img/2.jpg";
-import img3 from "/img/3.png";
-import img4 from "/img/4.png";
-import img5 from "/img/5.png";
-import img6 from "/img/6.jpg";
-import img7 from "/img/7.jpg";
-import img8 from "/img/8.jpg";
-import img9 from "/img/9.jpg";
 
+// Importar imágenes optimizadas WebP
+import img1 from "/img/optimized/1.webp";
+import img2 from "/img/optimized/2.webp";
+import img3 from "/img/optimized/3.webp";
+import img4 from "/img/optimized/4.webp";
+import img5 from "/img/optimized/5.webp";
+import img6 from "/img/optimized/6.webp";
+import img7 from "/img/optimized/7.webp";
+import img8 from "/img/optimized/8.webp";
+import img9 from "/img/optimized/9.webp";
 
 const servicios = [
   { src: img1, alt: "Imagen 1" },
@@ -21,7 +22,6 @@ const servicios = [
   { src: img7, alt: "Imagen 7" },
   { src: img8, alt: "Imagen 8" },
   { src: img9, alt: "Imagen 9" },
-
 ];
 
 const CarruselImg = () => {
@@ -72,6 +72,8 @@ const CarruselImg = () => {
                       src={logo.src}
                       alt={logo.alt}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 ))}

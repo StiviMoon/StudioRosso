@@ -10,18 +10,28 @@ const InicioP1 = () => {
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-0">
         {/* Background with overlay */}
         <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1709891798937-fd431bd7e10b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZvbmRvJTIwZGUlMjBwYW50YWxsYSUyMGRlJTIwYW1hcG9sYXxlbnwwfHwwfHx8MA=="
-            alt="Studio Rosso Background"
-            className="w-full h-full object-cover"
-          />
+          <picture>
+            {/* WebP para navegadores modernos */}
+            <source
+              srcSet="/img/hero-background.webp"
+              type="image/webp"
+            />
+            {/* JPG como fallback */}
+            <img
+              src="/img/hero-background-optimized.jpg"
+              alt="Studio Rosso Background - Fondo de pantalla abstracto con tonos oscuros"
+              className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         </div>
 
         {/* Content Container */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-5rem)] py-12 sm:py-16 lg:py-20">
-            
+
             {/* Left Column - Text Content */}
             <div className="text-white space-y-6 sm:space-y-8 order-2 lg:order-1">
               {/* Badge */}
@@ -37,9 +47,9 @@ const InicioP1 = () => {
                   <span className="block text-white pb-2">Experiencias</span>
                   <span className="block text-white ">Digitales Únicas</span>
                 </h1>
-                
+
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-montserrat text-gray-200 leading-relaxed max-w-2xl">
-                  Somos un estudio creativo fundado por expertos en desarrollo y diseño. 
+                  Somos un estudio creativo fundado por expertos en desarrollo y diseño.
                   Transformamos ideas en experiencias digitales que conectan, inspiran y generan resultados.
                 </p>
               </div>
@@ -66,14 +76,14 @@ const InicioP1 = () => {
 
               {/* Call to Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-6 sm:pt-8">
-                <Link 
+                <Link
                   to="/servicios"
                   className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-greengrove text-white font-semibold rounded-full hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
                 >
                   <span>Explorar Servicios</span>
                   <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-                
+
                 <button className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 text-sm sm:text-base">
                   <FiPlay className="mr-2" />
                   <span>Ver Nuestro Trabajo</span>
@@ -102,7 +112,7 @@ const InicioP1 = () => {
               <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-greengrove/30 to-transparent rounded-full blur-3xl"></div>
-                
+
                 {/* Logo Container */}
                 <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 shadow-2xl">
                   <img

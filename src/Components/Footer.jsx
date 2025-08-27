@@ -24,7 +24,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="container mx-auto px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-black">
-            
+
             {/* Brand Section */}
             <div className="lg:col-span-1">
               <div className="flex flex-col items-start space-y-6">
@@ -34,11 +34,11 @@ const Footer = () => {
                     <img src={r1} alt="Agencia Rosso Logo" className="w-16 h-16 object-contain" />
                   </div>
                 </div>
-                
+
                 {/* Description */}
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold text-gray-900">Agencia Rosso</h3>
-                  <p className="text-sm leading-relaxed text-gray-700 max-w-xs font-montserrat">
+                  <p className="text-sm leading-relaxed text-gray-800 max-w-xs font-montserrat">
                     Somos una agencia de diseño y desarrollo web enfocada en crear experiencias digitales innovadoras y marcas impactantes que transforman negocios.
                   </p>
                 </div>
@@ -71,7 +71,7 @@ const Footer = () => {
             {/* Quick Links */}
             <div className="lg:col-span-1">
               <div className="flex flex-col space-y-6">
-                <h3 className="text-lg font-bold text-gray-900 border-b-2 border-gray-300 pb-2">
+                <h3 className="text-lg font-bold text-gray-900 border-b-2 border-gray-400 pb-2">
                   Enlaces Rápidos
                 </h3>
                 <nav className="space-y-3">
@@ -84,9 +84,9 @@ const Footer = () => {
                     <Link
                       key={index}
                       to={link.to}
-                      className="group flex items-center text-gray-700 hover:text-gray-900 transition-all duration-200 hover:translate-x-1"
+                      className="group flex items-center text-gray-800 hover:text-gray-900 transition-all duration-200 hover:translate-x-1"
                     >
-                      <span className="w-1 h-1 bg-gray-400 rounded-full mr-3 group-hover:bg-gray-900 transition-colors duration-200"></span>
+                      <span className="w-1 h-1 bg-gray-500 rounded-full mr-3 group-hover:bg-gray-900 transition-colors duration-200"></span>
                       {link.label}
                     </Link>
                   ))}
@@ -97,7 +97,7 @@ const Footer = () => {
             {/* Services */}
             <div className="lg:col-span-1">
               <div className="flex flex-col space-y-6">
-                <h3 className="text-lg font-bold text-gray-900 border-b-2 border-gray-300 pb-2">
+                <h3 className="text-lg font-bold text-gray-900 border-b-2 border-gray-400 pb-2">
                   Servicios
                 </h3>
                 <nav className="space-y-3">
@@ -111,9 +111,9 @@ const Footer = () => {
                     <Link
                       key={index}
                       to={service.to}
-                      className="group flex items-center text-gray-700 hover:text-gray-900 transition-all duration-200 hover:translate-x-1"
+                      className="group flex items-center text-gray-800 hover:text-gray-900 transition-all duration-200 hover:translate-x-1"
                     >
-                      <span className="w-1 h-1 bg-gray-400 rounded-full mr-3 group-hover:bg-gray-900 transition-colors duration-200"></span>
+                      <span className="w-1 h-1 bg-gray-500 rounded-full mr-3 group-hover:bg-gray-900 transition-colors duration-200"></span>
                       {service.label}
                     </Link>
                   ))}
@@ -124,7 +124,7 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="lg:col-span-1">
               <div className="flex flex-col space-y-6">
-                <h3 className="text-lg font-bold text-gray-900 border-b-2 border-gray-300 pb-2">
+                <h3 className="text-lg font-bold text-gray-900 border-b-2 border-gray-400 pb-2">
                   Contacto
                 </h3>
                 <div className="space-y-4">
@@ -137,7 +137,7 @@ const Footer = () => {
                       <p className="text-sm text-gray-700">+57 319-487-3667</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3 group">
                     <div className="p-2 bg-white/60 backdrop-blur-sm rounded-lg group-hover:bg-white/80 transition-all duration-200">
                       <FaEnvelope className="text-gray-700 text-sm" />
@@ -147,7 +147,7 @@ const Footer = () => {
                       <p className="text-sm text-gray-700">studiorossoagency@gmail.com</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3 group">
                     <div className="p-2 bg-white/60 backdrop-blur-sm rounded-lg group-hover:bg-white/80 transition-all duration-200">
                       <FaMapMarkerAlt className="text-gray-700 text-sm" />

@@ -49,7 +49,7 @@ const ComponentSection = () => {
             <FiStar className="text-greengrove text-sm sm:text-base" />
             <span className="text-sm font-medium text-greengrove">¿Por qué elegirnos?</span>
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold font-dream text-gray-800 leading-tight mb-6 sm:mb-8">
             ¿Por qué elegir{" "}
             <span className="text-greengrove relative">
@@ -58,9 +58,9 @@ const ComponentSection = () => {
             </span>
             ?
           </h2>
-          
-          <p className="text-lg sm:text-xl lg:text-2xl font-montserrat text-gray-600 leading-relaxed max-w-4xl mx-auto px-4">
-            En Studio Rosso, combinamos pasión, creatividad y tecnología para crear soluciones que transformen tu marca. 
+
+          <p className="text-lg sm:text-xl lg:text-2xl font-montserrat text-gray-800 leading-relaxed max-w-4xl mx-auto px-4">
+            En Studio Rosso, combinamos pasión, creatividad y tecnología para crear soluciones que transformen tu marca.
             Nuestro equipo de expertos trabaja contigo para alcanzar resultados excepcionales y experiencias memorables.
           </p>
         </div>
@@ -71,28 +71,28 @@ const ComponentSection = () => {
             <div className="space-y-8 sm:space-y-10">
               {features.map((feature, index) => (
                 <div className="group" key={index}>
-                  <div className="flex flex-col sm:flex-row items-start space-y-5 sm:space-y-0 sm:space-x-6 p-8 sm:p-10 bg-white/90 backdrop-blur-sm rounded-3xl 
-                                  border border-gray-100 hover:border-greengrove/30 transition-all duration-300 
+                  <div className="flex flex-col sm:flex-row items-start space-y-5 sm:space-y-0 sm:space-x-6 p-8 sm:p-10 bg-white/90 backdrop-blur-sm rounded-3xl
+                                  border border-gray-100 hover:border-greengrove/30 transition-all duration-300
                                   hover:shadow-xl hover:transform hover:scale-[1.01]">
                     <div className="flex-shrink-0 flex justify-center sm:justify-start">
-                      <div className="p-4 sm:p-5 bg-gradient-to-br from-greengrove/15 to-greengrove/5 rounded-2xl 
+                      <div className="p-4 sm:p-5 bg-gradient-to-br from-greengrove/15 to-greengrove/5 rounded-2xl
                                     transition-all duration-300 group-hover:scale-105">
                         {feature.icon}
                       </div>
                     </div>
-                    
+
                     <div className="flex-1 space-y-4 sm:space-y-5 text-center sm:text-left">
                       <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 font-dream group-hover:text-greengrove transition-colors duration-300">
                         {feature.title}
                       </h3>
-                      <p className="text-base sm:text-lg lg:text-xl text-gray-600 font-montserrat leading-relaxed">
+                      <p className="text-base sm:text-lg lg:text-xl text-gray-800 font-montserrat leading-relaxed">
                         {feature.description}
                       </p>
-                      
+
                       {/* Benefits list */}
                       <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-4 pt-4 sm:pt-6">
                         {feature.benefits.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-center space-x-2 px-4 py-2 
+                          <div key={benefitIndex} className="flex items-center space-x-2 px-4 py-2
                                                            bg-gradient-to-r from-greengrove/10 to-greengrove/5 rounded-full text-sm font-medium text-greengrove
                                                            border border-greengrove/20">
                             <FiCheckCircle className="w-4 h-4 flex-shrink-0" />
@@ -108,8 +108,8 @@ const ComponentSection = () => {
 
             {/* Call to action */}
             <div className="pt-8 sm:pt-10 text-center sm:text-left">
-              <button className="group inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-black to-gray-800 text-white rounded-full 
-                                 font-semibold hover:from-greengrove hover:to-greengrove/80 transition-all duration-300 transform hover:scale-105 
+              <button className="group inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-black to-gray-800 text-white rounded-full
+                                 font-semibold hover:from-greengrove hover:to-greengrove/80 transition-all duration-300 transform hover:scale-105
                                  shadow-lg hover:shadow-xl text-base sm:text-lg">
                 <span>Descubre más sobre nosotros</span>
                 <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -122,18 +122,18 @@ const ComponentSection = () => {
             <div className="relative">
               {/* Simple Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-greengrove/20 to-transparent rounded-full blur-2xl"></div>
-              
+
               {/* Main Image Container */}
               <div className="relative">
                 <img
-                  className="relative w-[32rem] h-[32rem] object-cover xl:w-[36rem] xl:h-[36rem] rounded-full 
+                  className="relative w-[32rem] h-[32rem] object-cover xl:w-[36rem] xl:h-[36rem] rounded-full
                              shadow-2xl border-8 border-white/60 backdrop-blur-sm
                              hover:scale-105 transition-transform duration-300"
                   src={imgL}
                   alt="Studio Rosso Team"
                 />
               </div>
-              
+
               {/* Minimal Floating Elements */}
               <div className="absolute top-10 right-16 w-16 h-16 bg-gradient-to-br from-greengrove/20 to-greengrove/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30">
                 <FiStar className="text-greengrove text-xl" />
@@ -157,7 +157,7 @@ const ComponentSection = () => {
                   </div>
                 </div>
                 <div className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2 sm:mb-3 font-dream">{stat.number}</div>
-                <div className="text-sm sm:text-base text-gray-600 font-montserrat">{stat.label}</div>
+                <div className="text-sm sm:text-base text-gray-800 font-montserrat">{stat.label}</div>
               </div>
             ))}
           </div>
