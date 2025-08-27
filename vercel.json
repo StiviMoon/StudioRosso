@@ -9,6 +9,12 @@
       }
     }
   ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "routes": [
     {
       "src": "/sitemap.xml",
@@ -70,16 +76,6 @@
     {
       "src": "/google123456789.html",
       "dest": "/google123456789.html"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html",
-      "headers": {
-        "Cache-Control": "public, max-age=0, must-revalidate"
-      }
     }
   ],
   "headers": [
@@ -115,6 +111,5 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "comment": "SPA configuration - All routes redirect to index.html for React Router"
+  }
 }
