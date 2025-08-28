@@ -92,11 +92,14 @@ export const getPageSEO = (pageName) => {
   const page = SEO_CONFIG.pages[pageName];
   if (!page) return SEO_CONFIG.pages.home;
 
+  // Asegurar que la URL sea única y no tenga duplicados
+  const pageUrl = page.path === '/' ? SEO_CONFIG.site.url : `${SEO_CONFIG.site.url}${page.path}`;
+
   return {
     title: page.title,
     description: page.description,
     keywords: page.keywords,
-    url: `${SEO_CONFIG.site.url}${page.path}`,
+    url: pageUrl,
     image: SEO_CONFIG.site.defaultImage,
     schema: page.schema
   };
