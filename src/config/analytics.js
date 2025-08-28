@@ -1,66 +1,68 @@
-// Configuración de Google Analytics para Studio Rosso Agency
-export const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Reemplaza con tu ID real de GA4
+// Google Analytics Configuration
+export const GA_TRACKING_ID = 'G-B3YGHVFK5W';
 
-// Inicializar Google Analytics
-export const initGA = () => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_MEASUREMENT_ID, {
+// Initialize Google Analytics
+export const initializeGA = () => {
+  if (typeof window !== 'undefined') {
+    // Check if gtag is already loaded
+    if (!window.gtag) {
+      console.warn('Google Analytics not loaded');
+      return;
+    }
+
+    // Configure default settings
+    window.gtag('config', GA_TRACKING_ID, {
       page_title: document.title,
       page_location: window.location.href,
-      custom_map: {
-        custom_dimension1: 'user_type',
-        custom_dimension2: 'page_category'
-      }
+      send_page_view: false, // We'll handle this manually
     });
   }
 };
 
-// Trackear eventos personalizados
-export const trackEvent = (action, category, label, value) => {
+// Track page view
+export const pageview = (url, title) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('config', GA_TRACKING_ID, {
+      page_path: url,
+      page_title: title,
+    });
+  }
+};
+
+// Track custom events
+export const event = ({ action, category, label, value }) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', action, {
       event_category: category,
       event_label: label,
-      value: value
+      value: value,
     });
   }
 };
 
-// Trackear vistas de página
-export const trackPageView = (url) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_MEASUREMENT_ID, {
-      page_path: url
-    });
-  }
-};
-
-// Trackear formularios enviados
+// Track form submissions
 export const trackFormSubmission = (formName) => {
-  trackEvent('form_submit', 'engagement', formName, 1);
+  event({
+    action: 'form_submit',
+    category: 'engagement',
+    label: formName,
+  });
 };
 
-// Trackear clics en botones
+// Track button clicks
 export const trackButtonClick = (buttonName, location) => {
-  trackEvent('button_click', 'engagement', `${buttonName}_${location}`, 1);
+  event({
+    action: 'click',
+    category: 'engagement',
+    label: `${buttonName}_${location}`,
+  });
 };
 
-// Trackear tiempo en página
-export const trackTimeOnPage = (seconds) => {
-  trackEvent('time_on_page', 'engagement', 'page_engagement', seconds);
-};
-
-// Trackear interacciones con carruseles
-export const trackCarouselInteraction = (carouselName, action) => {
-  trackEvent('carousel_interaction', 'engagement', `${carouselName}_${action}`, 1);
-};
-
-// Trackear descargas de recursos
-export const trackDownload = (fileName, fileType) => {
-  trackEvent('file_download', 'engagement', `${fileType}_${fileName}`, 1);
-};
-
-// Trackear errores
-export const trackError = (errorType, errorMessage) => {
-  trackEvent('error', 'error', `${errorType}_${errorMessage}`, 1);
+// Track external links
+export const trackExternalLink = (url, linkText) => {
+  event({
+    action: 'click',
+    category: 'outbound',
+    label: `${linkText}_${url}`,
+  });
 };

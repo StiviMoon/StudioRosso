@@ -6,9 +6,11 @@ import Nosotros from "./Pages/Nosotros.jsx";
 import NavBar from "./Components/NavBar.jsx";
 import Footer from "./Components/Footer.jsx";
 import useScrollToTop from "./hooks/useScrollToTop.jsx";
+import { useGoogleAnalytics } from "./hooks/useGoogleAnalytics.jsx";
 
 function App() {
   useScrollToTop();
+  useGoogleAnalytics(); // This will automatically track page views
 
   return (
     <div className="app">
