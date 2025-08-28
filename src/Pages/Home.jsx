@@ -27,11 +27,11 @@ const Home = () => {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-dream text-gray-800 leading-tight mb-6 sm:mb-8 px-4">
-              Creamos marcas que se{" "}
               <span className="text-greengrove relative">
-                sienten, se ven y venden
+                Studio Rosso Agency
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-greengrove/30 rounded-full"></div>
-              </span>
+              </span>{" "}
+              crea marcas que se sienten, se ven y venden en Colombia
             </h2>
 
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-montserrat text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12 px-4">
