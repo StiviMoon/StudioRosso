@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Google Analytics - Studio Rosso</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3YGHVFK5W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B3YGHVFK5W', {
+        debug_mode: true
+      });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .status {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .success { color: #22c55e; }
+        .error { color: #ef4444; }
+        button {
+            background: #22c55e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #16a34a;
+        }
+        pre {
+            background: #f3f4f6;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificación de Google Analytics</h1>
+
+    <div class="status">
+        <h2>Estado de la implementación:</h2>
+        <p id="status">Verificando...</p>
+    </div>
+
+    <div class="status">
+        <h2>Información de configuración:</h2>
+        <pre id="config"></pre>
+    </div>
+
+    <div class="status">
+        <h2>Pruebas de eventos:</h2>
+        <button onclick="sendTestEvent()">Enviar Evento de Prueba</button>
+        <button onclick="sendPageView()">Enviar Vista de Página</button>
+        <button onclick="sendCustomEvent()">Enviar Evento Personalizado</button>
+        <p id="eventStatus"></p>
+    </div>
+
+    <div class="status">
+        <h2>Instrucciones:</h2>
+        <ol>
+            <li>Abre las herramientas de desarrollo (F12)</li>
+            <li>Ve a la pestaña "Network" o "Red"</li>
+            <li>Filtra por "google" o "collect"</li>
+            <li>Haz clic en los botones de prueba</li>
+            <li>Deberías ver solicitudes a Google Analytics</li>
+        </ol>
+    </div>
+
+    <script>
+        // Verificar si gtag está cargado
+        function checkGtagStatus() {
+            const statusEl = document.getElementById('status');
+            const configEl = document.getElementById('config');
+
+            if (typeof gtag !== 'undefined') {
+                statusEl.innerHTML = '<span class="success">✓ Google Analytics está cargado correctamente</span>';
+
+                // Mostrar información de configuración
+                configEl.textContent = `
+GA Measurement ID: G-B3YGHVFK5W
+gtag function: ${typeof gtag}
+dataLayer: ${typeof window.dataLayer}
+dataLayer length: ${window.dataLayer ? window.dataLayer.length : 0}
+URL actual: ${window.location.href}
+                `;
+            } else {
+                statusEl.innerHTML = '<span class="error">✗ Google Analytics NO está cargado</span>';
+            }
+        }
+
+        // Enviar evento de prueba
+        function sendTestEvent() {
+            const eventStatusEl = document.getElementById('eventStatus');
+
+            try {
+                gtag('event', 'test_event', {
+                    event_category: 'engagement',
+                    event_label: 'test_button_click',
+                    value: 1
+                });
+                eventStatusEl.innerHTML = '<span class="success">✓ Evento de prueba enviado</span>';
+                console.log('Test event sent');
+            } catch (error) {
+                eventStatusEl.innerHTML = '<span class="error">✗ Error al enviar evento: ' + error.message + '</span>';
+            }
+        }
+
+        // Enviar vista de página
+        function sendPageView() {
+            const eventStatusEl = document.getElementById('eventStatus');
+
+            try {
+                gtag('config', 'G-B3YGHVFK5W', {
+                    page_path: '/analytics-test',
+                    page_title: 'Analytics Test Page'
+                });
+                eventStatusEl.innerHTML = '<span class="success">✓ Vista de página enviada</span>';
+                console.log('Page view sent');
+            } catch (error) {
+                eventStatusEl.innerHTML = '<span class="error">✗ Error al enviar vista: ' + error.message + '</span>';
+            }
+        }
+
+        // Enviar evento personalizado
+        function sendCustomEvent() {
+            const eventStatusEl = document.getElementById('eventStatus');
+
+            try {
+                gtag('event', 'button_click', {
+                    event_category: 'UI',
+                    event_label: 'header_cta',
+                    custom_parameter: 'test_value'
+                });
+                eventStatusEl.innerHTML = '<span class="success">✓ Evento personalizado enviado</span>';
+                console.log('Custom event sent');
+            } catch (error) {
+                eventStatusEl.innerHTML = '<span class="error">✗ Error al enviar evento personalizado: ' + error.message + '</span>';
+            }
+        }
+
+        // Verificar estado cuando se carga la página
+        window.addEventListener('load', () => {
+            setTimeout(checkGtagStatus, 1000); // Esperar un segundo para asegurar que gtag se cargó
+        });
+    </script>
+</body>
+</html>
