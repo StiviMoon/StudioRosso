@@ -9,12 +9,7 @@ const Nosotros = () => {
   const navigate = useNavigate();
   return (
     <section className="bg-gradient-to-br from-gray-50 to-white pt-16 sm:pt-20 pb-12 sm:pb-20 p-4 min-h-screen">
-      <SEO 
-        title="Sobre Nosotros - Studio Rosso Agency"
-        description="Conoce a Johan Rodríguez y Valentina Reyes, fundadores de Studio Rosso Agency. Somos jóvenes apasionados por el diseño y la tecnología en Colombia."
-        keywords="johan rodríguez colombia, valentina reyes colombia, fundadores studio rosso, agencia diseño colombia, historia studio rosso, equipo diseño colombia"
-        url="/nosotros"
-      />
+      <SEO pageName="nosotros" />
       <div className="max-w-6xl mx-auto pb-8 sm:pb-12 pt-16 sm:pt-20">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -22,13 +17,13 @@ const Nosotros = () => {
             <FiHeart className="text-greengrove text-base" />
             <span className="text-sm font-medium text-greengrove">Nuestra Historia</span>
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center text-greengrove mb-6 sm:mb-8 font-dream px-4">
             Sobre Nosotros
           </h2>
           <p className="text-center text-gray-700 leading-relaxed text-lg sm:text-xl md:text-2xl font-montserrat px-4 max-w-5xl mx-auto">
-            Somos <strong>Johan y Valentina</strong>, dos jóvenes apasionados que creemos que el diseño 
-            y la tecnología pueden cambiar el mundo. Studio Rosso nació de nuestra convicción de que 
+            Somos <strong>Johan y Valentina</strong>, dos jóvenes apasionados que creemos que el diseño
+            y la tecnología pueden cambiar el mundo. Studio Rosso nació de nuestra convicción de que
             cada marca tiene una historia única que merece ser contada de manera extraordinaria.
           </p>
         </div>
@@ -43,7 +38,7 @@ const Nosotros = () => {
               <h3 className="text-2xl sm:text-3xl font-bold text-greengrove font-dream">Johan Rodríguez</h3>
               <p className="text-lg text-gray-600 font-montserrat mb-4">Full Stack Developer</p>
               <p className="text-gray-700 font-montserrat leading-relaxed">
-                El cerebro técnico del equipo. Convierte ideas complejas en código limpio y funcional. 
+                El cerebro técnico del equipo. Convierte ideas complejas en código limpio y funcional.
                 Su pasión por la tecnología se refleja en cada línea de código que escribe.
               </p>
             </div>
@@ -57,7 +52,7 @@ const Nosotros = () => {
               <h3 className="text-2xl sm:text-3xl font-bold text-greengrove font-dream">Valentina Reyes</h3>
               <p className="text-lg text-gray-600 font-montserrat mb-4">Visual Communicator</p>
               <p className="text-gray-700 font-montserrat leading-relaxed">
-                La artista visual que da vida a las ideas. Su creatividad y sensibilidad estética 
+                La artista visual que da vida a las ideas. Su creatividad y sensibilidad estética
                 transforman conceptos abstractos en experiencias visuales que conectan emocionalmente.
               </p>
             </div>
@@ -74,8 +69,8 @@ const Nosotros = () => {
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 font-dream">Nuestra Visión</h3>
             </div>
             <p className="text-gray-700 leading-relaxed font-montserrat text-lg">
-              Creemos en el poder transformador del diseño bien hecho. No solo queremos que tu marca 
-              se vea bien, queremos que genere conexiones reales con tu audiencia y impulse el 
+              Creemos en el poder transformador del diseño bien hecho. No solo queremos que tu marca
+              se vea bien, queremos que genere conexiones reales con tu audiencia y impulse el
               crecimiento de tu negocio.
             </p>
           </div>
@@ -88,7 +83,7 @@ const Nosotros = () => {
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 font-dream">Nuestra Misión</h3>
             </div>
             <p className="text-gray-700 leading-relaxed font-montserrat text-lg">
-              Ayudar a emprendedores y pequeñas empresas a construir marcas auténticas que 
+              Ayudar a emprendedores y pequeñas empresas a construir marcas auténticas que
               reflejen su verdadera esencia y conecten con su audiencia de manera significativa.
             </p>
           </div>
@@ -157,10 +152,10 @@ const Nosotros = () => {
             <p className="text-lg sm:text-xl mb-6 font-montserrat opacity-90">
               Cuéntanos sobre tu proyecto y veamos cómo podemos ayudarte a hacerlo realidad
             </p>
-            <button 
-              onClick={() => navigateToTop(navigate, '/contacto')} 
-              className="group inline-flex items-center space-x-2 px-8 py-4 bg-white text-greengrove rounded-full 
-                       font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 
+            <button
+              onClick={() => navigateToTop(navigate, '/contacto')}
+              className="group inline-flex items-center space-x-2 px-8 py-4 bg-white text-greengrove rounded-full
+                       font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105
                        shadow-lg text-lg"
             >
               <span>Empezar Conversación</span>
@@ -169,7 +164,7 @@ const Nosotros = () => {
           </div>
         </div>
       </div>
-      
+
       <Services/>
     </section>
   );

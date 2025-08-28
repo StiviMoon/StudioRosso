@@ -12,15 +12,7 @@ const Servicios = () => {
   const navigate = useNavigate();
   return (
     <div className="bg-gradient-to-br from-gray-50 to-white min-h-screen pt-16 sm:pt-20">
-      <SEO
-        title="Servicios de Diseño y Desarrollo Web en Colombia"
-        description="Servicios profesionales de branding, diseño web, desarrollo web, marketing digital y SEO en Colombia. Soluciones personalizadas para hacer crecer tu negocio. Johan Rodríguez y Valentina Reyes."
-        keywords="servicios diseño web colombia, branding servicios, desarrollo web colombia, marketing digital servicios, SEO colombia, diseño UX UI colombia, fotografía comercial colombia, packaging diseño colombia, identidad visual colombia, social media colombia"
-        url="/servicios"
-        image="/img/banner.jpg"
-        type="website"
-        tags={["diseño web", "branding", "desarrollo web", "marketing digital", "SEO", "Colombia"]}
-      />
+      <SEO pageName="servicios" />
       {/* Hero Section */}
       <div className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
         {/* Background decoration */}

@@ -13,15 +13,10 @@ const Home = () => {
 
   return (
     <div className='h-full pt-10'>
-      <SEO 
-        title="Agencia de Diseño y Desarrollo Web en Colombia"
-        description="Studio Rosso Agency: Creamos marcas que se sienten, se ven y venden. Agencia de diseño, branding y desarrollo web en Colombia. Johan Rodríguez y Valentina Reyes."
-        keywords="agencia diseño colombia, branding colombia, desarrollo web colombia, diseño web bogotá, agencia digital colombia, marketing digital colombia, SEO colombia, diseño gráfico colombia"
-        url="/"
-      />
-      
+      <SEO pageName="home" />
+
       <InicioP1 />
-      
+
       {/* Hero Section - Renovado */}
       <section className="bg-gradient-to-b from-neutral-50 to-white py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6">
@@ -30,7 +25,7 @@ const Home = () => {
               <FiStar className="text-greengrove text-base" />
               <span className="text-sm font-medium text-greengrove">Studio Rosso</span>
             </div>
-            
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-dream text-gray-800 leading-tight mb-6 sm:mb-8 px-4">
               Creamos marcas que se{" "}
               <span className="text-greengrove relative">
@@ -38,22 +33,22 @@ const Home = () => {
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-greengrove/30 rounded-full"></div>
               </span>
             </h2>
-            
+
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-montserrat text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12 px-4">
               <strong>Studio Rosso:</strong> diseño + tecnología para negocios que quieren crecer.
             </p>
 
             {/* Botones claros */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <button onClick={() => navigateToTop(navigate, '/servicios')} className="group inline-flex items-center space-x-3 px-8 py-4 bg-greengrove text-white rounded-full 
-                               font-semibold hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 
+              <button onClick={() => navigateToTop(navigate, '/servicios')} className="group inline-flex items-center space-x-3 px-8 py-4 bg-greengrove text-white rounded-full
+                               font-semibold hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105
                                shadow-lg hover:shadow-xl text-base sm:text-lg">
                 <span>Explorar Servicios</span>
                 <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
-              
-              <button onClick={() => navigateToTop(navigate, '/contacto')} className="group inline-flex items-center space-x-3 px-8 py-4 border-2 border-greengrove text-greengrove rounded-full 
-                               font-semibold hover:bg-greengrove hover:text-white transition-all duration-300 transform hover:scale-105 
+
+              <button onClick={() => navigateToTop(navigate, '/contacto')} className="group inline-flex items-center space-x-3 px-8 py-4 border-2 border-greengrove text-greengrove rounded-full
+                               font-semibold hover:bg-greengrove hover:text-white transition-all duration-300 transform hover:scale-105
                                text-base sm:text-lg">
                 <span>Iniciar tu Proyecto</span>
                 <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -71,7 +66,7 @@ const Home = () => {
               Lo hacemos simple
             </h3>
             <p className="text-lg sm:text-xl md:text-2xl font-montserrat text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Tú tienes una idea, nosotros la llevamos al siguiente nivel. Desde el branding hasta tu web, 
+              Tú tienes una idea, nosotros la llevamos al siguiente nivel. Desde el branding hasta tu web,
               te ayudamos a construir una marca que conecta con clientes y genera resultados.
             </p>
           </div>
@@ -86,7 +81,7 @@ const Home = () => {
                 Dale identidad a tu negocio
               </p>
             </div>
-            
+
             <div className="text-center group">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-greengrove/10 rounded-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 <FiZap className="text-greengrove text-3xl" />
@@ -96,7 +91,7 @@ const Home = () => {
                 Tu vitrina digital, moderna y funcional
               </p>
             </div>
-            
+
             <div className="text-center group">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-greengrove/10 rounded-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 <FiTrendingUp className="text-greengrove text-3xl" />
@@ -129,7 +124,7 @@ const Home = () => {
                 Entendemos tu marca, metas y retos
               </p>
             </div>
-            
+
             <div className="text-center group">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-greengrove text-white rounded-full text-2xl font-bold mb-6 group-hover:scale-110 transition-transform duration-300">
                 2
@@ -139,7 +134,7 @@ const Home = () => {
                 Con diseño estratégico y tecnología moderna
               </p>
             </div>
-            
+
             <div className="text-center group">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-greengrove text-white rounded-full text-2xl font-bold mb-6 group-hover:scale-110 transition-transform duration-300">
                 3
@@ -162,7 +157,7 @@ const Home = () => {
                 ¿Por qué Studio Rosso?
               </h3>
               <p className="text-lg sm:text-xl md:text-2xl font-montserrat text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Porque somos jóvenes, frescos y hablamos tu mismo idioma. No creemos en plantillas: 
+                Porque somos jóvenes, frescos y hablamos tu mismo idioma. No creemos en plantillas:
                 cada proyecto es tan único como tu marca.
               </p>
             </div>
@@ -171,10 +166,10 @@ const Home = () => {
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-4 sm:space-y-6">
                   <h4 className="text-xl sm:text-2xl font-bold text-gray-800 font-dream">
-                    Con Valentina (visual) y Johan (tecnología), tienes lo mejor de dos mundos: 
+                    Con Valentina (visual) y Johan (tecnología), tienes lo mejor de dos mundos:
                     diseño que emociona y desarrollo que funciona.
                   </h4>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-greengrove rounded-full mt-2 flex-shrink-0"></div>
@@ -201,21 +196,21 @@ const Home = () => {
                   <h4 className="text-xl sm:text-2xl font-bold text-gray-800 font-dream">
                     Detrás de Studio Rosso estamos nosotros
                   </h4>
-                  
+
                   <div className="space-y-4">
                     <div className="text-center">
                       <h5 className="font-bold text-greengrove font-dream">Johan Rodríguez</h5>
                       <p className="text-sm text-gray-600 font-montserrat">Full Stack Developer</p>
                       <p className="text-xs text-gray-500 font-montserrat mt-1">El que convierte ideas en código y webs que funcionan</p>
                     </div>
-                    
+
                     <div className="text-center">
                       <h5 className="font-bold text-greengrove font-dream">Valentina Reyes</h5>
                       <p className="text-sm text-gray-600 font-montserrat">Visual Communicator</p>
                       <p className="text-xs text-gray-500 font-montserrat mt-1">La mente detrás del diseño que conecta y emociona</p>
                     </div>
                   </div>
-                  
+
                   <p className="text-sm text-gray-600 font-montserrat">
                     Somos jóvenes, apasionados y creemos en el poder de las marcas bien hechas.
                   </p>
@@ -265,14 +260,14 @@ const Home = () => {
             <p className="text-xl sm:text-2xl text-gray-300 font-montserrat px-4">
               Cuéntanos tu idea y hagámosla realidad.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <button onClick={() => navigateToTop(navigate, '/contacto')} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold 
-                                 hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105 
+              <button onClick={() => navigateToTop(navigate, '/contacto')} className="px-8 py-4 bg-greengrove text-white rounded-full font-semibold
+                                 hover:bg-greengrove/90 transition-all duration-300 transform hover:scale-105
                                  shadow-lg hover:shadow-xl text-base sm:text-lg">
                 Iniciar Proyecto
               </button>
-              <button onClick={() => window.open("https://www.behance.net/gallery/213678865/Portfolio-Design", "_blank")} className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold 
+              <button onClick={() => window.open("https://www.behance.net/gallery/213678865/Portfolio-Design", "_blank")} className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold
                                  hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 text-base sm:text-lg">
                 Ver Portafolio
               </button>
@@ -280,7 +275,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       <Beneficios/>
       <LogoSlider/>
       <Team/>

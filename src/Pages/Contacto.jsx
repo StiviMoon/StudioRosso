@@ -6,14 +6,9 @@ import { FiMail, FiPhone, FiMapPin, FiHeart, FiUsers } from 'react-icons/fi';
 const Contacto = () => {
   return (
     <div className="min-h-screen relative">
-      <SEO 
-        title="Contacto - Studio Rosso Agency"
-        description="Contacta con Studio Rosso Agency en Colombia. Teléfono: +57 319 487 3667. Email: studiorossoagency@gmail.com. Consulta gratuita para tu proyecto."
-        keywords="contacto studio rosso, teléfono agencia diseño colombia, email studio rosso, consulta diseño web colombia, presupuesto diseño colombia"
-        url="/contacto"
-      />
+      <SEO pageName="contacto" />
       {/* Background with overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${banner})` }}
       >
@@ -23,7 +18,7 @@ const Contacto = () => {
       <div className="relative z-10 min-h-screen flex items-center justify-center p-4 pt-16 sm:pt-20">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center relative bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-white/20 shadow-2xl">
-            
+
             {/* Left Column - Text Content */}
             <div className="text-white space-y-6 sm:space-y-8 p-4 sm:p-6 md:p-8">
               <div className="space-y-4 sm:space-y-6">
@@ -31,9 +26,9 @@ const Contacto = () => {
                   <FiHeart className="text-white text-sm" />
                   <span className="text-xs font-medium text-white font-montserrat">Studio Rosso</span>
                 </div>
-                
+
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-dream">
-                  Nos inspiran 
+                  Nos inspiran
                   <span className="block text-white">las historias</span>
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl w-full lg:w-[90%] text-white leading-relaxed font-montserrat">
@@ -48,7 +43,7 @@ const Contacto = () => {
                   <h4 className="text-lg font-semibold text-white font-dream">Somos personas reales</h4>
                 </div>
                 <p className="text-sm text-white/90 font-montserrat leading-relaxed">
-                  No somos una gran corporación. Somos Johan y Valentina, dos jóvenes apasionados 
+                  No somos una gran corporación. Somos Johan y Valentina, dos jóvenes apasionados
                   que creemos en el poder de las marcas bien hechas. Tu proyecto será nuestro proyecto.
                 </p>
               </div>
