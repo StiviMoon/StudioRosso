@@ -9,9 +9,9 @@
     <link rel="preload" href="/img/banner.jpg" as="image" type="image/jpeg">
     <link rel="preload" href="/img/Logos/rosso-min.svg" as="image" type="image/svg+xml">
 
-    <!-- Preload de fuentes críticas -->
-    <link rel="preload" href="/fonts/DreamOrphans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preconnect para fuentes (Google Fonts en index.css) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- DNS prefetch para recursos externos -->
     <link rel="dns-prefetch" href="//googletagmanager.com">
@@ -73,10 +73,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-B3YGHVFK5W', {
-        debug_mode: true,
-        send_page_view: true
-      });
+      gtag('config', 'G-B3YGHVFK5W', { send_page_view: true });
     </script>
 
     <!-- Structured Data -->

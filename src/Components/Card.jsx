@@ -1,14 +1,10 @@
-import { FaArrowRight } from 'react-icons/fa';
-import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
+import PropTypes from "prop-types";
 
-const Card = ({ title, description, icon, targetId, handleScroll }) => {
-  return (
-    <div
-      onClick={() => handleScroll(targetId)}
-      className="group relative w-full p-6 sm:p-8 bg-white/95 backdrop-blur-sm shadow-lg rounded-2xl cursor-pointer
-                 transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:-translate-y-2
-                 border border-gray-100 hover:border-gray-200 overflow-hidden"
-    >
+const Card = ({ title, description, icon, to }) => {
+  const content = (
+    <>
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/50 to-transparent
                       opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -46,18 +42,31 @@ const Card = ({ title, description, icon, targetId, handleScroll }) => {
 
       {/* Subtle border animation */}
       <div className="absolute inset-0 rounded-2xl border-2 border-transparent
-                      group-hover:border-greengrove/20 transition-all duration-500 pointer-events-none"></div>
-    </div>
+                      group-hover:border-greengrove/20 transition-all duration-500 pointer-events-none" />
+    </>
   );
+
+  const className =
+    "group relative w-full p-6 sm:p-8 bg-white/95 backdrop-blur-sm shadow-lg rounded-2xl cursor-pointer " +
+    "transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:-translate-y-2 " +
+    "border border-gray-100 hover:border-gray-200 overflow-hidden block";
+
+  if (to) {
+    return (
+      <Link to={to} className={className}>
+        {content}
+      </Link>
+    );
+  }
+
+  return <div className={className}>{content}</div>;
 };
 
-// PropTypes validation
 Card.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   icon: PropTypes.node.isRequired,
-  targetId: PropTypes.string.isRequired,
-  handleScroll: PropTypes.func.isRequired,
+  to: PropTypes.string,
 };
 
 export default Card;

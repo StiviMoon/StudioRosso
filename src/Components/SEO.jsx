@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import { getPageSEO, generateSchema, generateBreadcrumbs, SEO_CONFIG } from '../config/seo';
 
-const SEO = ({ pageName = 'home', customTitle, customDescription, customKeywords }) => {
+const SEO = ({ pageName = 'home', customTitle, customDescription, customKeywords, customUrl }) => {
   // Obtener configuración SEO de la página
   const pageSEO = getPageSEO(pageName);
   const { site } = SEO_CONFIG;
@@ -11,7 +11,7 @@ const SEO = ({ pageName = 'home', customTitle, customDescription, customKeywords
   const title = customTitle || pageSEO.title;
   const description = customDescription || pageSEO.description;
   const keywords = customKeywords || pageSEO.keywords;
-  const url = pageSEO.url;
+  const url = customUrl ? `${site.url}${customUrl}` : pageSEO.url;
   const image = `${site.url}${site.defaultImage}`;
 
   // Generar schemas
@@ -67,10 +67,11 @@ const SEO = ({ pageName = 'home', customTitle, customDescription, customKeywords
 };
 
 SEO.propTypes = {
-  pageName: PropTypes.oneOf(['home', 'servicios', 'nosotros', 'contacto']),
+  pageName: PropTypes.oneOf(['home', 'servicios', 'nosotros', 'contacto', 'servicio']),
   customTitle: PropTypes.string,
   customDescription: PropTypes.string,
-  customKeywords: PropTypes.string
+  customKeywords: PropTypes.string,
+  customUrl: PropTypes.string,
 };
 
 export default SEO;

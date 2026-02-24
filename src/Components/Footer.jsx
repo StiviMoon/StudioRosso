@@ -1,15 +1,9 @@
+import React from "react";
+import { FaInstagram, FaTiktok, FaYoutube, FaLinkedin, FaGithub, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-import { FaInstagram, FaTiktok, FaYoutube, FaLinkedin, FaGithub, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import r1 from '/img/Logos/rosso-min.svg';
-
-const Footer = () => {
+const Footer = React.memo(function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const handleSocialClick = (platform) => {
-    // Analytics tracking could be added here
-    console.log(`Social link clicked: ${platform}`);
-  };
 
   return (
     <footer className="bg-[#F5F5DC] relative overflow-hidden">
@@ -31,7 +25,7 @@ const Footer = () => {
                 {/* Logo */}
                 <div className="group">
                   <div className="bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <img src={r1} alt="Agencia Rosso Logo" className="w-16 h-16 object-contain" />
+                    <img src="/img/Logos/rosso-min.svg" alt="Agencia Rosso Logo" className="w-16 h-16 object-contain" width="64" height="64" loading="lazy" decoding="async" />
                   </div>
                 </div>
 
@@ -58,7 +52,6 @@ const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Síguenos en ${social.label}`}
-                      onClick={() => handleSocialClick(social.label)}
                       className="group p-3 bg-white/60 backdrop-blur-sm rounded-xl hover:bg-white/80 hover:scale-110 transition-all duration-300 hover:shadow-lg"
                     >
                       <social.icon className="text-gray-800 text-xl group-hover:text-gray-900 transition-colors duration-200" />
@@ -192,6 +185,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;

@@ -27,7 +27,7 @@ const Trabajos = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-20 space-y-20">
       {/* Componente 1 - Branding */}
-      <div id='branding'>
+      <div id="branding">
         <ServicioComp
           title="Branding"
           description="En Studio Rosso transformamos tu visión en una marca poderosa y auténtica. Desde el diseño del concepto hasta la creación de una identidad visual única, nuestro objetivo es reflejar la esencia de tu marca de manera coherente y atractiva. ¡Haz que tu marca se distinga!"
@@ -36,12 +36,12 @@ const Trabajos = () => {
           badgeText="Nuestra especialidad"
           image1={img3}
           image2={img2}
-
+          servicePath="/servicios/branding-y-estrategia"
         />
       </div>
 
       {/* Componente 2 - Packaging */}
-      <div id='packaging'>
+      <div id="packaging">
         <ServicioCompInverso
           title="Packaging"
           description="Diseñamos empaques que no solo protegen, sino que hablan por tu marca. A través de soluciones creativas y estratégicas, creamos packaging que resalta en el mercado, conecta emocionalmente con tu audiencia y eleva el valor percibido de tu producto. ¡Haz que tu empaque cautive!"
@@ -50,22 +50,24 @@ const Trabajos = () => {
           badgeText="Sabemos de empaques"
           image1={p2}
           image2={p1}
+          servicePath="/servicios/identidad-visual-packaging"
         />
       </div>
 
       {/* Nueva Sección con Tarjetas */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8" id='ux'>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8" id="ux">
         <TarjetaComp
           title="Diseño UX/UI"
           description="Diseñamos productos y servicios que satisfacen las necesidades de tus usuarios. Nuestro objetivo es que los usuarios tengan la mejor experiencia al Interactuar con tu marca."
           image={img2}
+          servicePath="/servicios/diseno-ux-ui"
         />
         <TarjetaComp
           title="Desarrollo Web"
           description="Transformamos tus ideas en sitios web modernos, dinámicos y totalmente personalizados. Destaca en el mundo digital con soluciones innovadoras diseñadas para impactar."
           image={wb1}
+          servicePath="/servicios/desarrollo-web"
         />
-
       </div>
 
       <div className='flex justify-center'>
@@ -78,7 +80,7 @@ const Trabajos = () => {
       </div>
 
       {/* Componente 3 - Social Media */}
-      <div id='social'>
+      <div id="social">
         <ServicioComp
           title="Social Media"
           description="En Rosso, no solo gestionamos redes sociales, sino que creamos estrategias personalizadas para que tu marca destaque. Mejoramos tu alcance y optimizamos los resultados con contenidos que capturan la atención y fomentan la interacción. ¡Lleva tu marca al siguiente nivel!"
@@ -87,11 +89,12 @@ const Trabajos = () => {
           badgeText="Expertos en Social Media"
           image1={s1}
           image2={s2}
+          servicePath="/servicios/social-media-contenidos"
         />
       </div>
 
       {/* Componente 4 - Fotografía */}
-      <div id='fotografia'>
+      <div id="fotografia">
         <ServicioCompInverso
           title="Fotografía"
           description="Capturamos la esencia de tu marca a través de fotografías y videos que cuentan historias visuales. Nuestra fotografía profesional resalta la identidad y calidad de tus productos, creando una conexión inmediata con tu audiencia. ¡Imágenes que hablan por tu marca!"
@@ -100,11 +103,12 @@ const Trabajos = () => {
           badgeText="Expertos en fotografía"
           image1={f2}
           image2={f1}
+          servicePath="/servicios/fotografia-ilustracion"
         />
       </div>
 
       {/* Componente 5 - Identidad Visual */}
-      <div id='identidad'>
+      <div id="identidad">
         <ServicioComp
           title="Identidad Visual"
           description="En Studio Rosso diseñamos identidades visuales que transmiten claramente la esencia de tu marca. Desde el logo hasta cada detalle gráfico, trabajamos para que tu marca sea memorable, se distinga en el mercado y tenga un impacto duradero. ¡Construye una identidad visual que deje huella!"
@@ -113,6 +117,7 @@ const Trabajos = () => {
           badgeText="Expertos en branding"
           image1={id1}
           image2={img4}
+          servicePath="/servicios/identidad-visual-packaging"
         />
       </div>
     </div>

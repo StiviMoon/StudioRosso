@@ -148,6 +148,8 @@ const Home = () => {
         </div>
       </section>
 
+      <LogoSlider />
+
       {/* Por qué elegirnos */}
       <section className="bg-white py-16 sm:py-20 md:py-24">
         <div className="container mx-auto px-4 sm:px-6">
@@ -277,7 +279,6 @@ const Home = () => {
       </section>
 
       <Beneficios/>
-      <LogoSlider/>
       <Team/>
     </div>
   )

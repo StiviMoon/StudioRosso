@@ -83,16 +83,20 @@ const CarruselImg = () => {
 
         {/* Flechas de navegación */}
         <button
+          type="button"
           onClick={handlePrev}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:shadow-lg focus:outline-none z-10"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-greengrove focus:ring-offset-2 z-10"
+          aria-label="Imagen anterior"
         >
-          <FiArrowLeft className="text-gray-700" size={24} />
+          <FiArrowLeft className="text-gray-700" size={24} aria-hidden />
         </button>
         <button
+          type="button"
           onClick={handleNext}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:shadow-lg focus:outline-none z-10"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-greengrove focus:ring-offset-2 z-10"
+          aria-label="Siguiente imagen"
         >
-          <FiArrowRight className="text-gray-700" size={24} />
+          <FiArrowRight className="text-gray-700" size={24} aria-hidden />
         </button>
       </div>
     </section>

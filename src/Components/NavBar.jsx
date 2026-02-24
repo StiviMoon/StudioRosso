@@ -1,41 +1,43 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { FaArrowRight } from "react-icons/fa";
-import logo from '/img/Logos/rossoL-min.svg';
+
+const NAV_ITEMS = [
+  { path: "/", label: "Home" },
+  { path: "/servicios", label: "Servicios" },
+  { path: "/nosotros", label: "Nosotros" },
+  { path: "/contacto", label: "Contacto" },
+];
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);  
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // Función para verificar si la ruta es activa
-  const isActive = (path) => location.pathname === path;
+  const isActive = useCallback((path) => location.pathname === path, [location.pathname]);
 
-  // Función para hacer scroll al top
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  };
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
-  // Función para cerrar menú y hacer scroll al top
-  const handleNavClick = () => {
+  const handleNavClick = useCallback(() => {
     setMenuOpen(false);
     scrollToTop();
-  };
+  }, [scrollToTop]);
 
-  // Effect para detectar scroll
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      setScrolled(isScrolled);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 10);
+        ticking = false;
+      });
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -48,20 +50,15 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-xl sm:text-2xl font-bold text-black group">
           <Link to="/" onClick={scrollToTop} className="flex items-center space-x-2 hover:text-greengrove transition-colors duration-300">
-            <img src={logo} alt="Studio Rosso" className="w-[10rem] sm:w-[12rem] md:w-[14rem]" />
+            <img src="/img/Logos/rossoL-min.svg" alt="Studio Rosso" className="w-[10rem] sm:w-[12rem] md:w-[14rem]" width="224" height="48" loading="eager" decoding="async" />
             <div className="w-2 h-2 bg-greengrove rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
         </div>
 
         {/* Desktop Menu - Hidden on mobile and tablet, visible on lg+ */}
         <ul className="hidden lg:flex items-center space-x-8">
-          {[
-            { path: "/", label: "Home" },
-            { path: "/servicios", label: "Servicios" },
-            { path: "/nosotros", label: "Nosotros" },
-            { path: "/contacto", label: "Contacto" }
-          ].map((item, index) => (
-            <li key={index}>
+          {NAV_ITEMS.map((item) => (
+            <li key={item.path}>
               <Link
                 to={item.path}
                 onClick={scrollToTop}
@@ -123,13 +120,8 @@ const Navbar = () => {
         } lg:hidden overflow-hidden transition-all duration-500 ease-in-out bg-white/95 backdrop-blur-md border-t border-gray-100`}
       >
         <ul className="px-4 sm:px-6 py-4 space-y-2">
-          {[
-            { path: "/", label: "Home" },
-            { path: "/servicios", label: "Servicios" },
-            { path: "/nosotros", label: "Nosotros" },
-            { path: "/contacto", label: "Contacto" }
-          ].map((item, index) => (
-            <li key={index}>
+          {NAV_ITEMS.map((item) => (
+            <li key={item.path}>
               <Link
                 to={item.path}
                 onClick={handleNavClick}

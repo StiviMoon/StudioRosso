@@ -1,5 +1,4 @@
-import rossoL from "/img/Logos/rossoL-min.svg";
-import ServiciosSlider from '../ServiciosSlider';
+import ServiciosSlider from "../ServiciosSlider";
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiPlay, FiStar, FiCheckCircle } from 'react-icons/fi';
 
@@ -23,6 +22,7 @@ const InicioP1 = () => {
               className="w-full h-full object-cover"
               loading="eager"
               decoding="async"
+              fetchPriority="high"
             />
           </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
@@ -116,9 +116,11 @@ const InicioP1 = () => {
                 {/* Logo Container */}
                 <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-white/20 shadow-2xl">
                   <img
-                    src={rossoL}
+                    src="/img/Logos/rossoL-min.svg"
                     alt="Studio Rosso Logo"
                     className="w-full h-auto filter brightness-0 invert"
+                    loading="eager"
+                    decoding="async"
                   />
                 </div>
               </div>

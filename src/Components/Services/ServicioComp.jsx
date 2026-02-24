@@ -5,9 +5,12 @@ const ServicioComp = ({
   title,
   description,
   buttonText1,
+  buttonText2,
   image1,
   image2,
+  servicePath,
 }) => {
+  const saberMasTo = servicePath ?? "/contacto";
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
@@ -19,18 +22,30 @@ const ServicioComp = ({
           </h2>
           {/* Descripción */}
           <p className="mt-4 text-gray-800 font-montserrat text-lg">{description}</p>
-          {/* Botón */}
+          {/* Imagen */}
           <div className="relative w-full h-[150px] md:h-[230px] rounded-lg overflow-hidden shadow-lg border border-gray-300">
             <img
               src={image1}
-              alt="Vista previa del servicio 1"
+              alt={`${title} - Vista previa`}
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
-          <div className="mt-6  justify-center flex flex-row items-center">
-            <Link to="/contacto" className="border-2 border-black text-black py-2 px-6  mx-8 rounded-full hover:bg-black hover:text-white transition-all duration-500 ease-in-out">
+          <div className="mt-6 flex flex-row items-center flex-wrap gap-3 justify-center">
+            <Link
+              to={saberMasTo}
+              className="border-2 border-black text-black py-2 px-6 rounded-full hover:bg-black hover:text-white transition-all duration-500 ease-in-out font-semibold"
+            >
               {buttonText1}
             </Link>
+            {buttonText2 && (
+              <Link
+                to="/contacto"
+                className="border-2 border-greengrove text-greengrove py-2 px-6 rounded-full hover:bg-greengrove hover:text-white transition-all duration-500 ease-in-out font-semibold"
+              >
+                {buttonText2}
+              </Link>
+            )}
           </div>
         </div>
 

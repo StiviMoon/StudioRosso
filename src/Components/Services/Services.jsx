@@ -1,18 +1,10 @@
-
-import { FaArrowRight, FaStar, FaPalette, FaBoxOpen, FaUserFriends, FaCode, FaChartLine, FaMobileAlt, FaCameraRetro } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-import { navigateToTop } from '../../utils/navigation.js';
-import Card from '../Card.jsx';
+import { FaArrowRight, FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { navigateToTop } from "../../utils/navigation.js";
+import Card from "../Card.jsx";
+import { SERVICIOS } from "../../config/servicios.js";
 
 const Services = () => {
-
-  const handleScroll = (targetId) => {
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const navigate = useNavigate();
 
   return (
@@ -41,81 +33,15 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-
-
-              <Card
-                number="01"
-                title="Branding y Estrategia"
-                description="Desarrollamos identidades de marca únicas y estrategias que conectan con tu audiencia."
-                icon={<FaPalette />}
-                targetId="branding"
-                handleScroll={handleScroll}
-              />
-
-              <Card
-                number="02"
-                title="Identidad Visual & Packaging"
-                description="Creamos sistemas visuales y empaques innovadores que reflejan tu identidad de marca."
-                icon={<FaBoxOpen />}
-                targetId="identidad"
-                handleScroll={handleScroll}
-              />
-
-
-              <Card
-                number="03"
-                title="Diseño UX/UI"
-                description="Diseñamos interfaces intuitivas y experiencias centradas en el usuario para web y apps."
-                icon={<FaUserFriends />}
-                targetId="ux"
-                handleScroll={handleScroll}
-              />
-
-
-
-
-              <Card
-                number="04"
-                title="Desarrollo Web"
-                description="Construimos sitios web modernos, responsivos y optimizados para tu negocio."
-                icon={<FaCode />}
-                targetId="dw"
-                handleScroll={handleScroll}
-              />
-
-
-              <Card
-                number="05"
-                title="Marketing Digital & SEO"
-                description="Mejoramos tu visibilidad en internet con estrategias SEO y campañas publicitarias."
-                icon={<FaChartLine />}
-                targetId="marketing"
-                handleScroll={handleScroll}
-              />
-
-
-              <Card
-                number="06"
-                title="Social Media & Contenidos"
-                description="Gestionamos redes sociales y creamos contenido visual atractivo para tu audiencia."
-                icon={<FaMobileAlt />}
-                targetId="social"
-                handleScroll={handleScroll}
-              />
-
-
-
-
-              <Card
-                number="07"
-                title="Fotografía e Ilustración"
-                description="Producción de contenido visual profesional y creativo para tu marca."
-                icon={<FaCameraRetro />}
-                targetId="fotografia"
-                handleScroll={handleScroll}
-              />
-
-
+          {SERVICIOS.map((servicio) => (
+            <Card
+              key={servicio.id}
+              title={servicio.title}
+              description={servicio.description}
+              icon={<servicio.icon className="text-2xl" />}
+              to={`/servicios/${servicio.id}`}
+            />
+          ))}
         </div>
         {/* Call to Action */}
         <div className="text-center mt-12 sm:mt-16 md:mt-20">
