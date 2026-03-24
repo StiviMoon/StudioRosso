@@ -25,8 +25,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          icons: ['react-icons'],
-          forms: ['react-hook-form', 'zod'],
+          forms: ['react-hook-form', 'zod', '@hookform/resolvers'],
         },
         // Optimizar nombres de archivos para Vercel
         chunkFileNames: 'assets/[name]-[hash].js',

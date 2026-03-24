@@ -10,18 +10,16 @@ const InicioP1 = () => {
         {/* Background with overlay */}
         <div className="absolute inset-0">
           <picture>
-            {/* WebP para navegadores modernos */}
-            <source
-              srcSet="/img/hero-background.webp"
-              type="image/webp"
-            />
-            {/* JPG como fallback */}
+            <source srcSet="/img/hero-background.webp" type="image/webp" />
             <img
               src="/img/hero-background-optimized.jpg"
-              alt="Studio Rosso Background - Fondo de pantalla abstracto con tonos oscuros"
+              alt=""
+              aria-hidden="true"
               className="w-full h-full object-cover"
+              width="1920"
+              height="1080"
               loading="eager"
-              decoding="async"
+              decoding="sync"
               fetchPriority="high"
             />
           </picture>

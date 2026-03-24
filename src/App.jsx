@@ -17,10 +17,14 @@ const SocialMediaContenidos = lazy(() => import("./Pages/Servicios/SocialMediaCo
 const FotografiaIlustracion = lazy(() => import("./Pages/Servicios/FotografiaIlustracion.jsx"));
 const Contacto = lazy(() => import("./Pages/Contacto.jsx"));
 const Nosotros = lazy(() => import("./Pages/Nosotros.jsx"));
+const NotFound = lazy(() => import("./Pages/NotFound.jsx"));
 
 const PageFallback = () => (
-  <div className="min-h-[50vh] flex items-center justify-center" aria-hidden="true">
-    <div className="w-10 h-10 border-2 border-greengrove border-t-transparent rounded-full animate-spin" />
+  <div className="min-h-screen flex items-center justify-center" aria-hidden="true">
+    <div className="flex flex-col items-center gap-4">
+      <div className="w-10 h-10 border-2 border-greengrove border-t-transparent rounded-full animate-spin" />
+      <p className="text-sm text-gray-400 font-montserrat">Cargando...</p>
+    </div>
   </div>
 );
 
@@ -45,6 +49,7 @@ function App() {
           <Route path="servicios/:id" element={<ServicioDetalle />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="nosotros" element={<Nosotros />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Footer />

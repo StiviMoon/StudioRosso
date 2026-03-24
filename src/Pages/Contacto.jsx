@@ -1,11 +1,11 @@
 import Formulario from '../Components/Formulario.jsx';
 import SEO from '../Components/SEO.jsx';
-import banner from '/img/banner.jpg';
+import banner from '/img/banner.webp';
 import { FiMail, FiPhone, FiMapPin, FiHeart, FiUsers } from 'react-icons/fi';
 
 const Contacto = () => {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative" id="main-content">
       <SEO pageName="contacto" />
       {/* Background with overlay */}
       <div
@@ -15,7 +15,7 @@ const Contacto = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center p-4 pt-16 sm:pt-20">
+      <div className="relative z-10 min-h-screen flex items-center justify-center p-4 pt-20 sm:pt-24">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center relative bg-white/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-white/20 shadow-2xl">
 
@@ -43,7 +43,7 @@ const Contacto = () => {
                   <h4 className="text-lg font-semibold text-white font-dream">Somos personas reales</h4>
                 </div>
                 <p className="text-sm text-white/90 font-montserrat leading-relaxed">
-                  No somos una gran corporación. Somos Johan y Valentina, dos jóvenes apasionados
+                  No somos una gran corporación. Somos Steven y Valentina, dos jóvenes apasionados
                   que creemos en el poder de las marcas bien hechas. Tu proyecto será nuestro proyecto.
                 </p>
               </div>

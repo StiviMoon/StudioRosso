@@ -29,7 +29,9 @@ const ServiciosSlider = React.memo(function ServiciosSlider() {
               src={imagePaths[index]}
               alt={`Servicio ${index + 1} - Studio Rosso Agency`}
               className="w-full h-full object-cover rounded-lg carousel-image"
-              loading={index < 2 ? "eager" : "lazy"}
+              width="400"
+              height="400"
+              loading="lazy"
               decoding="async"
             />
           </div>

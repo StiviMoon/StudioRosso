@@ -25,7 +25,7 @@ export const SEO_CONFIG = {
     home: {
       path: '/',
       title: 'Studio Rosso Agency - Agencia de Diseño y Desarrollo Web en Colombia',
-      description: 'Studio Rosso Agency es la agencia líder en diseño, branding y desarrollo web en Colombia. Creamos marcas memorables con Johan Rodríguez y Valentina Reyes.',
+      description: 'Studio Rosso Agency: diseño, branding, desarrollo web e inteligencia artificial en Colombia. Automatizamos procesos y creamos marcas memorables.',
       keywords: 'studio rosso agency, studio rosso, agencia diseño colombia, studio rosso bogotá, branding colombia, desarrollo web colombia, diseño web bogotá',
       schema: 'Organization'
     },
@@ -38,9 +38,9 @@ export const SEO_CONFIG = {
     },
     nosotros: {
       path: '/nosotros',
-      title: 'Nosotros - Studio Rosso Agency | Johan Rodríguez y Valentina Reyes',
-      description: 'Conoce a Studio Rosso Agency y sus fundadores Johan Rodríguez y Valentina Reyes. Expertos en diseño y desarrollo web en Colombia.',
-      keywords: 'studio rosso agency nosotros, johan rodríguez studio rosso, valentina reyes studio rosso, equipo studio rosso agency',
+      title: 'Nosotros - Studio Rosso Agency | Steven Rodríguez y Valentina Reyes',
+      description: 'Conoce a Studio Rosso Agency y sus fundadores Steven Rodríguez y Valentina Reyes. Ingeniería de software, IA, diseño y marketing digital en Colombia.',
+      keywords: 'studio rosso agency nosotros, steven rodríguez studio rosso, valentina reyes studio rosso, equipo studio rosso agency',
       schema: 'AboutPage'
     },
     contacto: {
@@ -146,13 +146,13 @@ export const generateSchema = (pageName) => {
       "founder": [
         {
           "@type": "Person",
-          "name": "Johan Rodríguez",
-          "jobTitle": "Fundador y Director Creativo"
+          "name": "Steven Rodríguez",
+          "jobTitle": "Fundador & Ingeniero de Software e IA"
         },
         {
           "@type": "Person",
           "name": "Valentina Reyes",
-          "jobTitle": "Fundadora y Directora de Estrategia"
+          "jobTitle": "Fundadora & Directora Creativa"
         }
       ]
     };

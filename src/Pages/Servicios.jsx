@@ -11,7 +11,7 @@ import { navigateToTop } from '../utils/navigation.js';
 const Servicios = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-white min-h-screen pt-16 sm:pt-20">
+    <div className="bg-gradient-to-br from-gray-50 to-white min-h-screen pt-20 sm:pt-24" id="main-content">
       <SEO pageName="servicios" />
       {/* Hero Section */}
       <div className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">

@@ -1,9 +1,33 @@
-import React from "react";
-import { FaInstagram, FaTiktok, FaYoutube, FaLinkedin, FaGithub, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import React, { useMemo } from "react";
+import { FaInstagram, FaTiktok, FaYoutube, FaLinkedin, FaGithub, FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { SERVICIOS } from "../config/servicios.js";
+
+// ─── Anti-bot contact assembly — never expose full strings in static HTML ───
+// Bots scraping raw HTML cannot harvest these values; they only exist at runtime.
+function useContactData() {
+  return useMemo(() => {
+    // Steven: +57 323 501 8878
+    const stevenParts = ["+57", "323", "501", "8878"];
+    const stevenRaw = stevenParts.join("");           // +57323501878 for href
+    const stevenDisplay = stevenParts.join(" ");       // +57 323 501 8878 for display
+
+    // Valentina: +57 319 487 3667
+    const valentinaParts = ["+57", "319", "487", "3667"];
+    const valentinaRaw = valentinaParts.join("");
+    const valentinaDisplay = valentinaParts.join(" ");
+
+    // Email
+    const emailParts = ["studiorossoagency", "@", "gmail", ".", "com"];
+    const email = emailParts.join("");
+
+    return { stevenRaw, stevenDisplay, valentinaRaw, valentinaDisplay, email };
+  }, []);
+}
 
 const Footer = React.memo(function Footer() {
   const currentYear = new Date().getFullYear();
+  const { stevenRaw, stevenDisplay, valentinaRaw, valentinaDisplay, email } = useContactData();
 
   return (
     <footer className="bg-[#F5F5DC] relative overflow-hidden">
@@ -94,20 +118,14 @@ const Footer = React.memo(function Footer() {
                   Servicios
                 </h3>
                 <nav className="space-y-3">
-                  {[
-                    { to: "/servicios", label: "Branding y Estrategia" },
-                    { to: "/servicios", label: "Identidad Visual & Packaging" },
-                    { to: "/servicios", label: "Diseño UX/UI" },
-                    { to: "/servicios", label: "Desarrollo Web" },
-                    { to: "/servicios", label: "Marketing Digital & SEO" }
-                  ].map((service, index) => (
+                  {SERVICIOS.slice(0, 5).map((service) => (
                     <Link
-                      key={index}
-                      to={service.to}
-                      className="group flex items-center text-gray-800 hover:text-gray-900 transition-all duration-200 hover:translate-x-1"
+                      key={service.id}
+                      to={`/servicios/${service.id}`}
+                      className="group flex items-center text-gray-800 hover:text-gray-900 transition-all duration-200 hover:translate-x-1 font-montserrat text-sm"
                     >
-                      <span className="w-1 h-1 bg-gray-500 rounded-full mr-3 group-hover:bg-gray-900 transition-colors duration-200"></span>
-                      {service.label}
+                      <span className="w-1 h-1 bg-gray-500 rounded-full mr-3 group-hover:bg-gray-900 transition-colors duration-200 flex-shrink-0"></span>
+                      {service.shortTitle}
                     </Link>
                   ))}
                 </nav>
@@ -121,26 +139,56 @@ const Footer = React.memo(function Footer() {
                   Contacto
                 </h3>
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-3 group">
+                  {/* Steven — WhatsApp */}
+                  <a
+                    href={`https://wa.me/${stevenRaw.replace("+", "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start space-x-3 group"
+                    aria-label="WhatsApp Steven Rodríguez"
+                  >
                     <div className="p-2 bg-white/60 backdrop-blur-sm rounded-lg group-hover:bg-white/80 transition-all duration-200">
-                      <FaPhone className="text-gray-700 text-sm" />
+                      <FaWhatsapp className="text-gray-700 text-sm" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-gray-900">Teléfono</p>
-                      <p className="text-sm text-gray-700">+57 319-487-3667</p>
+                      <p className="text-sm font-medium text-gray-900">Steven · Desarrollo & IA</p>
+                      <p className="text-sm text-gray-700">{stevenDisplay}</p>
                     </div>
-                  </div>
+                  </a>
 
-                  <div className="flex items-start space-x-3 group">
+                  {/* Valentina — WhatsApp */}
+                  <a
+                    href={`https://wa.me/${valentinaRaw.replace("+", "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start space-x-3 group"
+                    aria-label="WhatsApp Valentina Reyes"
+                  >
+                    <div className="p-2 bg-white/60 backdrop-blur-sm rounded-lg group-hover:bg-white/80 transition-all duration-200">
+                      <FaWhatsapp className="text-gray-700 text-sm" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-gray-900">Valentina · Diseño & Branding</p>
+                      <p className="text-sm text-gray-700">{valentinaDisplay}</p>
+                    </div>
+                  </a>
+
+                  {/* Email */}
+                  <a
+                    href={`mailto:${email}`}
+                    className="flex items-start space-x-3 group"
+                    aria-label="Enviar email a Studio Rosso"
+                  >
                     <div className="p-2 bg-white/60 backdrop-blur-sm rounded-lg group-hover:bg-white/80 transition-all duration-200">
                       <FaEnvelope className="text-gray-700 text-sm" />
                     </div>
                     <div>
                       <p className="text-sm font-medium text-gray-900">Email</p>
-                      <p className="text-sm text-gray-700">studiorossoagency@gmail.com</p>
+                      <p className="text-sm text-gray-700 break-all">{email}</p>
                     </div>
-                  </div>
+                  </a>
 
+                  {/* Ubicación */}
                   <div className="flex items-start space-x-3 group">
                     <div className="p-2 bg-white/60 backdrop-blur-sm rounded-lg group-hover:bg-white/80 transition-all duration-200">
                       <FaMapMarkerAlt className="text-gray-700 text-sm" />
@@ -167,17 +215,17 @@ const Footer = React.memo(function Footer() {
                 </p>
               </div>
 
-              {/* Legal Links - Removed non-existent pages */}
-              <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm">
-                <span className="text-gray-400 cursor-not-allowed">
-                  Términos & Condiciones
-                </span>
-                <span className="text-gray-400 cursor-not-allowed">
-                  Política de Privacidad
-                </span>
-                <span className="text-gray-400 cursor-not-allowed">
-                  Política de Cookies
-                </span>
+              {/* Legal */}
+              <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm font-montserrat">
+                <Link to="/contacto" className="text-gray-500 hover:text-gray-800 transition-colors duration-200">
+                  Contacto
+                </Link>
+                <Link to="/servicios" className="text-gray-500 hover:text-gray-800 transition-colors duration-200">
+                  Servicios
+                </Link>
+                <Link to="/nosotros" className="text-gray-500 hover:text-gray-800 transition-colors duration-200">
+                  Nosotros
+                </Link>
               </div>
             </div>
           </div>

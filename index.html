@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/img/Logos/rosso-min.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Preload de recursos críticos para mejorar LCP -->
-    <link rel="preload" href="/img/hero-background.webp" as="image" type="image/webp">
-    <link rel="preload" href="/img/banner.jpg" as="image" type="image/jpeg">
+    <!-- Preload del hero (LCP crítico) -->
+    <link rel="preload" href="/img/hero-background.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="preload" href="/img/Logos/rosso-min.svg" as="image" type="image/svg+xml">
 
-    <!-- Preconnect para fuentes (Google Fonts en index.css) -->
+    <!-- Preconnect para fuentes (carga en paralelo, no bloquea render) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts como <link> (no @import en CSS) para carga no bloqueante -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=optional" />
 
     <!-- DNS prefetch para recursos externos -->
     <link rel="dns-prefetch" href="//googletagmanager.com">
@@ -23,7 +24,7 @@
 
     <!-- Meta tags optimizados -->
     <title>Studio Rosso Agency - Agencia de Diseño y Desarrollo Web en Colombia</title>
-    <meta name="description" content="Studio Rosso Agency es la agencia líder en diseño, branding y desarrollo web en Colombia. Creamos marcas memorables con Johan Rodríguez y Valentina Reyes." />
+    <meta name="description" content="Studio Rosso Agency: diseño, branding, desarrollo web e inteligencia artificial en Colombia. Creamos marcas memorables con Steven Rodríguez y Valentina Reyes." />
     <meta name="keywords" content="studio rosso agency, studio rosso, agencia diseño colombia, studio rosso bogotá, branding colombia, desarrollo web colombia, diseño web bogotá" />
     <meta name="author" content="Studio Rosso Agency" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -67,13 +68,22 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3YGHVFK5W"></script>
+    <!-- Critical CSS inline — evita FOUC antes de que cargue el bundle CSS -->
+    <style>
+      *,::before,::after{box-sizing:border-box}
+      body{margin:0;background:#fafafa;font-family:'Montserrat',system-ui,sans-serif}
+      #root{min-height:100vh}
+      .font-dream{font-family:'Dream Orphans','Georgia',serif}
+      .font-montserrat{font-family:'Montserrat',system-ui,sans-serif}
+    </style>
+
+    <!-- Google tag (gtag.js) — defer para no bloquear render -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-B3YGHVFK5W"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-B3YGHVFK5W', { send_page_view: true });
+      gtag('config', 'G-B3YGHVFK5W', { send_page_view: false });
     </script>
 
     <!-- Structured Data -->
@@ -84,7 +94,7 @@
       "name": "Studio Rosso Agency",
       "url": "https://www.studiorossoagency.com",
       "logo": "https://www.studiorossoagency.com/img/Logos/rosso-min.png",
-      "description": "Studio Rosso Agency es la agencia líder en diseño, branding y desarrollo web en Colombia. Creamos marcas memorables con Johan Rodríguez y Valentina Reyes.",
+      "description": "Studio Rosso Agency: diseño, branding, desarrollo web e inteligencia artificial en Colombia. Steven Rodríguez y Valentina Reyes.",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "Colombia",
@@ -120,7 +130,7 @@
         "longitude": -74.0721
       },
       "url": "https://www.studiorossoagency.com",
-      "telephone": "+57-300-000-0000",
+      "email": "studiorossoagency@gmail.com",
       "priceRange": "$$",
       "openingHours": "Mo-Fr 09:00-18:00",
       "sameAs": [
@@ -134,17 +144,16 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Johan Rodríguez",
-      "jobTitle": "Fundador y Director Creativo",
+      "name": "Steven Rodríguez",
+      "jobTitle": "Fundador & Ingeniero de Software e IA",
       "worksFor": {
         "@type": "Organization",
         "name": "Studio Rosso Agency"
       },
-      "description": "Experto en diseño, branding y desarrollo web con más de 5 años de experiencia en el sector creativo.",
+      "description": "Ingeniero de software especializado en desarrollo web moderno, automatizaciones de procesos e integración de inteligencia artificial.",
       "url": "https://www.studiorossoagency.com/nosotros",
       "sameAs": [
-        "https://www.linkedin.com/in/johanrodriguez",
-        "https://www.instagram.com/johanrodriguez"
+        "https://www.github.com/stivimoon"
       ]
     }
     </script>
@@ -154,16 +163,16 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Valentina Reyes",
-      "jobTitle": "Fundadora y Directora de Estrategia",
+      "jobTitle": "Fundadora & Directora Creativa",
       "worksFor": {
         "@type": "Organization",
         "name": "Studio Rosso Agency"
       },
-      "description": "Estratega digital especializada en marketing, SEO y desarrollo de negocios online.",
+      "description": "Comunicadora visual y experta en marketing digital especializada en branding, identidad visual y estrategia de contenidos.",
       "url": "https://www.studiorossoagency.com/nosotros",
       "sameAs": [
-        "https://www.linkedin.com/in/valentinareyes",
-        "https://www.instagram.com/valentinareyes"
+        "https://www.linkedin.com/in/valentina-reyes-285137335/",
+        "https://www.instagram.com/studiorossoagency"
       ]
     }
     </script>

@@ -1,8 +1,8 @@
-// Configuración de EmailJS
-// Reemplaza estos valores con los tuyos de EmailJS.com
+// Configuración de EmailJS — leída desde variables de entorno
+// Define VITE_EMAILJS_* en tu archivo .env.local
 
 export const EMAILJS_CONFIG = {
-  PUBLIC_KEY: "7yDM7GQ8w5wquEpoB",
-  SERVICE_ID: "service_2cgkjg6", 
-  TEMPLATE_ID: "template_91zer8c"
-}; 
+  PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+};
