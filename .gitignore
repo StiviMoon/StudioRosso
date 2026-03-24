@@ -110,3 +110,4 @@ jspm_packages/
 # Local development files
 Backend/node_modules/
 Backend/.env
+.env*.local
